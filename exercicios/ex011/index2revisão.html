@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mídias em HTML</title>
+</head>
+<body>
+    <h1>imagem que se adapta a diferentes tamanhos de tela</h1>
+    <p>abra essa imagem e aumente ou diminua a aba do navegador</p>
+   
+    <picture>
+         
+        <source media="(max-width: 750px)" srcset="imagens/pequena.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/media.png" type="image/png">
+        <img src="imagens/grande.png" alt="imagem grande">
+
+    </picture>
+
+<audio preload="metadata" controls loop>
+    <source src="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" type="audio/mpeg">
+    
+    <p>infelizmente seu navegador não consegue reproduzir audio <a href="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" download="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3">clique aqui para fazer o download</a></p>
+
+
+</audio>
+
+
+</body>
+</html>

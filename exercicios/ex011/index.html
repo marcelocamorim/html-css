@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+<h1>Imagem dinâmica</h1>
+<p>abra essa imagem em diferentes dispositivos ou alternando o tamanho do seu navegador</p>
+
+<picture>
+
+
+    <source media="(max-width: 750px )" srcset="imagens/pequena.png" type="image/png">
+
+    <source media="(max-width: 1050px )" srcset="imagens/media.png" type="image/png">
+
+    <img src="imagens/grande.png" alt="imagem flexível">
+
+</picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios</p>
+       
+    <audio src="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" controls>
+        <p>ops... impossivel reproduzir o áudio no seu navegador</p>
+    </audio>
+
+<audio preload="metadata"  controls> 
+<source src="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" type="audio/mpeg">
+
+<source src="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.ogg" type="audio/ogg">
+
+<source src="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.wav" type="audio/ogg">
+
+<p>Infelizmente seu navegador não é capaz de reproduzir áudio <a href="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" download="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" type="audio/mpeg"></a>Clique aqui para fazer o download</p>
+
+
+
+</audio>
+
+<h2>Teste menssagem de erro</h2>
+<p>Infelizmente seu navegador não é capaz de reproduzir áudio <a href="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" download="midias/[ GUITAR INSTRUMENTAL BEAT ] Sad Rock [FREE USE MUSIC] Punch Deck   I Cant Stop.mp3" type="audio/mpeg">Clique aqui para fazer o download</a></p>
+    
+</body>
+</html>

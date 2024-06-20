@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            margin: 0px;
+        }
+
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            
+        }
+
+        nav{
+            background-color: gray;
+            padding: 5px;
+            box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.301);
+        }
+        nav>a{
+            text-decoration: none;
+            padding-right: 50px;
+            color: white;
+            font-weight: bold;
+          
+            
+        }
+
+        nav>a:hover{
+            text-decoration: underline;
+        }
+
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.301);
+        }
+        article{
+            background-color: lightgray;
+            padding: 10px;
+            margin: 10px;
+        }
+        article > aside{
+            background-color: rgb(129, 129, 129);
+        }
+
+        footer{
+            background-color: black;
+            padding: 5px;
+            
+        }
+
+        footer > p{
+            color: white;
+            text-align: center;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="assuntos">
+            <p>Esportes politica tecnologia</p>
+        </section>
+        <section>
+            <article>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, debitis numquam! Accusantium eaque praesentium, aspernatur dolorem beatae tempora dignissimos amet sint deleniti temporibus magnam vero consequatur dolore recusandae explicabo id!</p>
+                <aside>
+                    <p>Artigo escrito por Fulano de tal</p>
+                </aside>
+            </article>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: marcelo C. Amorim</p>
+    </footer>
+    
+</body>
+</html>
