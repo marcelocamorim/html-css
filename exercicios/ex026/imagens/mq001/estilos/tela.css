@@ -22,10 +22,12 @@ header h1{
 
 header menu{
     background-color: rgb(95, 94, 94);
+    
 }
 
-ul{
-
+ul a{
+    text-decoration: none;
+    color: white;
 }
 
 li{
@@ -33,9 +35,28 @@ li{
     padding: 10px;
     color: white;
     background-color: rgb(58, 58, 58);
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 li:hover{
+    background-color: rgba(255, 255, 255, 0.507);
+    color: rgb(0, 0, 0);
+    transform: translateY(4px);
+    font-weight: bold;
     
+}
+
+article{
+    max-width: 800px;
+    padding: 10px;
+    text-align: justify;
+    line-height: 1.4em;
+    margin: auto;
+    text-indent: 20px;
+
+}
+
+article h2{
+    text-align: center;
+    padding: 20px;
 }
