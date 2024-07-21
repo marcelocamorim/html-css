@@ -5,7 +5,9 @@
     margin: 0px;
     padding: 0px;
 }
-
+body{
+    background-color: rgb(175, 173, 173);
+}
 html{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -25,9 +27,17 @@ header menu{
     
 }
 
+main{
+    background-color: white;
+    height: 100vh;
+    max-width: 75%;
+    min-width:580px;
+    margin: auto;
+}
+
 ul a{
     text-decoration: none;
-    color: white;
+   
 }
 
 li{
