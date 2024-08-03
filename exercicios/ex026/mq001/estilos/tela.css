@@ -31,8 +31,8 @@ header menu{
 main{
     background-color: white;
     height: 100vh;
-    max-width: 75%;
-    min-width:580px;
+    width: 75%;
+    
     margin: auto;
 }
 
