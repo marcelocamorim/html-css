@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+/*
+typical devices breakpont
+pequenas telas: até 600px
+celulares de 600 à 768px
+tablets de 768 a 992
+desktop de 992 a 1200
+telas grandes acima de 1200px
+
+*/
+
+@media screen and {
+    
+}
