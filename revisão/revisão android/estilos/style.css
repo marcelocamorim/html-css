@@ -46,12 +46,12 @@ header h3{
     padding: 20px;
 }
 
-ul{
+nav ul{
     list-style: none;
 
 }
 
-ul li{
+nav ul li{
     display: inline-block;
     padding: 10px;
     
@@ -110,7 +110,46 @@ img{
     margin: auto;
     padding: 20px 0px;
 }
+div#containerVideo{
+    background-color: #063d1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    margin: 20px 0px;
+    border-radius: 10px;
+        
+}
+div iframe{
+    width: 85vw;
+}
 
 aside{
-    background-color: #2fa866;
+    background-color: var(--cor1);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+aside h3{
+    color: white;
+    text-align: center;
+    padding: 10px;
+    color: var(--cor05);
+}
+
+aside p{
+    color: var(--cor05);
+}
+aside ul{
+    list-style-position: inside;
+    columns: 2;
+    padding: 10px;
+}
+
+footer{
+    background-color: var(--cor05);
+    padding: 10px;
+    color: white;
+    text-align: center;
+    
 }
