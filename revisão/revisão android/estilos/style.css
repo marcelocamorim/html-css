@@ -9,6 +9,7 @@ body, html, p, h1, ul{
     margin: 0px;
     padding: 0px;
     
+    
 }
 
 :root{
@@ -109,6 +110,7 @@ img{
     display: block;
     margin: auto;
     padding: 20px 0px;
+    max-width: 85vw;
 }
 div#containerVideo{
     background-color: #063d1e;
@@ -153,3 +155,4 @@ footer{
     text-align: center;
     
 }
+

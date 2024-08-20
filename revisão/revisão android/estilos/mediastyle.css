@@ -11,6 +11,23 @@ telas grandes acima de 1200px
 
 */
 
-@media screen and {
+@media screen and (min-width:992px) {
+    section{
+        width: 900px;
+        
+    }
+    
+    div#containerVideo{
+        height: 500px;
+    }
+
+    div iframe{
+        max-width: 750px;
+        height: 480px;
+    }
+    
+    img{
+        transition: .5s;
+    }
     
 }
