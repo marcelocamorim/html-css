@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*font-family: "Bebas Neue", sans-serif;*/
+
+@font-face {
+    font-family: android;
+    src: url(../fontes/idroid.otf) format("opentype");
+    font-weight: normal;
+}
+
