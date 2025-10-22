@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17 de HTML cfb cursos</title>
+    <style>
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function desenhar(){
+            let canvas=document.getElementById("canvas")
+            let ctx=canvas.getContext("2d")
+            ctx.fillRect(25,25,100,100)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        Tag canvas - Curso de HTML Completo e Profissional #17
+    </h1>
+    <p>
+        🧩 Tag canvas (Área de Desenho Gráfica)
+
+        Função principal:
+        A tag canvas cria uma área retangular em que é possível desenhar gráficos, imagens, animações ou jogos
+        usando JavaScript.
+        Sozinha, a tag não exibe nada — ela serve apenas como um espaço de desenho programável.
+    </p>
+
+
+    <canvas id="canvas" width="500px" height="500px">
+        Seu navegador não suporta o elemento canvas.
+    </canvas>
+
+    <script>desenhar()</script>
+</body>
+
+</html>
