@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 22 de HTML cfb cursos</title>
+    <script>
+        function abrirDialog(){
+            document.getElementById("d1").setAttribute("open", "true");
+        }
+        function fecharDialog(){
+            document.getElementById("d1").removeAttribute("open");
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Tag dialog - Curso de HTML Completo e Profissional #22</h1>
+    <h2>🧩 Tag &lt;dialog&gt; (Caixa de Diálogo / Janela Modal)</h2>
+
+    <h3>Função principal:</h3>
+    <p>
+        A tag &lt;dialog&gt; é usada para criar caixas de diálogo (modais ou pop-ups) nativas em HTML, sem precisar de
+        bibliotecas externas.
+        Ela pode ser aberta e fechada com JavaScript, exibindo mensagens, formulários ou avisos de forma interativa.
+    </p>
+
+    <button onclick="abrirDialog()">Abrir</button>
+    <button onclick="fecharDialog()">Fechar</button>
+    <dialog id="d1" open>
+        <p>
+            <dfn title="Linguagem de marcação para web">HTML</dfn> Hypertext markup language é uma linguagem de marcação
+            para construção de páginas na web. A tag
+        </p>
+        <p>
+            <dfn>CSS</dfn> Cascading Style Sheets é uma linguagem de estilo usada para adicionar estilos/ formatações a um
+            documento escrito em HTML.
+        </p>
+    </dialog>
+
+
+
+</body>
+
+</html>
