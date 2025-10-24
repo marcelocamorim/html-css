@@ -5,30 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 24 de HTML cfb Cursos</title>
 
-    <script>
-        const d1=document.getElementById('d1')
-        const btn_dialog=document.getElementById('btn_dialog')
-        const btn_fechar=document.getElementById('btn_fechar')
-
-        function fecharDialog(){
-            d1.innerHTML='Abrir'
-            d1.removeAttribute('open')
-        } 
-
-        function abrirDialog(){
-            d1.innerHTML='Fechar'
-            d1.setAttribute('open','')
-        }
-
-        function controlaDialog(){
-            if(d1.open){
-                fecharDialog()
-            }else{
-                abrirDialog()
-            }
-        }
-
-    </script>
+    
 
     <style>
         dialog{
@@ -91,6 +68,32 @@
         </div>
     </dialog>
 
+
+
+    <script>
+        const d1=document.getElementById('d1')
+        const btn_dialog=document.getElementById('btn_dialog')
+        const btn_fechar=document.getElementById('btn_fechar')
+
+        function fecharDialog(){
+            btn_dialog.innerHTML='Abrir'
+            d1.removeAttribute('open')
+        } 
+
+        function abrirDialog(){
+            btn_dialog.innerHTML='Fechar'
+            d1.setAttribute('open','')
+        }
+
+        function controlaDialog(){
+            if(d1.hasAttribute('open')){
+                fecharDialog()
+            }else{
+                abrirDialog()
+            }
+        }
+
+    </script>
     
 </body>
 </html>
