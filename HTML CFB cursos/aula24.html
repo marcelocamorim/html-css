@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24 de HTML cfb Cursos</title>
+
+    <script>
+        const d1=document.getElementById('d1')
+        const btn_dialog=document.getElementById('btn_dialog')
+        const btn_fechar=document.getElementById('btn_fechar')
+
+        function fecharDialog(){
+            d1.innerHTML='Abrir'
+            d1.removeAttribute('open')
+        } 
+
+        function abrirDialog(){
+            d1.innerHTML='Fechar'
+            d1.setAttribute('open','')
+        }
+
+        function controlaDialog(){
+            if(d1.open){
+                fecharDialog()
+            }else{
+                abrirDialog()
+            }
+        }
+
+    </script>
+
+    <style>
+        dialog{
+            padding: 0;
+            border: 0;
+            border-radius: 7px;
+            box-shadow: 0 0 10px black;
+            flex-direction: column;
+        }
+        .dialog_titulo {
+            background-color: #eee;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #aaa;
+            height: 40px;
+        }
+        .dialog_corpo {
+            background-color: #fff;
+            padding: 7px;
+        }
+        .dialog_rodape{
+            background-color: #fff;
+            border-bottom-left-radius: inherit;
+            border-bottom-right-radius: inherit;
+            padding: 7px;
+            border-top: 1px solid #aaa;
+        }
+        #btn_fechar{
+            border: none;
+            border-radius: 7px;
+            padding: 7px;
+            cursor: pointer;
+            outline: none;
+        }
+        #btn_fechar:hover{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tag dialog P2 - Curso de HTML Completo e Profissional #24</h1>
+
+    <button onclick="controlaDialog()" id="btn_dialog">Abrir</button>
+    <dialog  id="d1">
+        <div class="dialog_titulo">
+            <h3>Caixa de Dialogo</h3>
+        </div>
+
+        <div class="dialog_corpo">
+            <p>Caixa de dialogo nativa do HTML 5</p>
+            <p>CFB Cursos / Curso de HTML Completo e profissional</p>
+        </div>
+
+        <div class="dialog_rodape">
+            <button id="btn_fechar" onclick="fecharDialog()">Fechar</button>
+        </div>
+    </dialog>
+
+    
+</body>
+</html>
