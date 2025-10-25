@@ -55,12 +55,12 @@
     <button onclick="controlaDialog()" id="btn_dialog">Abrir</button>
     <dialog  id="d1">
         <div class="dialog_titulo">
-            <h3>Caixa de Dialogo</h3>
+            <h3 id="titulo">Caixa de Dialogo</h3>
         </div>
 
         <div class="dialog_corpo">
             <p>Caixa de dialogo nativa do HTML 5</p>
-            <p>CFB Cursos / Curso de HTML Completo e profissional</p>
+            <p id="msg1">CFB Cursos / Curso de HTML Completo e profissional</p>
         </div>
 
         <div class="dialog_rodape">
@@ -85,7 +85,7 @@
             d1.setAttribute('open','')
         }
 
-        function controlaDialog(){
+        function controlaDialog(titulo,msg){
             if(d1.hasAttribute('open')){
                 fecharDialog()
             }else{
