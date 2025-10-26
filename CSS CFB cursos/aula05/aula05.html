@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 de CSS CFB cursos</title>
+    <link rel="stylesheet" href="aula05.css">
+</head>
+
+<body>
+    <h1>Curso de CSS3 #05 - background - Parte 2 - background-clip, padding, border</h1>
+    <p>
+        border-box
+        Aqui, o valor de width e height inclui o conteúdo + padding + border.
+        Ou seja, o tamanho total nunca passa dos valores definidos.
+    </p>
+    <div id="d1">CFB Cursos</div>
+
+    <p>
+        padding-box
+        É menos usado. Nesse modo, a largura e altura incluem o conteúdo + o padding,
+        mas não incluem a borda.
+    </p>
+    <div id="d2">CFB Cursos</div>
+
+    <p>
+        content-box (padrão)
+        É o comportamento padrão do CSS.
+        Quando você define width e height, elas valem apenas para o conteúdo — o padding e a border são adicionados por
+        fora, aumentando o tamanho total do elemento.
+    </p>
+    <div id="d3">CFB Cursos</div>
+
+    <p>
+        Dica profissional
+        A maioria dos desenvolvedores define border-box para todos os elementos logo no início do CSS, assim:
+    </p>
+    <pre>
+        <code>
+           * {
+                box-sizing: border-box;
+                } 
+        </code>
+    </pre>
+    <p>Isso simplifica o cálculo de tamanhos e deixa o layout mais previsível.</p>
+
+</body>
+
+</html>
