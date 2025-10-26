@@ -191,6 +191,127 @@ body \{\par
 fixed e scroll funcionam em praticamente todos os navegadores.\par
 local \'e9 bem suportado, mas pode ter comportamento inconsistente em dispositivos m\'f3veis.\par
 \par
+\ul\b\fs36 Metapropriedade background\par
+\ulnone\b0\fs24 A metapropriedade background \'e9 uma forma abreviada (shorthand) de definir todas as propriedades de plano de fundo em uma \'fanica linha de CSS.\par
+Ela serve para escrever menos c\'f3digo e deixar o estilo mais limpo.\par
+\par
+\ul\b\f1\u-10180?\u-8280?\f2  \f0 Estrutura geral\par
+\ulnone\b0\par
+A sintaxe completa da metapropriedade \'e9 esta:\par
+background: <color> <image> <position> / <size> <repeat> <origin> <clip> <attachment>;\par
+Voc\'ea n\'e3o precisa usar todos os valores \f2\emdash  \f0 apenas os que quiser, na ordem correta.\par
+\par
+\f1\u-10178?\u-8727?\f2  \f0 Propriedades que o background pode incluir\par
+Propriedade\tab Fun\'e7\'e3o\par
+background-color\tab Define a cor de fundo.\par
+background-image\tab Define a imagem de fundo.\par
+background-position\tab Define onde a imagem \'e9 posicionada.\par
+background-size\tab Define o tamanho da imagem (ex: cover, contain, 100px).\par
+background-repeat\tab Controla a repeti\'e7\'e3o da imagem (repeat, no-repeat, etc.).\par
+background-origin\tab Define onde come\'e7a o plano de fundo (padding-box, border-box, content-box).\par
+background-clip\tab Controla at\'e9 onde o fundo se estende.\par
+background-attachment\tab Define se o fundo rola ou fica fixo (scroll, fixed, local).\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 Exemplo completo\par
+\ulnone\b0 body \{\par
+  background: \par
+    #000                          /* cor de fundo */\par
+    url('fundo.jpg')              /* imagem */\par
+    center center / cover         /* posi\'e7\'e3o e tamanho */\par
+    no-repeat                     /* repeti\'e7\'e3o */\par
+    fixed                         /* fixo na tela */\par
+    padding-box                   /* origem */\par
+    content-box;                  /* clip */\par
+\}\par
+Isso \'e9 igual a escrever:\par
+\par
+body \{\par
+  background-color: #000;\par
+  background-image: url('fundo.jpg');\par
+  background-position: center center;\par
+  background-size: cover;\par
+  background-repeat: no-repeat;\par
+  background-attachment: fixed;\par
+  background-origin: padding-box;\par
+  background-clip: content-box;\par
+\}\par
+\f1\u-10179?\u-9055?\f2  \f0 Ou seja, o background re\'fane tudo em uma s\'f3 linha.\par
+\par
+\ul\b\f1\u-10180?\u-8273?\f2  \f0 Exemplo simplificado (mais comum no dia a dia)\par
+\ulnone\b0 body \{\par
+  background: url('wallpaper.jpg') center / cover no-repeat fixed;\par
+\}\par
+\f1\u10145?\u-497? \f0 Aqui definimos:\par
+imagem de fundo (url(...))\par
+posi\'e7\'e3o (center)\par
+tamanho (cover)\par
+repeti\'e7\'e3o (no-repeat)\par
+e comportamento fixo (fixed).\par
+\par
+\ul\b\f1\u9888?\u-497? \f0 Observa\'e7\'e3o importante\ulnone\b0\par
+Quando voc\'ea usa a forma abreviada, qualquer propriedade omitida \'e9 redefinida para o valor padr\'e3o.\par
+Por isso, cuidado ao sobrescrever um background j\'e1 existente.\par
+\b Exemplo:\b0\par
+div \{\par
+  background: url('imagem.png');\par
+\}\par
+div:hover \{\par
+  background: red; /* remove a imagem! */\par
+\}\par
+\f1\u10145?\u-497? \f0 Ao usar o background novamente, ele apaga os valores anteriores (inclusive image, repeat, etc.), deixando apenas a cor.\par
+\par
+\ul\b tamanho da imagem\par
+\ulnone\b0 Quando falamos sobre o tamanho da imagem de fundo, usamos a propriedade background-size, que define como a imagem ser\'e1 dimensionada dentro do elemento.\par
+\b Vamos ver todas as op\'e7\'f5es que existem \f1\u-10179?\u-9145?\f0\par
+\b0\par
+\ul\b\f1\u-10180?\u-8280?\f2  \f0 Propriedade: background-size\par
+\ulnone\b0\f1\u-10178?\u-8727?\f2  \f0 Sintaxe b\'e1sica:\par
+background-size: auto | cover | contain | <largura> <altura>;\par
+\par
+\ul\b auto (padr\'e3o)\b0\par
+\ulnone A imagem \'e9 exibida no seu tamanho original, sem redimensionamento.\par
+background-size: auto;\par
+\f1\u10145?\u-497?\f2  \f0 Se a imagem for menor que o elemento, ela se repetir\'e1 (a menos que use no-repeat).\par
+\par
+\ul\b cover\ulnone\b0\par
+A imagem \'e9 ampliada proporcionalmente at\'e9 cobrir toda a \'e1rea do elemento.\par
+Parte dela pode ser cortada se o tamanho n\'e3o for proporcional.\par
+background-size: cover;\par
+\f1\u10145?\u-497?\f2  \f0 Ideal para fundos de tela cheia, como banners ou p\'e1ginas inteiras.\par
+\par
+\b Exemplo pr\'e1tico:\par
+\b0\par
+body \{\par
+  background: url('paisagem.jpg') center/cover no-repeat;\par
+\}\par
+\par
+\ul\b contain\ulnone\b0\par
+A imagem \'e9 redimensionada proporcionalmente at\'e9 caber totalmente dentro do elemento.\par
+Nenhuma parte \'e9 cortada, mas podem sobrar espa\'e7os vazios.\par
+background-size: contain;\par
+\f1\u10145?\u-497?\f2  \f0 Boa op\'e7\'e3o para mostrar a imagem completa, sem cortes.\par
+\par
+\ul\b Valores personalizados (largura e altura)\ulnone\b0\par
+Voc\'ea pode definir tamanhos espec\'edficos \f2\emdash  \f0 em pixels, porcentagem, ou outras unidades.\par
+background-size: 200px 100px;\par
+\f1\u10145?\u-497?\f2  \f0 A imagem ter\'e1 200px de largura e 100px de altura, mesmo que distor\'e7a.\par
+Ou s\'f3 a largura (a altura se ajusta automaticamente, mantendo a propor\'e7\'e3o):\par
+background-size: 50%;\par
+\f1\u10145?\u-497?\f2  \f0 A imagem ocupar\'e1 50% da largura do elemento.\par
+\par
+\ul\b M\'faltiplos fundos\ulnone\b0\par
+Quando h\'e1 v\'e1rias imagens de fundo, voc\'ea pode definir um tamanho diferente para cada uma, separados por v\'edrgulas:\par
+background-image: url('estrela.png'), url('ceu.jpg');\par
+background-size: 50px 50px, cover;\par
+\f1\u10145?\u-497?\f2  \f0 A primeira imagem (estrela) ter\'e1 50x50px, e a segunda cobrir\'e1 todo o fundo.\par
+\par
+\ul\b\f1\u9881?\u-497?\f2  \f0 Resumo r\'e1pido\par
+\ulnone\b0 Valor\tab O que faz\tab Corta a imagem?\tab Mant\'e9m propor\'e7\'e3o?\par
+auto\tab Mostra no tamanho original\tab\f4\u10060?\f0\tab\f4\u9989?\f0\par
+cover\tab Cobre todo o elemento\tab\f4\u9989?\f0\tab\f4\u9989?\f0\par
+contain\tab Mostra toda a imagem\tab\f4\u10060?\f0\tab\f4\u9989?\f0\par
+px, %, etc.\tab Tamanho fixo ou relativo\tab\f1\u9888?\u-497?\f2  \f0 Pode\tab\f1\u9888?\u-497?\f2  \f0 Depende\ul\b\fs36\par
+\ulnone\b0\fs22\par
 \par
 \par
 \par
