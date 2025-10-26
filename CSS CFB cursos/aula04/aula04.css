@@ -1,0 +1,17 @@
+body{
+    background-image: url(img-html.png);
+    background-size: 200px;
+    background-repeat:no-repeat ;
+    background-position: 650px 200px;
+}
+
+h1{
+    background-color: aqua;
+    background-image: url(img-css.png);
+    background-size: 20px;
+    background-repeat: repeat-x;
+    background-position: 0px 2px;
+}
+h1{
+    color: red;
+}
