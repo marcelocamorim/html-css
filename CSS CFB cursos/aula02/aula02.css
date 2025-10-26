@@ -1,0 +1,19 @@
+p{
+    color: red;
+    font-size: 20pt;
+}
+
+#p1{
+    color: blue;
+}
+
+.txt{
+    color: greenyellow;
+    font-size: 30pt;
+}
+
+h4, h5, h6{
+     color: rgb(255, 0, 234);
+    font-size: 15pt;
+}
+
