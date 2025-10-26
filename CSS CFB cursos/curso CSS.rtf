@@ -135,8 +135,61 @@ A maioria dos desenvolvedores define border-box para todos os elementos logo no 
 \f1\u10145?\u-497?\f2  \f0 Isso simplifica o c\'e1lculo de tamanhos e deixa o layout mais previs\'edvel.\par
 \ul\b\par
 \ulnone\b0\par
-\fs22\par
+\ul\b\fs36 background-attachment\par
+\ulnone\b0\fs22 A propriedade background-attachment em CSS controla como o plano de fundo (background) se comporta quando a p\'e1gina \'e9 rolada (scroll).\par
+Ela define se a imagem de fundo se move junto com o conte\'fado ou fica fixa na tela.\par
 \par
+\ul\b\f1\u-10180?\u-8280?\f2  \f0 Sintaxe b\'e1sica\par
+\ulnone\b0 background-attachment: scroll | fixed | local;\par
+\par
+\ul\b\f1\u-10178?\u-8727?\f2  \f0 scroll (padr\'e3o)\b0\par
+\ulnone O fundo se move junto com o conte\'fado quando voc\'ea rola a p\'e1gina.\par
+\'c9 o comportamento normal da maioria dos sites.\par
+\par
+body \{\par
+  background-image: url('fundo.jpg');\par
+  background-attachment: scroll;\par
+\}\par
+\f1\u10145?\u-497? \f0 Quando voc\'ea faz scroll, o fundo \f2\ldblquote\f0 anda\f2\rdblquote  \f0 junto.\par
+\par
+\ul\b\f2  \f0 fixed\ulnone\b0\par
+O fundo fica fixo na tela, n\'e3o se move quando a p\'e1gina rola.\par
+Cria o efeito de plano de fundo est\'e1tico, como se o conte\'fado passasse por cima dele.\par
+\par
+body \{\par
+  background-image: url('fundo.jpg');\par
+  background-attachment: fixed;\par
+  background-size: cover;\par
+\}\par
+\f1\u10145?\u-497? \f0 Muito usado para efeitos de paralaxe simples.\par
+\par
+\ul\b\f1\u-10179?\u-9020?\f2   \f0 local\ulnone\b0\par
+O fundo rola junto com o conte\'fado dentro do elemento,\par
+mas fica fixo em rela\'e7\'e3o \'e0 \'e1rea vis\'edvel desse elemento.\par
+\par
+div \{\par
+  background-image: url('papel.jpg');\par
+  background-attachment: local;\par
+  overflow: auto;\par
+  height: 200px;\par
+\}\par
+\f1\u10145?\u-497? \f0\'datil quando um elemento tem scroll interno (como uma caixa com barra de rolagem).\par
+\par
+\ul\b\f1\u-10178?\u-8736?\f2  \f0 Dica pr\'e1tica\ulnone\b0\par
+Voc\'ea pode combinar com outras propriedades de fundo:\par
+\par
+body \{\par
+  background-image: url('paisagem.jpg');\par
+  background-repeat: no-repeat;\par
+  background-position: center;\par
+  background-size: cover;\par
+  background-attachment: fixed;\par
+\}\par
+\f1\u10145?\u-497? \f0 Isso cria um fundo que cobre toda a tela e permanece fixo enquanto o conte\'fado rola.\par
+\par
+\ul\b\f1\u9881?\u-497? \f0 Compatibilidade\ulnone\b0\par
+fixed e scroll funcionam em praticamente todos os navegadores.\par
+local \'e9 bem suportado, mas pode ter comportamento inconsistente em dispositivos m\'f3veis.\par
 \par
 \par
 \par
