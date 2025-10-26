@@ -1,0 +1,276 @@
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Emoji;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Symbol;}{\f4\fnil\fcharset1 Segoe UI Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs22\lang22\par
+\ul\fs36 Formas de Adicionar css\par
+\ulnone\fs22 CSS externo\par
+\b0 cria um documento separado para o CSS, esse documento \'e9 anexado na tag head do html exemplo:\par
+<title>Aula 01 de CSS cfb cursos</title>\par
+<link rel="stylesheet" href="aula01.css">\par
+\par
+\b 1. CSS Inline (dentro da tag)\par
+\b0 O estilo \'e9 aplicado diretamente na tag HTML, usando o atributo style.\par
+<p style="color: blue; font-size: 18px;">Texto em azul e tamanho 18px</p>\par
+\par
+\b 2. CSS Interno (no pr\'f3prio arquivo HTML)\par
+\b0 O c\'f3digo CSS \'e9 colocado dentro da tag <style> no <head> do HTML.\par
+\par
+<!DOCTYPE html>\par
+<html lang="pt-br">\par
+<head>\par
+  <meta charset="UTF-8">\par
+  <style>\par
+    body \{\par
+      background-color: #f0f0f0;\par
+      font-family: Arial;\par
+    \}\par
+\par
+    h1 \{\par
+      color: green;\par
+    \}\par
+  </style>\par
+</head>\par
+<body>\par
+  <h1>T\'edtulo em verde</h1>\par
+  <p>Par\'e1grafo com fundo cinza claro.</p>\par
+</body>\par
+</html>\par
+\b\f1\u-10178?\u-8723?\f2  \f0 Ordem de prioridade padr\'e3o (da menor para a maior):\par
+\b0\par
+\f1 1\u-497?\f0 CSS externo (em arquivo .css)\par
+\f1 2\u-497?\f0 CSS interno (dentro da tag <style>)\par
+\f1 3\u-497?\f0 CSS inline (dentro da tag HTML, usando style="...")\par
+\f3\u-10179?\u-9055?\f2  \f0 Em outras palavras:\par
+Se o mesmo elemento tiver regras diferentes nos tr\'eas lugares, o inline vence, o interno fica em segundo, e o externo perde.\par
+\par
+\ul\b\fs36 adicionar imagem background\par
+\ulnone\fs24 adiciona a imagem  \b0 background-image: url();\par
+\b controla o tamanho da imagem \b0 background-size: 500px;\par
+\b controla a repiti\'e7\'e3o da imagem \b0 background-repeat: ;\par
+\b controla a posi\'e7\'e3o da imagem \b0 background-position: 100% 0px;\par
+\par
+\ul\b Exemplo\par
+\ulnone\b0 body\{\par
+    background-image: url(img-html.png);\par
+    background-size: 200px;\par
+    background-repeat:no-repeat ;\par
+    background-position: 650px 200px;\par
+\}\par
+\ul\b Exemplo com mais de uma imagem\par
+\ulnone\b0 basta colocar as informa\'e7\'f5es separadas por virgula EX:\par
+body\{\par
+    background-image: url(img-html.png) , url(img-css.png);\par
+    background-size: 200px , 150px;\par
+    background-repeat: no-repeat, repeat ;\par
+    background-position: 650px 200px , 500px 150px;\par
+\}\par
+\par
+content-box \par
+Esses tr\'eas valores \f2\emdash  \f0 content-box, padding-box e border-box \f2\emdash  \f0 s\'e3o usados com a propriedade box-sizing, que define o que \'e9 inclu\'eddo no c\'e1lculo da largura (width) e altura (height) de um elemento.\par
+\par
+Vamos entender cada um \f3\u-10179?\u-9145?\f0\par
+\par
+\ul\b\f1\fs36\u-10178?\u-8727?\f2   \f0 content-box (padr\'e3o), border-box, padding-box\par
+\ulnone\b0\fs24\par
+\ul\b content-box; \par
+\ulnone\b0\'c9 o comportamento padr\'e3o do CSS.\par
+Quando voc\'ea define width e height, elas valem apenas para o conte\'fado \f2\emdash  \f0 o padding e a border s\'e3o adicionados por fora, aumentando o tamanho total do elemento.\par
+\par
+div \{\par
+  box-sizing: content-box; /* padr\'e3o */\par
+  width: 200px;\par
+  padding: 20px;\par
+  border: 5px solid black;\par
+\}\par
+\par
+\b\f3\u-10179?\u-9009?\f2  \f0 C\'e1lculo do tamanho total:\b0\par
+Largura total = 200 (conte\'fado) + 20 + 20 (padding) + 5 + 5 (borda) = 250px\par
+\f1\u10145?\u-497?\f2  \f0 O elemento ocupa mais espa\'e7o do que o width declarado.\par
+\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 border-box\par
+\ulnone\b0\par
+Aqui, o valor de width e height inclui o conte\'fado + padding + border.\par
+Ou seja, o tamanho total nunca passa dos valores definidos.\par
+\par
+div \{\par
+  box-sizing: border-box;\par
+  width: 200px;\par
+  padding: 20px;\par
+  border: 5px solid black;\par
+\}\par
+\par
+\b\f3\u-10179?\u-9009?\f2  \f0 C\'e1lculo interno:\par
+\b0 200px = conte\'fado + padding + borda\par
+O navegador reduz o conte\'fado automaticamente para que o total continue 200px.\par
+\f1\u10145?\u-497?\f2  \f0 Muito usado em layouts modernos, pois evita \f2\ldblquote\f0 estouro\f2\rdblquote  \f0 de tamanho.\par
+\par
+\par
+\ul\b\f3\u-10180?\u-8280?\f2  \f0 padding-box\par
+\ulnone\b0\par
+\'c9 menos usado. Nesse modo, a largura e altura incluem o conte\'fado + o padding,\par
+mas n\'e3o incluem a borda.\par
+\par
+div \{\par
+  box-sizing: padding-box;\par
+  width: 200px;\par
+  padding: 20px;\par
+  border: 5px solid black;\par
+\}\par
+\par
+\b\f3\u-10179?\u-9009?\f2  \f0 C\'e1lculo:\b0\par
+Largura total = 200 (conte\'fado + padding) + 5 + 5 (borda) = 210px\par
+\f1\u10145?\u-497?\f2  \f0 Raramente necess\'e1rio \f2\emdash  \f0 alguns navegadores nem aplicam de forma consistente.\par
+\par
+\b\f3\u-10179?\u-9055?\f2  \f0 Comparativo r\'e1pido\par
+\b0 Tipo\tab Inclui o qu\'ea em width/height?\tab Tamanho final aumenta com padding/borda?\par
+content-box\tab Apenas o conte\'fado\tab\f4\u9989?\f2  \f0 Sim\par
+padding-box\tab Conte\'fado + padding\tab\f1\u9888?\u-497?\f2  \f0 Sim (um pouco)\par
+border-box\tab Conte\'fado + padding + borda\tab\f4\u10060?\f2  \f0 N\'e3o\par
+\par
+\ul\b\f1\u-10178?\u-8736?\f2  \f0 Dica profissional\ulnone\b0\par
+A maioria dos desenvolvedores define border-box para todos os elementos logo no in\'edcio do CSS, assim:\par
+* \{\par
+  box-sizing: border-box;\par
+\}\par
+\f1\u10145?\u-497?\f2  \f0 Isso simplifica o c\'e1lculo de tamanhos e deixa o layout mais previs\'edvel.\par
+\ul\b\par
+\ulnone\b0\par
+\fs22\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+position CSS\par
+\par
+Em CSS, a propriedade position define como um elemento \'e9 posicionado na p\'e1gina e como ele se comporta em rela\'e7\'e3o a outros elementos.\par
+Ela \'e9 fundamental para layouts, menus fixos, sobreposi\'e7\'f5es (como modais) e efeitos visuais.\par
+\par
+Vamos entender cada tipo de position:\par
+\par
+\f1\u-10178?\u-8727?\f2  \f0 1. static (padr\'e3o)\par
+\par
+\'c9 o valor padr\'e3o de todos os elementos.\par
+\par
+O elemento segue o fluxo normal da p\'e1gina, sem posicionamento especial.\par
+\par
+As propriedades top, left, right, bottom n\'e3o funcionam aqui.\par
+\par
+div \{\par
+  position: static;\par
+\}\par
+\par
+\par
+\f1\u10145?\u-497?\f2  \f0 Ideal para conte\'fado comum, quando voc\'ea n\'e3o quer alterar o fluxo da p\'e1gina.\par
+\par
+\f3\u-10179?\u-9008?\f2  \f0 2. relative\par
+\par
+O elemento mant\'e9m seu espa\'e7o original, mas pode ser movido com top, left, right, bottom.\par
+\par
+A posi\'e7\'e3o \'e9 relativa \'e0 sua posi\'e7\'e3o original.\par
+\par
+div \{\par
+  position: relative;\par
+  top: 20px;   /* move 20px para baixo */\par
+  left: 10px;  /* move 10px para a direita */\par
+\}\par
+\par
+\par
+\f1\u10145?\u-497?\f2  \f0 Muito usado para criar uma \f2\ldblquote\f0 refer\'eancia\f2\rdblquote  \f0 para elementos filhos com position: absolute;.\par
+\par
+\f3\u-10179?\u-9011?\f2  \f0 3. absolute\par
+\par
+Remove o elemento do fluxo da p\'e1gina.\par
+\par
+\'c9 posicionado em rela\'e7\'e3o ao ancestral mais pr\'f3ximo com position: relative, absolute, ou fixed.\par
+\par
+Se n\'e3o existir um ancestral posicionado, ele \'e9 posicionado em rela\'e7\'e3o \'e0 p\'e1gina (body).\par
+\par
+.container \{\par
+  position: relative;\par
+\}\par
+\par
+.box \{\par
+  position: absolute;\par
+  top: 0;\par
+  right: 0;\par
+\}\par
+\par
+\par
+\f1\u10145?\u-497?\f2  \f0 Ideal para criar elementos sobrepostos, menus suspensos, tooltips, etc.\par
+\par
+\f3\u-10179?\u-9012?\f2  \f0 4. fixed\par
+\par
+Fixa o elemento em rela\'e7\'e3o \'e0 janela do navegador (viewport).\par
+\par
+Mesmo rolando a p\'e1gina, o elemento permanece vis\'edvel no mesmo lugar.\par
+\par
+nav \{\par
+  position: fixed;\par
+  top: 0;\par
+  width: 100%;\par
+\}\par
+\par
+\par
+\f1\u10145?\u-497?\f2  \f0 Usado em menus fixos, bot\'f5es de voltar ao topo, barras flutuantes etc.\par
+\par
+\f1\u-10178?\u-8545?\f2  \f0 5. sticky\par
+\par
+\'c9 uma mistura de relative e fixed.\par
+\par
+O elemento age como relative at\'e9 o scroll chegar em certo ponto, e depois fica fixo.\par
+\par
+header \{\par
+  position: sticky;\par
+  top: 0;\par
+  background: white;\par
+\}\par
+\par
+\par
+\f1\u10145?\u-497?\f2  \f0\'datil para cabe\'e7alhos que \f2\ldblquote\f0 grudam\f2\rdblquote  \f0 no topo ao rolar a p\'e1gina.\par
+\par
+\f1\u9881?\u-497?\f2  \f0 Extra: z-index\par
+\par
+Controla a ordem de sobreposi\'e7\'e3o dos elementos posicionados (relative, absolute, fixed, sticky).\par
+\par
+Quanto maior o n\'famero, mais \'e0 frente o elemento aparece.\par
+\par
+.box1 \{\par
+  position: absolute;\par
+  z-index: 10;\par
+\}\par
+.box2 \{\par
+  position: absolute;\par
+  z-index: 5;\par
+\}\par
+}
+ 
