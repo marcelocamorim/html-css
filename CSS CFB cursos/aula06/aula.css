@@ -1,0 +1,8 @@
+body{
+    background-image: url(img-html.png), url(img-css.png);
+    background-repeat: no-repeat, repeat;
+    background-size: 400px, 30px;
+    background-attachment: scroll, fixed;
+    
+    
+}
