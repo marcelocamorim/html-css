@@ -1,0 +1,5 @@
+p{
+    
+    border: solid 30px;
+    border-image: url(img-css.png) 100 round;
+}
