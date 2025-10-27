@@ -1,0 +1,7 @@
+p{
+    width: 300px;
+    border-top: 10px solid black;
+    border-bottom: 10px double rgb(255, 0, 0);
+    border-right: 10px dotted blue;
+    border-left: 10px groove greenyellow;
+}
