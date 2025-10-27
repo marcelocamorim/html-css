@@ -1,5 +1,5 @@
-{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Emoji;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Symbol;}{\f4\fnil\fcharset1 Segoe UI Symbol;}}
-{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Emoji;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Symbol;}{\f4\fnil\fcharset1 Segoe UI Symbol;}{\f5\fnil Segoe UI Emoji;}{\f6\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont6\mwrapIndent1440 }\viewkind4\uc1 
 \pard\sa200\sl276\slmult1\b\f0\fs22\lang22\par
 \ul\fs36 Formas de Adicionar css\par
 \ulnone\fs22 CSS externo\par
@@ -150,7 +150,7 @@ body \{\par
   background-image: url('fundo.jpg');\par
   background-attachment: scroll;\par
 \}\par
-\f1\u10145?\u-497? \f0 Quando voc\'ea faz scroll, o fundo \f2\ldblquote\f0 anda\f2\rdblquote  \f0 junto.\par
+\f1\u10145?\u-497?\f5  \f0 Quando voc\'ea faz scroll, o fundo \f2\ldblquote\f0 anda\f2\rdblquote  \f0 junto.\par
 \par
 \ul\b\f2  \f0 fixed\ulnone\b0\par
 O fundo fica fixo na tela, n\'e3o se move quando a p\'e1gina rola.\par
@@ -161,7 +161,7 @@ body \{\par
   background-attachment: fixed;\par
   background-size: cover;\par
 \}\par
-\f1\u10145?\u-497? \f0 Muito usado para efeitos de paralaxe simples.\par
+\f1\u10145?\u-497?\f5  \f0 Muito usado para efeitos de paralaxe simples.\par
 \par
 \ul\b\f1\u-10179?\u-9020?\f2   \f0 local\ulnone\b0\par
 O fundo rola junto com o conte\'fado dentro do elemento,\par
@@ -173,7 +173,7 @@ div \{\par
   overflow: auto;\par
   height: 200px;\par
 \}\par
-\f1\u10145?\u-497? \f0\'datil quando um elemento tem scroll interno (como uma caixa com barra de rolagem).\par
+\f1\u10145?\u-497?\f5  \f0\'datil quando um elemento tem scroll interno (como uma caixa com barra de rolagem).\par
 \par
 \ul\b\f1\u-10178?\u-8736?\f2  \f0 Dica pr\'e1tica\ulnone\b0\par
 Voc\'ea pode combinar com outras propriedades de fundo:\par
@@ -185,9 +185,9 @@ body \{\par
   background-size: cover;\par
   background-attachment: fixed;\par
 \}\par
-\f1\u10145?\u-497? \f0 Isso cria um fundo que cobre toda a tela e permanece fixo enquanto o conte\'fado rola.\par
+\f1\u10145?\u-497?\f5  \f0 Isso cria um fundo que cobre toda a tela e permanece fixo enquanto o conte\'fado rola.\par
 \par
-\ul\b\f1\u9881?\u-497? \f0 Compatibilidade\ulnone\b0\par
+\ul\b\f1\u9881?\u-497?\f5  \f0 Compatibilidade\ulnone\b0\par
 fixed e scroll funcionam em praticamente todos os navegadores.\par
 local \'e9 bem suportado, mas pode ter comportamento inconsistente em dispositivos m\'f3veis.\par
 \par
@@ -241,14 +241,14 @@ body \{\par
 \ulnone\b0 body \{\par
   background: url('wallpaper.jpg') center / cover no-repeat fixed;\par
 \}\par
-\f1\u10145?\u-497? \f0 Aqui definimos:\par
+\f1\u10145?\u-497?\f5  \f0 Aqui definimos:\par
 imagem de fundo (url(...))\par
 posi\'e7\'e3o (center)\par
 tamanho (cover)\par
 repeti\'e7\'e3o (no-repeat)\par
 e comportamento fixo (fixed).\par
 \par
-\ul\b\f1\u9888?\u-497? \f0 Observa\'e7\'e3o importante\ulnone\b0\par
+\ul\b\f1\u9888?\u-497?\f5  \f0 Observa\'e7\'e3o importante\ulnone\b0\par
 Quando voc\'ea usa a forma abreviada, qualquer propriedade omitida \'e9 redefinida para o valor padr\'e3o.\par
 Por isso, cuidado ao sobrescrever um background j\'e1 existente.\par
 \b Exemplo:\b0\par
@@ -258,7 +258,7 @@ div \{\par
 div:hover \{\par
   background: red; /* remove a imagem! */\par
 \}\par
-\f1\u10145?\u-497? \f0 Ao usar o background novamente, ele apaga os valores anteriores (inclusive image, repeat, etc.), deixando apenas a cor.\par
+\f1\u10145?\u-497?\f5  \f0 Ao usar o background novamente, ele apaga os valores anteriores (inclusive image, repeat, etc.), deixando apenas a cor.\par
 \par
 \ul\b tamanho da imagem\par
 \ulnone\b0 Quando falamos sobre o tamanho da imagem de fundo, usamos a propriedade background-size, que define como a imagem ser\'e1 dimensionada dentro do elemento.\par
@@ -314,6 +314,90 @@ px, %, etc.\tab Tamanho fixo ou relativo\tab\f1\u9888?\u-497?\f2  \f0 Pode\tab\f
 \ulnone\b0\fs22\par
 \par
 \par
+\par
+\par
+\ul\b\fs36 border\par
+\ulnone\b0\fs22 a propriedade border em CSS \'e9 uma das mais usadas e serve para criar bordas ao redor de elementos (caixas, imagens, bot\'f5es, se\'e7\'f5es, etc.).\par
+Ela \'e9 super vers\'e1til e pode definir espessura, estilo, cor, arredondamento e at\'e9 imagens como borda.\par
+Vamos ver tudo de forma organizada \f1\u-10179?\u-9145?\f0\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 1\u-497?\f4\u8419?\f0  Propriedade b\'e1sica border\ulnone\b0\par
+A forma mais comum \'e9 o atalho (shorthand):\par
+border: 2px solid red;\par
+\b\f3\u-10179?\u-9143?\f2  \f0 Isso significa:\b0\par
+2px \f6\u8594?\f2  \f0 espessura da borda\par
+solid \f6\u8594?\f2  \f0 estilo da linha\par
+red \f6\u8594?\f2  \f0 cor da borda\par
+\par
+\b\f1\u-10179?\u-9055?\f2  \f0\'c9 o mesmo que:\par
+\b0\par
+border-width: 2px;\par
+border-style: solid;\par
+border-color: red;\par
+\par
+\ul\b\f1\u-10180?\u-8280?\f2   \f0 Partes individuais da borda\par
+\ulnone\b0\par
+Voc\'ea pode definir cada lado separadamente:\par
+\par
+border-top: 2px solid blue;\par
+border-right: 3px dashed green;\par
+border-bottom: 1px dotted black;\par
+border-left: 4px double purple;\par
+\par
+Ou controlar s\'f3 um aspecto (por exemplo, apenas a cor ou a espessura):\par
+border-color: red green blue yellow; /* topo, direita, baixo, esquerda */\par
+border-width: 1px 2px 3px 4px;\par
+\par
+\ul\b\f1\u-10178?\u-8727?\f2  \f0 Estilos de borda (border-style)\par
+\ulnone\b0 Valor\tab Exemplo\tab Descri\'e7\'e3o\par
+none\tab\f4\u10060?\f0\tab Sem borda\par
+solid\tab\f2\u8213?\f0\tab Linha cont\'ednua\par
+dashed\tab - - -\tab Linha tracejada\par
+dotted\tab\f2\bullet\bullet\bullet\f0\tab Pontilhada\par
+double\tab\f4\u9552?\f0\tab Linha dupla\par
+groove\tab\f4\u9619?\f0\tab Efeito 3D \f4\ldblquote\f0 entalhado\f4\rdblquote\f0\par
+ridge\tab\f4\u9618?\f0\tab Efeito 3D \f4\ldblquote\f0 elevado\f4\rdblquote\f0\par
+inset\tab\f4\u9619?\f0\tab Apar\'eancia \f2\ldblquote\f0 para dentro\f2\rdblquote\f0\par
+outset\tab\f4\u9618?\f0\tab Apar\'eancia \f2\ldblquote\f0 para fora\f2\rdblquote\par
+\f0\par
+\ul\b Arredondar bordas (border-radius)\ulnone\b0\par
+Serve para criar bordas curvas ou circulares.\par
+border-radius: 10px; /* cantos levemente arredondados */\par
+\par
+\par
+\ul\b\f3\u-10179?\u-9055?\f2  \f0 Exemplos:\ulnone\b0\par
+border-radius: 50%; /* forma um c\'edrculo */\par
+border-radius: 10px 0 10px 0; /* controla cada canto */\par
+\par
+\ul\b\f2  \f0 Bordas com imagens (border-image)\ulnone\b0\par
+Permite usar uma imagem como borda:\par
+border: 10px solid transparent;\par
+border-image: url(borda.png) 30 stretch;\par
+\par
+\ul\b\f1\u9881?\u-497?\f2  \f0 Controle de cada aspecto separadamente\par
+\ulnone\b0 Propriedade\tab Fun\'e7\'e3o\par
+border-width\tab Define a espessura\par
+border-style\tab Define o estilo da linha\par
+border-color\tab Define a cor\par
+border-radius\tab Arredonda os cantos\par
+border-image\tab Usa uma imagem como borda\par
+\par
+\f3\u-10179?\u-9055?\f2  \f0 Exemplo completo\par
+div \{\par
+  border: 4px double #3498db;\par
+  border-radius: 12px;\par
+  padding: 20px;\par
+  width: 200px;\par
+  text-align: center;\par
+  background-color: #f0f8ff;\par
+\}\par
+\par
+\ul\b\f1\u-10178?\u-8736?\f2  \f0 Dica pr\'e1tica\ulnone\b0\par
+Para ver facilmente os limites dos elementos durante o desenvolvimento, muitos devs usam:\par
+* \{\par
+  border: 1px solid red;\par
+\}\par
+\f1\u10145?\u-497? \f0 Isso ajuda a visualizar o box model e o espa\'e7amento entre elementos.\lang22\par
 \par
 \par
 \par
