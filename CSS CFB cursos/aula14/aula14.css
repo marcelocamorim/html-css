@@ -1,0 +1,15 @@
+body{
+    margin: 0px;
+}
+
+div{
+    border: 1px solid black;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+#dv1{
+    
+    padding: 100px;
+}
