@@ -1,4 +1,4 @@
-{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Emoji;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Symbol;}{\f4\fnil\fcharset1 Segoe UI Symbol;}{\f5\fnil Segoe UI Emoji;}{\f6\fnil\fcharset1 Cambria Math;}{\f7\fnil Segoe UI Symbol;}}
+{\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Emoji;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Symbol;}{\f4\fnil\fcharset1 Segoe UI Symbol;}{\f5\fnil Segoe UI Emoji;}{\f6\fnil\fcharset1 Cambria Math;}{\f7\fnil Cambria Math;}{\f8\fnil Segoe UI Symbol;}}
 {\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont6\mwrapIndent1440 }\viewkind4\uc1 
 \pard\sa200\sl276\slmult1\b\f0\fs22\lang22 text-align: center;   centralizar textos\par
 margin: auto; centralizar objetos \par
@@ -352,12 +352,12 @@ border-width: 1px 2px 3px 4px;\par
 \ul\b\f1\u-10178?\u-8727?\f2  \f0 Estilos de borda (border-style)\par
 \ulnone\b0 Valor\tab Exemplo\tab Descri\'e7\'e3o\par
 none\tab\f4\u10060?\f0\tab Sem borda\par
-solid\tab\f6\u8213?\f0\tab Linha cont\'ednua\par
+solid\tab\f7\u8213?\f0\tab Linha cont\'ednua\par
 dashed\tab - - -\tab Linha tracejada\par
 dotted\tab\f2\bullet\bullet\bullet\f0\tab Pontilhada\par
 double\tab\f4\u9552?\f0\tab Linha dupla\par
-groove\tab\f4\u9619?\f0\tab Efeito 3D \f7\ldblquote\f0 entalhado\f7\rdblquote\f0\par
-ridge\tab\f4\u9618?\f0\tab Efeito 3D \f7\ldblquote\f0 elevado\f7\rdblquote\f0\par
+groove\tab\f4\u9619?\f0\tab Efeito 3D \f8\ldblquote\f0 entalhado\f8\rdblquote\f0\par
+ridge\tab\f4\u9618?\f0\tab Efeito 3D \f8\ldblquote\f0 elevado\f8\rdblquote\f0\par
 inset\tab\f4\u9619?\f0\tab Apar\'eancia \f2\ldblquote\f0 para dentro\f2\rdblquote\f0\par
 outset\tab\f4\u9618?\f0\tab Apar\'eancia \f2\ldblquote\f0 para fora\f2\rdblquote\par
 \f0\par
@@ -398,7 +398,98 @@ Para ver facilmente os limites dos elementos durante o desenvolvimento, muitos d
 * \{\par
   border: 1px solid red;\par
 \}\par
-\f1\u10145?\u-497?\f5  \f0 Isso ajuda a visualizar o box model e o espa\'e7amento entre elementos.\lang22\par
+\f1\u10145?\u-497?\f5  \f0 Isso ajuda a visualizar o box model e o espa\'e7amento entre elementos.\par
+\par
+\ul\b\fs36\lang1046 gradient\par
+\ulnone\b0\fs22 O gradient (degrad\'ea) cria transi\'e7\'f5es suaves entre duas ou mais cores, sem precisar usar imagens.\par
+Ele \'e9 definido pela fun\'e7\'e3o gradient(), geralmente em conjunto com background ou background-image.\par
+\par
+Vamos ver todos os tipos e formas de uso \f1\u-10179?\u-9145?\f0\par
+\par
+\ul\b\f1\u-10180?\u-8440?\f2  \f0 1\u-497?\f4\u8419?\f0  Tipos principais de gradientes\par
+\ulnone\b0\par
+Existem tr\'eas tipos principais de gradiente em CSS:\par
+\par
+Tipo\tab Fun\'e7\'e3o\tab Descri\'e7\'e3o\par
+linear-gradient()\tab\f3\u-10179?\u-8959?\f2  \f0 Linear\tab Cores que mudam em linha reta\par
+radial-gradient()\tab\f3\u-10180?\u-8273?\f2  \f0 Radial\tab Cores que se espalham em c\'edrculo ou elipse\par
+conic-gradient()\tab\f3\u-10180?\u-8448?\f2  \f0 C\'f4nico\tab Cores que giram em torno de um ponto central\par
+\par
+\ul\b\f3\u-10180?\u-8280?\f2  \f0 2\u-497?\f4\u8419?\f0  Linear Gradient\ulnone\b0\par
+Transi\'e7\'e3o de cores em linha reta \f6\emdash\f2  \f0 horizontal, vertical ou diagonal.\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Exemplo b\'e1sico:\par
+\b0 background: linear-gradient(red, blue);\par
+\f1\u10145?\u-497?\f2  \f0 Cria uma transi\'e7\'e3o de vermelho para azul, de cima para baixo (por padr\'e3o).\par
+\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Definindo dire\'e7\'e3o\b0\par
+Voc\'ea pode controlar a dire\'e7\'e3o com palavras-chave ou graus:\par
+background: linear-gradient(to right, red, yellow);  /* esquerda \f6\u8594?\f2  \f0 direita */\par
+background: linear-gradient(to bottom right, blue, green); /* diagonal */\par
+background: linear-gradient(45deg, purple, pink);  /* \'e2ngulo personalizado */\par
+\par
+\f1\u-10179?\u-9055?\f2  \f0 to right = 0\'b0, to bottom = 180\'b0, 45deg = diagonal.\par
+\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Mais de duas cores\par
+\b0 background: linear-gradient(to right, red, orange, yellow, green, blue);\par
+\f1\u10145?\u-497?\f2  \f0 Cria um arco-\'edris suave.\par
+\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Cores com paradas espec\'edficas\b0\par
+Voc\'ea pode definir em que ponto (%) cada cor aparece:\par
+background: linear-gradient(to right, red 0%, yellow 50%, green 100%);\par
+\par
+\ul\b\f1\u9728?\u-497?\f2  \f0 3\u-497?\f4\u8419?\f0  Radial Gradient\par
+\ulnone\b0\par
+Transi\'e7\'e3o circular (ou el\'edptica) de cores, a partir de um ponto central.\par
+background: radial-gradient(circle, yellow, red);\par
+\f1\u10145?\u-497?\f2  \f0 Um c\'edrculo amarelo que se transforma em vermelho.\par
+\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Formatos e posi\'e7\'e3o\par
+\b0 background: radial-gradient(ellipse at top left, blue, white);\par
+circle \f6\u8594?\f2  \f0 c\'edrculo\par
+ellipse \f2\u8594? \f0 elipse\par
+at top left \f2\u8594? \f0 define o ponto de origem do gradiente\par
+\par
+\ul\b\f1\u-10180?\u-8448?\f2  \f0 4\u-497?\f4\u8419?\f0  Conic Gradient\par
+\ulnone\b0\par
+Transi\'e7\'e3o circular, como se as cores girassem em torno do centro.\par
+background: conic-gradient(red, yellow, green, blue);\par
+\f1\u10145?\u-497?\f2  \f0 Parece uma roda de cores.\par
+\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Ponto inicial e \'e2ngulo\par
+\b0 background: conic-gradient(from 90deg at center, red, yellow, blue);\par
+\f1\u10145?\u-497?\f2  \f0 Come\'e7a a partir de 90\'b0, girando no sentido hor\'e1rio.\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 5\u-497?\f4\u8419?\f0  Repeating Gradients (repeti\'e7\'e3o)\ulnone\b0\par
+Voc\'ea pode criar padr\'f5es que se repetem com:\par
+repeating-linear-gradient()\par
+repeating-radial-gradient()\par
+repeating-conic-gradient()\par
+\par
+\ul\b Exemplo:\par
+\ulnone\b0 background: repeating-linear-gradient(\par
+  45deg,\par
+  red,\par
+  red 10px,\par
+  yellow 10px,\par
+  yellow 20px\par
+);\par
+\f1\u10145?\u-497?\f2  \f0 Cria linhas diagonais coloridas repetidas a cada 20px.\par
+\par
+\ul\b\f1\u-10179?\u-9055?\f2  \f0 6\u-497?\f4\u8419?\f0  Dica pr\'e1tica\ulnone\b0\par
+Os gradientes s\'e3o usados com background-image, mas voc\'ea pode simplificar:\par
+background: linear-gradient(to right, #3498db, #8e44ad);\par
+E tamb\'e9m d\'e1 pra combinar com imagens:\par
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('foto.jpg');\par
+background-size: cover;\par
+\par
+\f1\u10145?\u-497?\f2  \f0 Muito usado para escurecer imagens de fundo e destacar o texto.\par
+\par
+\ul\b\f1\u9881?\u-497?\f2  \f0 Resumo r\'e1pido\par
+\ulnone\b0 Tipo\tab Exemplo\tab Dire\'e7\'e3o\par
+linear-gradient()\tab linear-gradient(to right, red, blue)\tab Linha reta\par
+radial-gradient()\tab radial-gradient(circle, yellow, red)\tab Circular\par
+conic-gradient()\tab conic-gradient(red, yellow, blue)\tab Girando\par
+repeating-linear-gradient()\tab repeating-linear-gradient(45deg, red, yellow 20px)\tab Padr\'f5es repetidos\lang22\par
 \par
 \par
 \par
@@ -531,5 +622,8 @@ Quanto maior o n\'famero, mais \'e0 frente o elemento aparece.\par
   position: absolute;\par
   z-index: 5;\par
 \}\par
+\par
+\par
+\par
 }
  
