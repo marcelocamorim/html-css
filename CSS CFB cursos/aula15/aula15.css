@@ -1,0 +1,37 @@
+div {
+    width: 250px;
+    height: 250px;
+}
+h1{   
+    font-size: 40pt; 
+    background: linear-gradient(to right,rgb(255, 0, 255), rgb(0, 255, 0));
+    color: transparent;
+    background-clip: text;
+}
+
+#dv1 {
+
+    border: 1px solid black;
+    background: linear-gradient(to bottom, red, yellow, rgb(68, 0, 255));
+}
+
+#dv2 {
+    border: 1px solid black;
+    background: linear-gradient(to bottom, red 0%, yellow 70%, rgb(68, 0, 255)) 90%;
+}
+
+#dv3 {
+
+    border: 1px solid black;
+    background: radial-gradient( red, yellow);
+}
+#dv4 {
+
+    border: 1px solid black;
+    background: radial-gradient( red 0%, yellow 60%);
+}
+
+#dv5 {
+    border: 1px solid black;
+    background: repeating-linear-gradient(to right, blue 0%, pink 20%);
+}
