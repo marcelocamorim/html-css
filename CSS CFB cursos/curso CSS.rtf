@@ -544,6 +544,99 @@ Sombras de objetos \f6\u8594?\f2  \f0 desfoque grande + cor suave\par
 Sombras de interface (bot\'f5es, cart\'f5es) \f2\u8594? \f0 pequeno deslocamento + opacidade baixa\lang22\par
 \par
 \par
+\ul\b\fs36 Formata\'e7\'f5es de textos\ulnone\b0\fs22\par
+principais propriedades usadas para controlar fonte, alinhamento, espa\'e7amento, decora\'e7\'e3o, transforma\'e7\'e3o e altura de linha.\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 1. Cor e Fonte\par
+\ulnone\b0\f1\u-10180?\u-8280?\f2  \f0 Cor do texto\par
+color: #333;\par
+Define a cor do texto. Pode usar:\par
+Nome da cor \f6\u8594?\f2  \f0 red, blue, green\par
+Hexadecimal \f6\u8594?\f2  \f0 #ff0000\par
+RGB \f6\u8594?\f2  \f0 rgb(255, 0, 0)\par
+RGBA \f6\u8594?\f2  \f0 rgba(0, 0, 0, 0.7) (com transpar\'eancia)\par
+\par
+\ul\b\f1\u-10179?\u-8928?\f2  \f0 Tipo da fonte\par
+\ulnone\b0 font-family: "Arial", "Helvetica", sans-serif;\par
+Define qual fonte ser\'e1 usada.\par
+\'c9 comum usar uma lista de fallback (caso a primeira n\'e3o exista no computador).\par
+\par
+\ul\b\f1\u-10179?\u-8924?\f2  \f0 Tamanho da fonte\par
+\ulnone\b0 font-size: 16px;\par
+Pode usar:\par
+px \f6\u8594?\f2  \f0 tamanho fixo\par
+%, em, rem \f6\u8594?\f2  \f0 tamanhos relativos (melhor para responsividade)\par
+\par
+\ul\b\f1\u-10179?\u-9046?\f2  \f0 Peso da fonte\par
+\ulnone\b0 font-weight: bold;\par
+Valores:\par
+normal\par
+bold\par
+lighter\par
+bolder\par
+Ou n\'fameros: 100 (fina) \f6\u8594?\f2  \f0 900 (grossa)\par
+\par
+\ul\b\f1\u9997?\u-497? \f0 Estilo da fonte\par
+\ulnone\b0 font-style: italic;\par
+Outras op\'e7\'f5es: normal, oblique.\par
+\par
+\ul\b\f1\u-10179?\u-8924?\f2  \f0 Varia\'e7\'e3o completa da fonte (atalho)\par
+\ulnone\b0 font: italic bold 16px Arial;\par
+Atalho que combina v\'e1rias propriedades em uma linha.\par
+\par
+\ul\b\f1\u-10179?\u-9009?\f2  \f0 2. Alinhamento e Espa\'e7amento\par
+\ulnone\b0\f1\u8596?\u-497? \f0 Alinhamento do texto\par
+text-align: center;\par
+Valores:\par
+left\par
+right\par
+center\par
+justify (texto justificado)\par
+\par
+\ul\b\f1\u8597?\u-497? \f0 Espa\'e7amento entre linhas\par
+\ulnone\b0 line-height: 1.5;\par
+Controla o espa\'e7o vertical entre as linhas de texto.\par
+\par
+\ul\b\f1\u11013?\u-497? \f0 Recuo do par\'e1grafo\par
+\ulnone\b0 text-indent: 30px;\par
+Cria o avan\'e7o da primeira linha de um par\'e1grafo.\par
+\par
+\ul\b\f1\u-10179?\u-9009?\f2  \f0 Espa\'e7o entre letras e palavras\par
+\ulnone\b0 letter-spacing: 2px;\par
+word-spacing: 5px;\par
+Aumenta o espa\'e7amento horizontal entre letras ou palavras.\par
+\par
+\ul\b\f1\u-10180?\u-8280?\f2  \f0 3. Decora\'e7\'e3o e Transforma\'e7\'e3o\par
+\ulnone\b0\f4\u10024?\f2  \f0 Decora\'e7\'e3o do texto\par
+text-decoration: underline;\par
+\par
+Outros valores:\par
+none \f6\u8594?\f2  \f0 remove sublinhado\par
+overline\par
+line-through\par
+\par
+\ul\b\f1\u-10179?\u-8928?\f2  \f0 Transforma\'e7\'e3o de texto\par
+\ulnone\b0 text-transform: uppercase;\par
+Valores:\par
+uppercase \f6\u8594?\f2  \f0 tudo mai\'fasculo\par
+lowercase \f2\u8594? \f0 tudo min\'fasculo\par
+capitalize \f2\u8594? \f0 s\'f3 a primeira letra de cada palavra em mai\'fascula\par
+\par
+\ul\b\f1\u-10179?\u-8909?\f2  \f0 Sombra no texto\par
+\ulnone\b0 text-shadow: 2px 2px 4px rgba(0,0,0,0.5);\par
+Cria efeito de destaque ou brilho.\par
+\par
+\ul\b\f1\u-10178?\u-8727?\f2  \f0 4. Exemplo completo\par
+\ulnone\b0 p \{\par
+  color: #333;\par
+  font-family: "Verdana", sans-serif;\par
+  font-size: 18px;\par
+  font-weight: 400;\par
+  text-align: justify;\par
+  line-height: 1.6;\par
+  letter-spacing: 0.5px;\par
+  text-indent: 30px;\par
+\}\lang22\par
 \par
 \par
 \par
