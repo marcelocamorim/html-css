@@ -1,0 +1,38 @@
+p{
+    text-indent: 30px;/*paragrafo*/
+    letter-spacing: 1px ;/*espasso das letras*/
+    word-spacing: 5px;/*espasso das palavras*/
+    line-height: 1.5; /*espasso entre linhas*/
+    direction: ltr; /*direção do texto*/
+}
+
+.p1{
+    color: red;/*cor*/
+    text-align: left;/*alinhamento do texto*/
+    text-decoration: none;/*decoração*/
+    text-transform: uppercase;/*tranformação*/
+}
+
+.p2{
+    color: green;
+    text-align: right;
+    text-decoration: underline;
+    text-transform: lowercase;
+}
+
+.p3{
+    color: blue;
+    text-align: center;
+    text-decoration: overline;
+    text-transform: capitalize;
+}
+
+.p4{
+    text-align: justify;
+    text-decoration: line-through;
+    text-indent: 20px;
+}
+
+a{
+    text-decoration: none;
+}
