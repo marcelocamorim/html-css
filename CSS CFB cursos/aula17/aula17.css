@@ -1,9 +1,18 @@
+div{
+    width: 350px;
+    height: 150px;
+    border: 1px solid black;
+    overflow: scroll; /* comportamento do conteudo que excede o espasso*/
+    word-break: break-all; /*quebra de palavra*/
+}
+
 p{
     text-indent: 30px;/*paragrafo*/
     letter-spacing: 1px ;/*espasso das letras*/
     word-spacing: 5px;/*espasso das palavras*/
     line-height: 1.5; /*espasso entre linhas*/
     direction: ltr; /*direção do texto*/
+    text-align-last: center; /* alinha apenas a ultima linha do texto*/
 }
 
 .p1{
