@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;    
+    background-color: blue;
+    padding: 5px;
+    border-radius: 15px;
+    display: table-cell;
+}
+
+a:hover{
+    color: rgb(0, 0, 0);
+    background-color: turquoise;
+
+}
