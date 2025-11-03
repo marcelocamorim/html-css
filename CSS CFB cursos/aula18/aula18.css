@@ -1,0 +1,16 @@
+
+/*
+@font-face{
+    font-family: teste;
+    src: url(Death\ Bones.ttf);
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
+p{
+    font-family: "Momo Signature", cursive;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 20px;
+    font-variant: small-caps;
+}
