@@ -1,5 +1,5 @@
 {\rtf1\fbidis\ansi\ansicpg1252\deff0\nouicompat\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Segoe UI Emoji;}{\f2\fnil Calibri;}{\f3\fnil\fcharset1 Segoe UI Symbol;}{\f4\fnil\fcharset1 Segoe UI Symbol;}{\f5\fnil Segoe UI Emoji;}{\f6\fnil\fcharset1 Cambria Math;}{\f7\fnil Cambria Math;}{\f8\fnil Segoe UI Symbol;}{\f9\fnil\fcharset1 Segoe UI Emoji;}{\f10\fnil\fcharset0 Cambria Math;}}
-{\colortbl ;\red255\green0\blue0;}
+{\colortbl ;\red0\green0\blue255;\red255\green0\blue0;}
 {\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont6\mwrapIndent1440 }\viewkind4\uc1 
 \pard\sa200\sl276\slmult1\b\f0\fs22\lang22 text-align: center;   centralizar textos\par
 margin: auto; centralizar objetos \par
@@ -663,11 +663,11 @@ Define o tamanho da fonte.\par
 font-size: 16px;\par
 \b Unidades mais usadas:\b0\par
 px \f6\u8594?\f2  \f0 valor fixo (n\'e3o muda com o tamanho da tela)\par
-em \f2\u8594? \f0 relativo ao tamanho da fonte do elemento pai\par
+em \f6\u8594?\f2  \f0 relativo ao tamanho da fonte do elemento pai\par
 (ex: 2em = 2\'d7 o tamanho do pai)\par
-rem \f2\u8594? \f0 relativo \'e0 fonte do elemento raiz (html)\par
-% \f2\u8594? \f0 relativo ao tamanho herdado\par
-vw, vh \f2\u8594? \f0 relativo ao tamanho da janela (viewport)\par
+rem \f6\u8594?\f2  \f0 relativo \'e0 fonte do elemento raiz (html)\par
+% \f6\u8594?\f2  \f0 relativo ao tamanho herdado\par
+vw, vh \f6\u8594?\f2  \f0 relativo ao tamanho da janela (viewport)\par
 \par
 \b\f1\u-10179?\u-9055?\f2  \f0 Exemplo responsivo:\b0\par
 font-size: 2vw; /* 2% da largura da janela */\par
@@ -685,7 +685,7 @@ Ou num\'e9ricos: 100 (fina) \f6\u8594?\f2  \f0 900 (grossa)\par
 \b\f1\u-10179?\u-9055?\f2  \f0 Exemplo:\b0\par
 font-weight: 700;\par
 \par
-\ul\b\f1\u9997?\u-497? \f0 4. font-style\par
+\ul\b\f1\u9997?\u-497?\f5  \f0 4. font-style\par
 \ulnone\b0 Define o estilo da fonte.\par
 font-style: italic;\par
 \b Outros valores:\b0\par
@@ -717,7 +717,7 @@ font-family: "Verdana", sans-serif;\par
 \ul\b\f1\u-10180?\u-8432?\f2  \f0 8. Usando fontes externas (Google Fonts)\ulnone\b0\par
 Voc\'ea pode importar fontes personalizadas:\par
 \b na tag head do HTML coloque o link\par
-\b0 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">\par
+\b0 <link href="{{\field{\*\fldinst{HYPERLINK https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap }}{\fldrslt{https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap\ul0\cf0}}}}\f0\fs22 " rel="stylesheet">\par
 \par
 \b E no CSS:\b0\par
 body \{\par
@@ -725,7 +725,7 @@ body \{\par
 \}\par
 \par
 \b ou com o @importe coloque direto no CSS\par
-\b0 @import\f10  \f0 url\f10 (\f0 'https\f10 ://\f0 fonts\f10 .\f0 googleapis\f10 .\f0 com\f10 /\f0 css2\f10 ?\f0 family\f10 =\f0 Momo\f10 +\f0 Signature\f10 &\f0 display\f10 =\f0 swap'\f10 );\par
+\b0 @import\f10  \f0 url\f10 (\f0 '{{\field{\*\fldinst{HYPERLINK https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap }}{\fldrslt{https\f10 ://\f0 fonts\f10 .\f0 googleapis\f10 .\f0 com\f10 /\f0 css2\f10 ?\f0 family\f10 =\f0 Momo\f10 +\f0 Signature\f10 &\f0 display\f10 =\f0 swap\ul0\cf0}}}}\f0\fs22 '\f10 );\par
 \f0\par
 p\f10\{\f0\par
 \f10     \f0 font\f10 -\f0 family\f10 : \f0 "Momo\f10  \f0 Signature"\f10 , \f0 cursive\f10 ;\f0\par
@@ -743,11 +743,11 @@ use: @font-face para configurar a fonte\par
 3-coloque o mesmo nome no font-family dos seletores css\par
 \ul\b exemplo\ulnone\b0\par
 @font\f10 -\f0 face\f10\{\f0\par
-\f10     \f0 font\f10 -\f0 family\cf1\f10 : \f0 teste\f10 ;\f0\par
+\f10     \f0 font\f10 -\f0 family\cf2\f10 : \f0 teste\f10 ;\f0\par
 \cf0\f10     \f0 src\f10 : \f0 url\f10 (\f0 Death\f10\\ \f0 Bones\f10 .\f0 ttf\f10 );\f0\par
 \f10\}\par
 p\{\par
-    font-family: \cf1 teste;\par
+    font-family: \cf2 teste;\par
 \cf0     font-style: italic;\par
     font-weight: lighter;\par
     font-size: 20px;\par
@@ -757,8 +757,89 @@ p\{\par
 \ul\b\f1\u-10178?\u-8736?\f2  \f0 Dica pr\'e1tica\ulnone\b0\par
 Use no m\'e1ximo 2 ou 3 fam\'edlias diferentes em um site.\par
 Combine uma fonte de t\'edtulo (forte e chamativa) e uma fonte de texto (simples e leg\'edvel).\par
-Evite usar apenas px \f2\emdash  \f0 prefira rem ou % para textos responsivos.\lang22\par
+Evite usar apenas px \f2\emdash  \f0 prefira rem ou % para textos responsivos.\par
 \par
+\par
+\ul\b\fs36 Transforma\'e7\'f5es\f10  \f0 2D\par
+\ulnone\b0\fs22 o tema transforma\'e7\'f5es 2D em CSS \'e9 fundamental para criar efeitos visuais modernos como rota\'e7\'f5es, inclina\'e7\'f5es e redimensionamentos sem precisar de imagens ou anima\'e7\'f5es complexas.\par
+Essas transforma\'e7\'f5es s\'e3o feitas com a propriedade transform e atuam diretamente sobre o elemento (caixa), alterando sua posi\'e7\'e3o, tamanho ou forma no plano 2D (horizontal e vertical).\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 1. Sintaxe b\'e1sica\par
+\ulnone\b0 transform: fun\'e7\'e3o(valor);\par
+Voc\'ea pode usar v\'e1rias fun\'e7\'f5es ao mesmo tempo:\par
+transform: rotate(45deg) scale(1.5) translateX(50px);\par
+\par
+\ul\b\f1\u-10178?\u-8727?\f2  \f0 2. Principais fun\'e7\'f5es 2D\par
+\ulnone\b0\f1\u-10179?\u-8903?\f2  \f0 translate(x, y)\par
+Move o elemento no eixo X (horizontal) e Y (vertical).\par
+transform: translate(50px, 100px);\par
+\f1\u10145?\u-497?\f2  \f0 Move o elemento 50px para a direita e 100px para baixo.\par
+translateX(50px) \f2\u8594? \f0 s\'f3 no eixo X\par
+translateY(-20px) \f2\u8594? \f0 s\'f3 no eixo Y (valor negativo sobe)\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 scale(x, y)\ulnone\b0\par
+Aumenta ou reduz o tamanho do elemento.\par
+transform: scale(1.5, 2);\par
+\par
+\f1\u10145?\u-497?\f2  \f0 Largura \'d71.5 e altura \'d72\par
+scale(2) \f6\u8594?\f2  \f0 dobra o tamanho\par
+scale(0.5) \f6\u8594?\f2  \f0 reduz pela metade\par
+scaleX(2) / scaleY(2) \f6\u8594?\f2  \f0 escala apenas um eixo\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 rotate(\'e2ngulo)\ulnone\b0\par
+Gira o elemento em torno do seu centro.\par
+transform: rotate(45deg);\par
+\f1\u10145?\u-497?\f2  \f0 Gira 45\'b0 no sentido hor\'e1rio\par
+Use valores negativos para girar no sentido anti-hor\'e1rio:\par
+transform: rotate(-45deg);\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 skew(x, y)\ulnone\b0\par
+Inclina (distorce) o elemento em torno dos eixos X e Y.\par
+transform: skew(20deg, 10deg);\par
+\f1\u10145?\u-497?\f2  \f0 Inclina 20\'b0 na horizontal e 10\'b0 na vertical\par
+skewX(20deg)\par
+skewY(15deg)\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 matrix(a, b, c, d, e, f)\ulnone\b0\par
+Combina v\'e1rias transforma\'e7\'f5es em uma \'fanica linha (usada mais em casos avan\'e7ados).\par
+transform: matrix(1, 0.3, 0.5, 1, 50, 0);\par
+\f1\u10145?\u-497?\f2  \f0 Combina rota\'e7\'e3o, inclina\'e7\'e3o e transla\'e7\'e3o.\par
+\par
+\ul\b\f1\u-10179?\u-9055?\f2  \f0 3. Transforma\'e7\'f5es combinadas\ulnone\b0\par
+Voc\'ea pode aplicar v\'e1rias transforma\'e7\'f5es de uma vez:\par
+transform: translateX(50px) rotate(30deg) scale(1.2);\par
+\b\f1\u9888?\u-497?\f2  \f0 A ordem importa!\par
+\b0 Primeiro o navegador aplica o translate, depois o rotate, depois o scale.\par
+\par
+\ul\b\f1\u-10180?\u-8273?\f2  \f0 4. Ponto de origem da transforma\'e7\'e3o\ulnone\b0\par
+Por padr\'e3o, o elemento gira ou escala a partir do centro,\par
+mas voc\'ea pode mudar isso com transform-origin.\par
+transform-origin: top left;\par
+transform: rotate(45deg);\par
+\b\f1\u10145?\u-497?\f2  \f0 Agora o giro ocorre a partir do canto superior esquerdo.\b0\par
+Voc\'ea tamb\'e9m pode usar valores:\par
+transform-origin: 25% 75%;\par
+\par
+\ul\b\f4\u10024?\f2  \f0 5. Exemplo pr\'e1tico\par
+\ulnone\b0 <div class="box">Box</div>\par
+\par
+.box \{\par
+  width: 150px;\par
+  height: 150px;\par
+  background: #4CAF50;\par
+  color: white;\par
+  display: flex;\par
+  align-items: center;\par
+  justify-content: center;\par
+  font-size: 20px;\par
+  transition: transform 0.4s;\par
+\}\par
+\par
+.box:hover \{\par
+  transform: rotate(15deg) scale(1.2);\par
+\}\par
+\b\f1\u10145?\u-497?\f2  \f0 Ao passar o mouse, o quadrado gira e aumenta de tamanho com suavidade.\lang22\par
+\b0\par
 \par
 \par
 \par
