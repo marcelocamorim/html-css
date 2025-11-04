@@ -842,6 +842,105 @@ transform-origin: 25% 75%;\par
 \b0\par
 \par
 \par
+transforma\'e7\'f5es 3D em CSS, que s\'e3o uma evolu\'e7\'e3o das 2D e permitem criar profundidade, perspectiva e efeitos realistas.\par
+Essas transforma\'e7\'f5es tamb\'e9m usam a propriedade transform, mas adicionam o eixo Z (profundidade), al\'e9m dos eixos X (horizontal) e Y (vertical).\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 1. Ativando o modo 3D\ulnone\b0\par
+Para o navegador entender transforma\'e7\'f5es em 3D, o elemento precisa de perspectiva, que \'e9 a sensa\'e7\'e3o de profundidade.\par
+Isso \'e9 feito com a propriedade:\par
+\b perspective: 600px;\par
+\b0\par
+\b Geralmente aplicada no elemento pai:\b0\par
+.container \{\par
+  perspective: 600px;\par
+\}\par
+\par
+\ul\b\f1\u-10178?\u-8727?\f2  \f0 2. Principais fun\'e7\'f5es 3D\par
+\ulnone\b0\f1\u-10179?\u-8903?\f2  \f0 translate3d(x, y, z)\par
+Move o elemento nos tr\'eas eixos:\par
+transform: translate3d(50px, 20px, 100px);\par
+X: move para os lados\par
+Y: move para cima/baixo\par
+Z: move para frente (positivo) ou para tr\'e1s (negativo)\par
+\par
+Tamb\'e9m pode usar individualmente:\par
+\par
+translateX(50px);\par
+translateY(20px);\par
+translateZ(100px);\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 rotateX(\'e2ngulo)\ulnone\b0\par
+Gira o elemento em torno do eixo horizontal (X):\par
+transform: rotateX(45deg);\par
+\f1\u10145?\u-497? \f0 Parece que ele est\'e1 virando \f2\ldblquote\f0 para cima\f2\rdblquote  \f0 ou \f2\ldblquote\f0 para baixo\f2\rdblquote\f0 .\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 rotateY(\'e2ngulo)\ulnone\b0\par
+Gira o elemento em torno do eixo vertical (Y):\par
+transform: rotateY(60deg);\par
+\f1\u10145?\u-497? \f0 Faz o elemento girar \f1\ldblquote\f0 de lado\f1\rdblquote\f0 .\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 rotateZ(\'e2ngulo)\ulnone\b0\par
+Gira o elemento no plano (igual ao rotate() 2D):\par
+transform: rotateZ(30deg);\par
+\f1\u-10179?\u-8903?\f2  \f0 rotate3d(x, y, z, \'e2ngulo)\par
+Gira em torno de um eixo personalizado no espa\'e7o 3D.\par
+transform: rotate3d(1, 1, 0, 45deg);\par
+\f1\u10145?\u-497? \f0 Gira 45\'b0 em torno de um eixo diagonal entre X e Y.\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 scale3d(x, y, z)\ulnone\b0\par
+Altera o tamanho em 3 dimens\'f5es:\par
+transform: scale3d(1.5, 1.5, 1);\par
+Tamb\'e9m pode usar individualmente:\par
+\par
+scaleX(1.2);\par
+scaleY(0.8);\par
+scaleZ(2);\par
+\par
+\ul\b\f1\u-10180?\u-8432?\f2  \f0 3. transform-style: preserve-3d\par
+\ulnone\b0\par
+Por padr\'e3o, os elementos filhos n\'e3o mant\'eam a profundidade.\par
+Para isso, no elemento pai:\par
+transform-style: preserve-3d;\par
+Isso faz com que as transforma\'e7\'f5es 3D dos elementos filhos sejam vis\'edveis.\par
+\par
+\ul\b\f1\u-10180?\u-8273?\f2  \f0 4. perspective-origin\ulnone\b0\par
+Define de onde o observador \f1\ldblquote\f0 olha\f1\rdblquote\f2  \f0 o objeto (ponto de fuga).\par
+perspective-origin: left top;\par
+Outros exemplos:\par
+center center (padr\'e3o)\par
+right bottom\par
+50% 0% (valores personalizados)\par
+\par
+\ul\b\f1\u-10179?\u-9055?\f2  \f0 5. Exemplo pr\'e1tico: rota\'e7\'e3o 3D em um cart\'e3o\par
+\ulnone\b0 <div class="container">\par
+  <div class="card">CSS 3D</div>\par
+</div>\par
+\par
+.container \{\par
+  perspective: 600px;\par
+\}\par
+\par
+.card \{\par
+  width: 200px;\par
+  height: 200px;\par
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);\par
+  color: white;\par
+  display: flex;\par
+  align-items: center;\par
+  justify-content: center;\par
+  font-size: 24px;\par
+  border-radius: 10px;\par
+  transition: transform 0.8s;\par
+  transform-style: preserve-3d;\par
+\}\par
+\par
+.card:hover \{\par
+  transform: rotateY(180deg);\par
+\}\par
+\b\f1\u10145?\u-497? \f0 Ao passar o mouse, o cart\'e3o gira como se estivesse virando no espa\'e7o.\b0\par
+\f4\u10024?\f2  \f0 6. Dica avan\'e7ada \f2\emdash  \f0 efeito de flip card (frente e verso)\par
+Voc\'ea pode criar dois lados e alternar entre eles com rota\'e7\'e3o em Y, simulando um cart\'e3o virando.\par
+\par
 \par
 \par
 \par
