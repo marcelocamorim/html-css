@@ -1,0 +1,31 @@
+ol{
+    /*list-style-image: url(img-list.png);  adiciona imagem ao marcadoor da lista*/
+    /*list-style-position: inside; - define a posição do marcador*/
+    /*list-style-type: square; - define o estilo do marcador*/
+    
+    list-style: none outside ;
+    padding: 0px;
+}
+
+body{
+    
+}
+
+li{
+   width: 200px;
+   height: 40px;
+   background-color: #721b1b;
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+   border-right: 1px solid white;
+}
+
+li:hover{
+    background-color: #f03a3a;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
