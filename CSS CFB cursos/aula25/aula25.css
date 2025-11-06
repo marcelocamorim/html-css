@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+div{
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    
+}
+
+#d1{
+    border: 25px solid black; 
+       
+}
+
+#d2{
+    width: 400px;
+    height: 400px;
+    outline: 20px solid aqua;
+    margin: 0px;
+}
