@@ -1,0 +1,27 @@
+table, td, th{
+    border: 1px solid black;
+}
+
+table{
+    width: 500px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    /*border-spacing: 10px 50px;*/
+    empty-cells: show;
+
+}
+
+td, th{
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+th{
+    background-color: rgb(31, 61, 1);
+    color: azure;
+}
+
+tr:nth-child(even){
+    background-color: rgba(44, 109, 100, 0.562);
+}
