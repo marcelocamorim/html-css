@@ -981,12 +981,12 @@ Define o tipo de marcador usado na lista.\par
   list-style-type: upper-roman; /* I, II, III... */\par
 \}\par
 \par
-\b\f1\u-10179?\u-8772?\u-497? \f0 3. list-style-image\b0\par
+\b\f1\u-10179?\u-8772?\u-497?\f5  \f0 3. list-style-image\b0\par
 Troca o marcador padr\'e3o por uma imagem personalizada:\par
 ul \{\par
   list-style-image: url("icone.png");\par
 \}\par
-\f1\u9888?\u-497? \f0 A imagem \'e9 posicionada onde normalmente ficaria a bolinha.\par
+\f1\u9888?\u-497?\f5  \f0 A imagem \'e9 posicionada onde normalmente ficaria a bolinha.\par
 \par
 \b\f1\u-10178?\u-8727?\f2  \f0 4. list-style-position\b0\par
 Controla onde o marcador aparece em rela\'e7\'e3o ao texto:\par
@@ -1002,7 +1002,7 @@ inside \f6\u8594?\f2  \f0 marcador fica dentro da \'e1rea de texto\par
   list-style-position: inside;\par
 \}\par
 \par
-\ul\b\f1\u9881?\u-497? \f0 5. list-style (atalho)\ulnone\b0\par
+\ul\b\f1\u9881?\u-497?\f5  \f0 5. list-style (atalho)\ulnone\b0\par
 Voc\'ea pode definir tudo em uma s\'f3 linha:\par
 \par
 ul \{\par
@@ -1010,7 +1010,7 @@ ul \{\par
 \}\par
 \par
 \par
-\b\f1\u10145?\u-497? \f0 Mesmo que:\b0\par
+\b\f1\u10145?\u-497?\f5  \f0 Mesmo que:\b0\par
 list-style-type: square;\par
 list-style-position: inside;\par
 \par
@@ -1052,7 +1052,7 @@ li \{\par
   left: -25px;\par
   top: 8px;\par
 \}\par
-\ul\b\f1\u10145?\u-497? \f0 Cria uma lista com \'edcones personalizados usando apenas CSS.\par
+\ul\b\f1\u10145?\u-497?\f5  \f0 Cria uma lista com \'edcones personalizados usando apenas CSS.\par
 \ulnone\b0\par
 \ul\b\f1\u-10179?\u-9055?\f2  \f0 Dicas r\'e1pidas\ulnone\b0\par
 Use list-style: none; para menus de navega\'e7\'e3o (quando vai estilizar com \'edcones ou links).\par
@@ -1082,6 +1082,45 @@ tr:nth-child(even)\{\par
 \}\par
 \par
 \par
+\ul\b\fs36 outline\ulnone\b0\fs22\par
+\b\f1\u-10180?\u-8273?\f2  \f0 O que \'e9 o outline\par
+\b0\par
+A propriedade outline desenha uma linha ao redor do elemento, por fora da borda.\par
+Ela n\'e3o ocupa espa\'e7o no layout (diferente da border, que empurra os elementos ao redor).\par
+\par
+\b\f1\u-10178?\u-8727?\f2  \f0 Sintaxe\par
+\b0 outline: [largura] [estilo] [cor];\par
+\b Exemplo:\par
+\b0 button \{\par
+  outline: 2px solid red;\par
+\}\par
+\par
+\b\f1\u-10179?\u-8947?\f2  \f0 Diferen\'e7a entre border e outline\par
+\b0 Caracter\'edstica\tab border\tab outline\par
+Posi\'e7\'e3o\tab Fica dentro da \'e1rea do elemento\tab Fica fora, sem afetar o tamanho\par
+Espa\'e7o ocupado\tab Sim, afeta o layout\tab N\'e3o, \'e9 apenas visual\par
+Arredondamento (border-radius)\tab Funciona\tab N\'e3o funciona\par
+Usado para\tab Estilizar o elemento\tab Destaque visual (ex: foco)\par
+\par
+\b\f4\u10024?\f2  \f0 Exemplo pr\'e1tico\par
+\b0 <input type="text" placeholder="Digite algo">\par
+\par
+input \{\par
+  border: 1px solid #ccc;\par
+  padding: 8px;\par
+\}\par
+\par
+input:focus \{\par
+  outline: 3px solid #4CAF50; /* Aparece quando o campo est\'e1 em foco */\par
+\}\par
+\par
+\b\f3\u-10179?\u-8904?\f2  \f0 Muito usado para acessibilidade, pois ajuda o usu\'e1rio a saber qual campo est\'e1 ativo.\b0\par
+\b\f3\u-10180?\u-8280?\f2  \f0 Propriedades individuais do outline\par
+\b0 Propriedade\tab Descri\'e7\'e3o\tab Exemplo\par
+outline-width\tab Largura da linha\tab outline-width: 3px;\par
+outline-style\tab Estilo da linha (solid, dashed, dotted, double, etc.)\tab outline-style: dashed;\par
+outline-color\tab Cor da linha\tab outline-color: blue;\par
+outline-offset\tab Espa\'e7o entre o outline e o elemento\tab outline-offset: 4px;\par
 \par
 \par
 \par
