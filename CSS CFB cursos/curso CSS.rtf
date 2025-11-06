@@ -774,8 +774,8 @@ transform: rotate(45deg) scale(1.5) translateX(50px);\par
 Move o elemento no eixo X (horizontal) e Y (vertical).\par
 transform: translate(50px, 100px);\par
 \f1\u10145?\u-497?\f2  \f0 Move o elemento 50px para a direita e 100px para baixo.\par
-translateX(50px) \f2\u8594? \f0 s\'f3 no eixo X\par
-translateY(-20px) \f2\u8594? \f0 s\'f3 no eixo Y (valor negativo sobe)\par
+translateX(50px) \f6\u8594?\f2  \f0 s\'f3 no eixo X\par
+translateY(-20px) \f6\u8594?\f2  \f0 s\'f3 no eixo Y (valor negativo sobe)\par
 \par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 scale(x, y)\ulnone\b0\par
 Aumenta ou reduz o tamanho do elemento.\par
@@ -872,12 +872,12 @@ translateZ(100px);\par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 rotateX(\'e2ngulo)\ulnone\b0\par
 Gira o elemento em torno do eixo horizontal (X):\par
 transform: rotateX(45deg);\par
-\f1\u10145?\u-497? \f0 Parece que ele est\'e1 virando \f2\ldblquote\f0 para cima\f2\rdblquote  \f0 ou \f2\ldblquote\f0 para baixo\f2\rdblquote\f0 .\par
+\f1\u10145?\u-497?\f5  \f0 Parece que ele est\'e1 virando \f2\ldblquote\f0 para cima\f2\rdblquote  \f0 ou \f2\ldblquote\f0 para baixo\f2\rdblquote\f0 .\par
 \par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 rotateY(\'e2ngulo)\ulnone\b0\par
 Gira o elemento em torno do eixo vertical (Y):\par
 transform: rotateY(60deg);\par
-\f1\u10145?\u-497? \f0 Faz o elemento girar \f1\ldblquote\f0 de lado\f1\rdblquote\f0 .\par
+\f1\u10145?\u-497?\f5  \f0 Faz o elemento girar \f5\ldblquote\f0 de lado\f5\rdblquote\f0 .\par
 \par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 rotateZ(\'e2ngulo)\ulnone\b0\par
 Gira o elemento no plano (igual ao rotate() 2D):\par
@@ -885,7 +885,7 @@ transform: rotateZ(30deg);\par
 \f1\u-10179?\u-8903?\f2  \f0 rotate3d(x, y, z, \'e2ngulo)\par
 Gira em torno de um eixo personalizado no espa\'e7o 3D.\par
 transform: rotate3d(1, 1, 0, 45deg);\par
-\f1\u10145?\u-497? \f0 Gira 45\'b0 em torno de um eixo diagonal entre X e Y.\par
+\f1\u10145?\u-497?\f5  \f0 Gira 45\'b0 em torno de um eixo diagonal entre X e Y.\par
 \par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 scale3d(x, y, z)\ulnone\b0\par
 Altera o tamanho em 3 dimens\'f5es:\par
@@ -904,7 +904,7 @@ transform-style: preserve-3d;\par
 Isso faz com que as transforma\'e7\'f5es 3D dos elementos filhos sejam vis\'edveis.\par
 \par
 \ul\b\f1\u-10180?\u-8273?\f2  \f0 4. perspective-origin\ulnone\b0\par
-Define de onde o observador \f1\ldblquote\f0 olha\f1\rdblquote\f2  \f0 o objeto (ponto de fuga).\par
+Define de onde o observador \f5\ldblquote\f0 olha\f5\rdblquote\f2  \f0 o objeto (ponto de fuga).\par
 perspective-origin: left top;\par
 Outros exemplos:\par
 center center (padr\'e3o)\par
@@ -937,12 +937,131 @@ right bottom\par
 .card:hover \{\par
   transform: rotateY(180deg);\par
 \}\par
-\b\f1\u10145?\u-497? \f0 Ao passar o mouse, o cart\'e3o gira como se estivesse virando no espa\'e7o.\b0\par
+\b\f1\u10145?\u-497?\f5  \f0 Ao passar o mouse, o cart\'e3o gira como se estivesse virando no espa\'e7o.\b0\par
 \f4\u10024?\f2  \f0 6. Dica avan\'e7ada \f2\emdash  \f0 efeito de flip card (frente e verso)\par
 Voc\'ea pode criar dois lados e alternar entre eles com rota\'e7\'e3o em Y, simulando um cart\'e3o virando.\par
 \par
 \par
 \par
+\ul\b\fs36 formata\'e7\'e3o de listas\par
+\ulnone\b0\fs22\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 1. Tipos de lista no HTML\par
+\ulnone\f1\u-10179?\u-9000?\f2  \f0 Lista n\'e3o ordenada:\par
+\b0 <ul>\par
+  <li>Ma\'e7\'e3</li>\par
+  <li>Banana</li>\par
+  <li>Laranja</li>\par
+</ul>\par
+\par
+\b\f1\u-10179?\u-9001?\f2  \f0 Lista ordenada:\par
+\b0 <ol>\par
+  <li>Primeiro passo</li>\par
+  <li>Segundo passo</li>\par
+  <li>Terceiro passo</li>\par
+</ol>\par
+\par
+\b\f1\u-10180?\u-8280?\f2  \f0 2. list-style-type\b0\par
+Define o tipo de marcador usado na lista.\par
+\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Para <ul> (n\'e3o ordenadas)\par
+\b0 ul \{\par
+  list-style-type: disc;     /* padr\'e3o: bolinha cheia */\par
+  /* outros: circle, square, none */\par
+\}\par
+\par
+\b\f1\u-10179?\u-8903?\f2  \f0 Para <ol> (ordenadas)\par
+\b0 ol \{\par
+  list-style-type: decimal;  /* 1, 2, 3... */\par
+  /* outros: lower-alpha, upper-alpha, lower-roman, upper-roman */\par
+\}\par
+\par
+\par
+\b Exemplo:\par
+\b0 ol \{\par
+  list-style-type: upper-roman; /* I, II, III... */\par
+\}\par
+\par
+\b\f1\u-10179?\u-8772?\u-497? \f0 3. list-style-image\b0\par
+Troca o marcador padr\'e3o por uma imagem personalizada:\par
+ul \{\par
+  list-style-image: url("icone.png");\par
+\}\par
+\f1\u9888?\u-497? \f0 A imagem \'e9 posicionada onde normalmente ficaria a bolinha.\par
+\par
+\b\f1\u-10178?\u-8727?\f2  \f0 4. list-style-position\b0\par
+Controla onde o marcador aparece em rela\'e7\'e3o ao texto:\par
+ul \{\par
+  list-style-position: outside; /* padr\'e3o */\par
+\}\par
+\b Valores:\b0\par
+outside \f6\u8594?\f2  \f0 marcador fica fora da \'e1rea de texto (alinhado \'e0 esquerda)\par
+inside \f6\u8594?\f2  \f0 marcador fica dentro da \'e1rea de texto\par
+\par
+\b Exemplo visual:\par
+\b0 ul \{\par
+  list-style-position: inside;\par
+\}\par
+\par
+\ul\b\f1\u9881?\u-497? \f0 5. list-style (atalho)\ulnone\b0\par
+Voc\'ea pode definir tudo em uma s\'f3 linha:\par
+\par
+ul \{\par
+  list-style: square inside;\par
+\}\par
+\par
+\par
+\b\f1\u10145?\u-497? \f0 Mesmo que:\b0\par
+list-style-type: square;\par
+list-style-position: inside;\par
+\par
+\b\f1\u-10179?\u-9009?\f2  \f0 6. Espa\'e7amento e apar\'eancia\b0\par
+Use margens e padding para controlar o alinhamento:\par
+\par
+ul \{\par
+  margin: 20px;\par
+  padding-left: 30px;\par
+\}\par
+li \{\par
+  margin-bottom: 8px;\par
+\}\par
+\par
+\ul\b\f4\u10024?\f2  \f0 7. Exemplo pr\'e1tico\par
+\ulnone\b0 <h3>Lista personalizada:</h3>\par
+<ul class="lista">\par
+  <li>Beber mais \'e1gua</li>\par
+  <li>Fazer exerc\'edcios</li>\par
+  <li>Dormir bem</li>\par
+</ul>\par
+\par
+.lista \{\par
+  list-style-type: none; /* remove marcador */\par
+  padding: 0;\par
+\}\par
+\par
+.lista li \{\par
+  background: #f3f3f3;\par
+  margin: 5px 0;\par
+  padding: 10px;\par
+  border-radius: 5px;\par
+  position: relative;\par
+\}\par
+\par
+.lista li::before \{\par
+  content: "\f1\u10004?\u-497?\f0 ";\par
+  position: absolute;\par
+  left: -25px;\par
+  top: 8px;\par
+\}\par
+\ul\b\f1\u10145?\u-497? \f0 Cria uma lista com \'edcones personalizados usando apenas CSS.\par
+\ulnone\b0\par
+\ul\b\f1\u-10179?\u-9055?\f2  \f0 Dicas r\'e1pidas\ulnone\b0\par
+Use list-style: none; para menus de navega\'e7\'e3o (quando vai estilizar com \'edcones ou links).\par
+Use ::marker (CSS moderno) para personalizar apenas o marcador:\par
+\par
+li::marker \{\par
+  color: red;\par
+  font-size: 20px;\par
+\}\lang22\par
 \par
 \par
 \par
