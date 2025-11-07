@@ -1,0 +1,32 @@
+div{
+    border: 1px solid black;
+    background-color: tomato;
+    width: 200px;
+    height: 200px;    
+    text-align: center;
+    line-height: 200px;
+    margin-bottom: 10px;
+}
+
+ol, ul, li{
+   border: 1px solid black ; 
+   margin:0px ;
+   padding: 0px;
+}
+ol{
+    display: table;
+    width: 400px;
+}
+
+ul{
+    display: table-row;
+}
+
+li{
+    display: table-cell;
+    text-align: center;
+}
+
+.titulo{
+    background-color: turquoise;
+}
