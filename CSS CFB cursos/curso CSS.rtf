@@ -1124,9 +1124,86 @@ outline-offset\tab Espa\'e7o entre o outline e o elemento\tab outline-offset: 4p
 \par
 \par
 \par
+\ul\b\fs36 Displays\par
+\ulnone\b0\fs22\par
+\ul\b\f3\u-10180?\u-8273?\f2  \f0 O que \'e9 o display\ulnone\b0\par
+A propriedade display define como um elemento HTML \'e9 exibido \f2\emdash  \f0 ou seja, se ele ocupa uma linha inteira, se pode ficar ao lado de outro, se \'e9 um container flex\'edvel etc.\par
 \par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 Tipos principais de display\par
+1\u-497?\f4\u8419?\f0  display: block;\b0\par
+\ulnone O elemento ocupa toda a largura dispon\'edvel (uma linha inteira).\par
+Sempre come\'e7a em uma nova linha.\par
+\'c9 poss\'edvel definir width, height, margin, padding, etc.\par
+Exemplos de elementos block por padr\'e3o:\par
+<div>, <h1>, <p>, <section>, <header>, <footer>.\par
 \par
+div \{\par
+  display: block;\par
+\}\par
 \par
+\ul\b display: inline;\b0\par
+\ulnone O elemento fica na mesma linha que outros.\par
+Ignora width e height.\par
+Usa apenas o espa\'e7o necess\'e1rio para seu conte\'fado.\par
+Exemplos de elementos inline por padr\'e3o:\par
+<span>, <a>, <b>, <i>.\par
+\par
+span \{\par
+  display: inline;\par
+\}\par
+\par
+\ul\b display: inline-block;\b0\par
+\ulnone Mistura o comportamento dos dois anteriores:\par
+Fica na mesma linha (como inline);\par
+Mas aceita width, height, margin, padding.\par
+\par
+button \{\par
+  display: inline-block;\par
+  width: 120px;\par
+  height: 40px;\par
+\}\par
+\par
+\ul\b display: none;\b0\par
+\ulnone O elemento n\'e3o aparece na tela e n\'e3o ocupa espa\'e7o.\par
+\'c9 diferente de visibility: hidden, que esconde o elemento mas mant\'e9m o espa\'e7o vazio.\par
+\par
+p \{\par
+  display: none;\par
+\}\par
+\par
+\ul\b display: flex;\b0\par
+\ulnone Transforma o elemento em um container flex\'edvel (Flexbox).\par
+Permite alinhar facilmente os itens horizontal ou verticalmente.\par
+\par
+.container \{\par
+  display: flex;\par
+  justify-content: center;\par
+  align-items: center;\par
+\}\par
+\par
+\ul\b  display: grid;\ulnone\b0\par
+Transforma o elemento em um container de grade bidimensional.\par
+Facilita a cria\'e7\'e3o de layouts complexos com linhas e colunas.\par
+\par
+.container \{\par
+  display: grid;\par
+  grid-template-columns: repeat(3, 1fr);\par
+\}\par
+\par
+\ul\b Outros tipos (menos comuns)\par
+\ulnone\b0 Tipo\tab Descri\'e7\'e3o\par
+table\tab Faz o elemento se comportar como uma <table>\par
+table-cell\tab Comportamento de uma c\'e9lula de tabela\par
+list-item\tab Faz o elemento se comportar como <li> (com marcador)\par
+contents\tab Faz o elemento desaparecer visualmente, mas manter seus filhos no fluxo da p\'e1gina\par
+run-in\tab Raramente usado; tenta combinar comportamento inline e block dependendo do contexto\par
+\par
+\ul\b\f3\u-10179?\u-9055?\f2  \f0 Dica pr\'e1tica\ulnone\b0\par
+Voc\'ea pode mudar a exibi\'e7\'e3o de qualquer elemento com display.\par
+Por exemplo:\par
+a \{\par
+  display: block; /* Faz um link ocupar a linha inteira */\par
+\}\par
 \par
 \par
 \par
