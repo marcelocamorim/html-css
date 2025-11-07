@@ -1205,6 +1205,156 @@ a \{\par
   display: block; /* Faz um link ocupar a linha inteira */\par
 \}\par
 \par
+\ul\b\fs32 display flex\par
+\ulnone\f1\fs22\u-10178?\u-8719?\f2  \f0 O que \'e9 o Flexbox\par
+\b0 Quando voc\'ea define:\par
+.container \{\par
+  display: flex;\par
+\}\par
+O elemento .container vira um container flex\'edvel, e todos os elementos dentro dele se tornam itens flex\'edveis (ou \f2\ldblquote\f0 flex items\f2\rdblquote\f0 ).\par
+\par
+\b\f1\u9881?\u-497? \f0 Estrutura b\'e1sica\par
+\b0 <div class="container">\par
+  <div class="item">1</div>\par
+  <div class="item">2</div>\par
+  <div class="item">3</div>\par
+</div>\par
+\par
+.container \{\par
+  display: flex;\par
+  background: #eee;\par
+  padding: 10px;\par
+\}\par
+\par
+.item \{\par
+  background: #4CAF50;\par
+  color: white;\par
+  padding: 20px;\par
+  margin: 5px;\par
+\}\par
+\par
+\b\f1\u-10179?\u-9143?\f2  \f0 Por padr\'e3o, os itens ficam lado a lado, na horizontal.\par
+\b0\par
+\ul\b\f1\u-10178?\u-8723?\f2  \f0 Dire\'e7\'e3o dos itens \f2\emdash  \f0 flex-direction\ulnone\b0\par
+Controla a dire\'e7\'e3o principal em que os elementos s\'e3o organizados.\par
+\par
+flex-direction: row;          /* Padr\'e3o: da esquerda p/ direita */\par
+flex-direction: row-reverse;  /* Direita \f6\u8594?\f2  \f0 esquerda */\par
+flex-direction: column;       /* De cima p/ baixo */\par
+flex-direction: column-reverse; /* De baixo p/ cima */\par
+\par
+\ul\b\f1\u-10178?\u-8727?\f2  \f0 Quebra de linha \f2\emdash  \f0 flex-wrap\par
+\ulnone\b0\par
+Define se os itens devem ou n\'e3o quebrar de linha quando n\'e3o couberem.\par
+\par
+flex-wrap: nowrap;   /* Padr\'e3o: tudo na mesma linha */\par
+flex-wrap: wrap;     /* Quebra de linha quando precisar */\par
+flex-wrap: wrap-reverse; /* Quebra invertida */\par
+\par
+Voc\'ea pode combinar com flex-direction:\par
+flex-flow: row wrap; /* Combina\'e7\'e3o pr\'e1tica das duas propriedades */\par
+\par
+\ul\b\f1\u-10178?\u-8722?\f2  \f0 Alinhamento horizontal \f2\emdash  \f0 justify-content\par
+\ulnone\b0\par
+Controla como os itens s\'e3o distribu\'eddos ao longo do eixo principal (horizontal se for row, vertical se for column).\par
+\par
+justify-content: flex-start; /* \'e0 esquerda (padr\'e3o) */\par
+justify-content: center;     /* centraliza */\par
+justify-content: flex-end;   /* \'e0 direita */\par
+justify-content: space-between; /* espa\'e7o igual entre itens */\par
+justify-content: space-around;  /* espa\'e7o igual nas laterais */\par
+justify-content: space-evenly;  /* espa\'e7amento igual em tudo */\par
+\par
+\ul\b\f1\u-10178?\u-8723?\f2  \f0 Alinhamento vertical \f2\emdash  \f0 align-items\ulnone\b0\par
+Controla o alinhamento no eixo cruzado (vertical, se row).\par
+\par
+align-items: stretch;    /* Padr\'e3o: estica os itens */\par
+align-items: flex-start; /* Alinha no topo */\par
+align-items: center;     /* Centraliza verticalmente */\par
+align-items: flex-end;   /* Alinha embaixo */\par
+align-items: baseline;   /* Alinha pela linha de texto */\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 Alinhamento de m\'faltiplas linhas \f2\emdash  \f0 align-content\ulnone\b0\par
+Funciona quando h\'e1 mais de uma linha de itens (flex-wrap: wrap ativado).\par
+Controla o espa\'e7o entre as linhas.\par
+\par
+align-content: flex-start;\par
+align-content: center;\par
+align-content: space-between;\par
+align-content: space-around;\par
+align-content: stretch;\par
+\par
+\ul\b\f1\u-10180?\u-8294?\u-497? \f0 Controlando itens individualmente\ulnone\b0\par
+Cada item dentro do container pode ter comportamento pr\'f3prio com estas propriedades:\par
+\ul\b Ordem dos itens filhos\par
+\ulnone\b0 use order para trocar facilmente a ordem dos itens dentro o container\par
+exemplo\par
+\f10 #\f0 d1\f10\{\f0\par
+\f10     \f0 order\f10 : \f0 2\f10 ;\f0\par
+\f10\}\f0\par
+\f10 #\f0 d2\f10\{\f0\par
+\f10     \f0 order\f10 : \f0 1\f10 ;\f0\par
+\f10\}\f0\par
+\f10 #\f0 d3\f10\{\f0\par
+\f10     \f0 order\f10 : \f0 4\f10 ;\f0\par
+\f10\}\f0\par
+\f10 #\f0 d4\f10\{\f0\par
+\f10     \f0 order\f10 : \f0 3\f10 ;\f0\par
+\f10\}\f0\par
+\ul\b flex-grow\b0\par
+\ulnone Define quanto o item cresce em rela\'e7\'e3o aos outros quando h\'e1 espa\'e7o livre.\par
+.item1 \{ flex-grow: 1; \} /* cresce 1x */\par
+.item2 \{ flex-grow: 2; \} /* cresce o dobro do item1 */\par
+\par
+\ul\b flex-shrink\ulnone\b0\par
+Define quanto o item encolhe quando o container \'e9 menor que o total dos itens.\par
+.item \{ flex-shrink: 0; \} /* n\'e3o encolhe */\par
+\par
+\ul\b flex-basis\ulnone\b0\par
+Define o tamanho inicial de um item antes de aplicar grow ou shrink.\par
+.item \{ flex-basis: 200px; \}\par
+\par
+\ul\b flex (atalho)\ulnone\b0\par
+Atalho para as tr\'eas juntas:\par
+flex: 1 1 200px; /* grow | shrink | basis */\par
+\par
+\ul\b\f1\u-10179?\u-9011?\f2  \f0 Alinhamento individual \f2\emdash  \f0 align-self\ulnone\b0\par
+Permite alinhar um item espec\'edfico, ignorando o align-items do container.\par
+\par
+.item3 \{\par
+  align-self: flex-end;\par
+\}\par
+\par
+\ul\b\f1\u-10180?\u-8440?\f2  \f0 Exemplo pr\'e1tico completo\par
+\ulnone\b0 <div class="container">\par
+  <div class="item">A</div>\par
+  <div class="item">B</div>\par
+  <div class="item">C</div>\par
+</div>\par
+\par
+.container \{\par
+  display: flex;\par
+  flex-direction: row;\par
+  justify-content: space-around;\par
+  align-items: center;\par
+  height: 200px;\par
+  background: #eee;\par
+\}\par
+\par
+.item \{\par
+  background: #4CAF50;\par
+  color: white;\par
+  padding: 30px;\par
+  flex: 1;\par
+  margin: 10px;\par
+  text-align: center;\par
+\}\par
+\par
+\ul\b\f1\u-10178?\u-8736?\f2  \f0 Dica final\ulnone\b0\par
+O flexbox \'e9 \'f3timo para:\par
+Centralizar qualquer elemento (horizontal e verticalmente);\par
+Criar layouts responsivos simples;\par
+Distribuir espa\'e7o de forma autom\'e1tica.\lang22\par
 \par
 \par
 \par
