@@ -1436,6 +1436,102 @@ Quanto maior o n\'famero, mais \'e0 frente o elemento aparece.\par
 \}\par
 \par
 \par
+\ul\b\fs36 Propriedades float e clear\ulnone\b0\fs22\par
+\par
+Agora vamos ver as propriedades float e clear \f2\emdash  \f0 que eram muito usadas antes do Flexbox e Grid, mas ainda s\'e3o \'fateis em algumas situa\'e7\'f5es.\par
+\par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 O que \'e9 o float\par
+\ulnone\b0\par
+A propriedade float faz um elemento \f2\ldblquote\f0 flutuar\f2\rdblquote  \f0\'e0 esquerda ou \'e0 direita do seu container, permitindo que outros elementos fiquem ao lado dele (como texto ou imagens).\par
+\par
+\ul\b\f1\u-10179?\u-9012?\f2  \f0 Sintaxe\par
+\ulnone\b0 float: left | right | none | inline-start | inline-end;\par
+\par
+Valor\tab Descri\'e7\'e3o\par
+left\tab Faz o elemento flutuar \'e0 esquerda\par
+right\tab Faz o elemento flutuar \'e0 direita\par
+none\tab Remove o comportamento de flutua\'e7\'e3o (padr\'e3o)\par
+inline-start / inline-end\tab Vers\'f5es adapt\'e1veis \'e0 dire\'e7\'e3o do texto (usadas com idiomas RTL)\par
+\f1\u-10179?\u-9055?\f2  \f0 Exemplo pr\'e1tico\par
+<img src="foto.jpg" alt="Foto" class="img">\par
+<p>Este \'e9 um texto que fica ao redor da imagem, pois a imagem est\'e1 flutuando \'e0 esquerda.</p>\par
+\par
+.img \{\par
+  float: left;\par
+  margin: 10px;\par
+  width: 150px;\par
+\}\par
+\b\f1\u10145?\u-497? \f0 O texto \f1\ldblquote\f0 envolve\f1\rdblquote\f2  \f0 a imagem, ocupando o espa\'e7o ao lado dela.\par
+\b0\par
+\ul\b\f1\u-10178?\u-8708?\f2  \f0 O que \'e9 o clear\ulnone\b0\par
+A propriedade clear serve para cancelar o efeito do float \f2\emdash  \f0 ela \f2\ldblquote\f0 limpa\f2\rdblquote  \f0 os elementos flutuantes anteriores, fazendo o pr\'f3ximo elemento come\'e7ar em uma nova linha.\par
+\par
+\b\f1\u-10179?\u-9012?\f2  \f0 Sintaxe\par
+\b0 clear: left | right | both | none;\par
+\par
+Valor\tab Descri\'e7\'e3o\par
+left\tab N\'e3o permite que elementos flutuando \'e0 esquerda fiquem ao lado\par
+right\tab N\'e3o permite elementos flutuando \'e0 direita\par
+both\tab N\'e3o permite flutua\'e7\'e3o nem \'e0 esquerda nem \'e0 direita\par
+none\tab Permite flutua\'e7\'e3o (padr\'e3o)\par
+\f1\u-10179?\u-9055?\f2  \f0 Exemplo pr\'e1tico com clear\par
+<img src="foto.jpg" class="img">\par
+<p>Texto ao lado da imagem.</p>\par
+<div class="rodape">Rodap\'e9</div>\par
+\par
+.img \{\par
+  float: left;\par
+  margin-right: 10px;\par
+\}\par
+\par
+.rodape \{\par
+  clear: both; /* Impede que o rodap\'e9 suba ao lado da imagem */\par
+  background: #eee;\par
+  padding: 10px;\par
+\}\par
+\par
+\ul\b\f1\u9888?\u-497? \f0 Problema comum com float\ulnone\b0\par
+Quando todos os elementos dentro de um container est\'e3o flutuando, o container \f2\ldblquote\f0 some\f2\rdblquote\f0 , pois ele n\'e3o reconhece a altura dos itens flutuantes.\par
+\par
+\b Exemplo:\par
+\b0 .container \{\par
+  background: lightgray;\par
+\}\par
+.item \{\par
+  float: left;\par
+  width: 50%;\par
+\}\par
+\b Nesse caso, .container pode colapsar (ficar com altura 0).\par
+\b0\par
+\ul\b\f1\u-10179?\u-9055?\f2  \f0 Solu\'e7\'f5es para \f2\ldblquote\f0 limpar\f2\rdblquote  \f0 o float\par
+\ulnone Adicionar um elemento com clear: both;\par
+\b0 <div class="container">\par
+  <div class="item">1</div>\par
+  <div class="item">2</div>\par
+  <div style="clear: both;"></div>\par
+</div>\par
+\par
+2\u-497?\f4\u8419?\f0  Usar o clearfix (modo mais elegante)\par
+.container::after \{\par
+  content: "";\par
+  display: block;\par
+  clear: both;\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8998?\f2  \f0 Resumo r\'e1pido\par
+\ulnone\b0 Propriedade\tab Fun\'e7\'e3o\par
+float\tab Faz o elemento \f2\ldblquote\f0 flutuar\f2\rdblquote  \f0\'e0 esquerda ou direita\par
+clear\tab Impede que elementos flutuantes fiquem ao lado\par
+clear: both\tab Garante que o pr\'f3ximo elemento comece abaixo dos flutuantes\par
+clearfix\tab T\'e9cnica para evitar colapso de container com itens flutuantes\par
+\par
+\ul\b\f3\u-10180?\u-8440?\f2  \f0 Dica pr\'e1tica\ulnone\b0\par
+Use float quando quiser:\par
+Colocar texto ao redor de imagens;\par
+Criar pequenos alinhamentos laterais.\par
+Mas para layouts modernos, prefira Flexbox ou Grid, pois s\'e3o mais flex\'edveis e previs\'edveis.\par
+\par
+\par
 \par
 }
  
