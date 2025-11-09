@@ -1130,7 +1130,7 @@ outline-offset\tab Espa\'e7o entre o outline e o elemento\tab outline-offset: 4p
 A propriedade display define como um elemento HTML \'e9 exibido \f2\emdash  \f0 ou seja, se ele ocupa uma linha inteira, se pode ficar ao lado de outro, se \'e9 um container flex\'edvel etc.\par
 \par
 \ul\b\f1\u-10178?\u-8719?\f2  \f0 Tipos principais de display\par
-1\u-497?\f4\u8419?\f0  display: block;\b0\par
+\f3\u-497?\u8419?\f0  display: block;\b0\par
 \ulnone O elemento ocupa toda a largura dispon\'edvel (uma linha inteira).\par
 Sempre come\'e7a em uma nova linha.\par
 \'c9 poss\'edvel definir width, height, margin, padding, etc.\par
@@ -1213,7 +1213,7 @@ a \{\par
 \}\par
 O elemento .container vira um container flex\'edvel, e todos os elementos dentro dele se tornam itens flex\'edveis (ou \f2\ldblquote\f0 flex items\f2\rdblquote\f0 ).\par
 \par
-\b\f1\u9881?\u-497? \f0 Estrutura b\'e1sica\par
+\b\f1\u9881?\u-497?\f5  \f0 Estrutura b\'e1sica\par
 \b0 <div class="container">\par
   <div class="item">1</div>\par
   <div class="item">2</div>\par
@@ -1284,7 +1284,7 @@ align-content: space-between;\par
 align-content: space-around;\par
 align-content: stretch;\par
 \par
-\ul\b\f1\u-10180?\u-8294?\u-497? \f0 Controlando itens individualmente\ulnone\b0\par
+\ul\b\f1\u-10180?\u-8294?\u-497?\f5  \f0 Controlando itens individualmente\ulnone\b0\par
 Cada item dentro do container pode ter comportamento pr\'f3prio com estas propriedades:\par
 \ul\b Ordem dos itens filhos\par
 \ulnone\b0 use order para trocar facilmente a ordem dos itens dentro o container\par
@@ -1356,53 +1356,25 @@ Centralizar qualquer elemento (horizontal e verticalmente);\par
 Criar layouts responsivos simples;\par
 Distribuir espa\'e7o de forma autom\'e1tica.\lang22\par
 \par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-\par
-position CSS\par
-\par
+\ul\b\fs36 position CSS\par
+\ulnone\b0\fs22\par
 Em CSS, a propriedade position define como um elemento \'e9 posicionado na p\'e1gina e como ele se comporta em rela\'e7\'e3o a outros elementos.\par
 Ela \'e9 fundamental para layouts, menus fixos, sobreposi\'e7\'f5es (como modais) e efeitos visuais.\par
 \par
 Vamos entender cada tipo de position:\par
 \par
-\f1\u-10178?\u-8727?\f2  \f0 1. static (padr\'e3o)\par
-\par
+\ul\b\f1\u-10178?\u-8727?\f2  \f0 1. static (padr\'e3o)\ulnone\b0\par
 \'c9 o valor padr\'e3o de todos os elementos.\par
-\par
 O elemento segue o fluxo normal da p\'e1gina, sem posicionamento especial.\par
-\par
 As propriedades top, left, right, bottom n\'e3o funcionam aqui.\par
 \par
 div \{\par
   position: static;\par
 \}\par
-\par
-\par
-\f1\u10145?\u-497?\f2  \f0 Ideal para conte\'fado comum, quando voc\'ea n\'e3o quer alterar o fluxo da p\'e1gina.\par
-\par
-\f3\u-10179?\u-9008?\f2  \f0 2. relative\par
-\par
+\b\f1\u10145?\u-497?\f2  \f0 Ideal para conte\'fado comum, quando voc\'ea n\'e3o quer alterar o fluxo da p\'e1gina.\par
+\b0\par
+\ul\b\f3\u-10179?\u-9008?\f2  \f0 2. relative\ulnone\b0\par
 O elemento mant\'e9m seu espa\'e7o original, mas pode ser movido com top, left, right, bottom.\par
-\par
 A posi\'e7\'e3o \'e9 relativa \'e0 sua posi\'e7\'e3o original.\par
 \par
 div \{\par
@@ -1410,16 +1382,11 @@ div \{\par
   top: 20px;   /* move 20px para baixo */\par
   left: 10px;  /* move 10px para a direita */\par
 \}\par
-\par
-\par
-\f1\u10145?\u-497?\f2  \f0 Muito usado para criar uma \f2\ldblquote\f0 refer\'eancia\f2\rdblquote  \f0 para elementos filhos com position: absolute;.\par
-\par
-\f3\u-10179?\u-9011?\f2  \f0 3. absolute\par
-\par
+\b\f1\u10145?\u-497?\f2  \f0 Muito usado para criar uma \f2\ldblquote\f0 refer\'eancia\f2\rdblquote  \f0 para elementos filhos com position: absolute;.\par
+\b0\par
+\ul\b\f3\u-10179?\u-9011?\f2  \f0 3. absolute\ulnone\b0\par
 Remove o elemento do fluxo da p\'e1gina.\par
-\par
 \'c9 posicionado em rela\'e7\'e3o ao ancestral mais pr\'f3ximo com position: relative, absolute, ou fixed.\par
-\par
 Se n\'e3o existir um ancestral posicionado, ele \'e9 posicionado em rela\'e7\'e3o \'e0 p\'e1gina (body).\par
 \par
 .container \{\par
@@ -1431,14 +1398,10 @@ Se n\'e3o existir um ancestral posicionado, ele \'e9 posicionado em rela\'e7\'e3
   top: 0;\par
   right: 0;\par
 \}\par
-\par
-\par
-\f1\u10145?\u-497?\f2  \f0 Ideal para criar elementos sobrepostos, menus suspensos, tooltips, etc.\par
-\par
-\f3\u-10179?\u-9012?\f2  \f0 4. fixed\par
-\par
+\b\f1\u10145?\u-497?\f2  \f0 Ideal para criar elementos sobrepostos, menus suspensos, tooltips, etc.\par
+\b0\par
+\ul\b\f3\u-10179?\u-9012?\f2  \f0 4. fixed\ulnone\b0\par
 Fixa o elemento em rela\'e7\'e3o \'e0 janela do navegador (viewport).\par
-\par
 Mesmo rolando a p\'e1gina, o elemento permanece vis\'edvel no mesmo lugar.\par
 \par
 nav \{\par
@@ -1446,14 +1409,10 @@ nav \{\par
   top: 0;\par
   width: 100%;\par
 \}\par
-\par
-\par
-\f1\u10145?\u-497?\f2  \f0 Usado em menus fixos, bot\'f5es de voltar ao topo, barras flutuantes etc.\par
-\par
-\f1\u-10178?\u-8545?\f2  \f0 5. sticky\par
-\par
+\b\f1\u10145?\u-497?\f2  \f0 Usado em menus fixos, bot\'f5es de voltar ao topo, barras flutuantes etc.\par
+\b0\par
+\ul\b\f1\u-10178?\u-8545?\f2  \f0 5. sticky\ulnone\b0\par
 \'c9 uma mistura de relative e fixed.\par
-\par
 O elemento age como relative at\'e9 o scroll chegar em certo ponto, e depois fica fixo.\par
 \par
 header \{\par
@@ -1461,14 +1420,10 @@ header \{\par
   top: 0;\par
   background: white;\par
 \}\par
-\par
-\par
-\f1\u10145?\u-497?\f2  \f0\'datil para cabe\'e7alhos que \f2\ldblquote\f0 grudam\f2\rdblquote  \f0 no topo ao rolar a p\'e1gina.\par
-\par
-\f1\u9881?\u-497?\f2  \f0 Extra: z-index\par
-\par
+\b\f1\u10145?\u-497?\f2  \f0\'datil para cabe\'e7alhos que \f2\ldblquote\f0 grudam\f2\rdblquote  \f0 no topo ao rolar a p\'e1gina.\par
+\b0\par
+\ul\b\fs24 z-index\ulnone\b0\fs22\par
 Controla a ordem de sobreposi\'e7\'e3o dos elementos posicionados (relative, absolute, fixed, sticky).\par
-\par
 Quanto maior o n\'famero, mais \'e0 frente o elemento aparece.\par
 \par
 .box1 \{\par
