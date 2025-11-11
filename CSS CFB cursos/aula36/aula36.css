@@ -1,0 +1,11 @@
+p::before{
+    content: "CFB - ";
+    color: rgb(68, 0, 255);
+}
+p::after{
+    content: url(../aula35/img-html.png);
+    width: 20px;
+    height: 20px;
+    
+}
+
