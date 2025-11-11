@@ -1,0 +1,25 @@
+p {
+    width: 300px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    /*oq mudar e o tempo em segundos, deparados por virgula*/
+    transition: width 1s, height 1s, color 1s, background-color 1s;
+
+    /*
+    linear = mantem a mesma velocidade
+    ease-in = começa lento e acelera
+    ease-out = começa rapido e fica lento
+    */
+    transition-timing-function: cubic-bezier(0,0.5,1,0.5);
+
+}
+
+p:hover {
+    width: 500px;
+    height: 120px;
+    background-color: #f00;
+    color: white;
+}
