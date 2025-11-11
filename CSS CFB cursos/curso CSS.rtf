@@ -1538,11 +1538,11 @@ Mas para layouts modernos, prefira Flexbox ou Grid, pois s\'e3o mais flex\'edvei
 \ul\b\f1\u-10178?\u-8719?\f2  \f0 O que \'e9 o overflow\ulnone\b0\par
 A propriedade overflow define o que fazer quando o conte\'fado de um elemento ultrapassa suas dimens\'f5es (largura e/ou altura).\par
 \par
-\ul\b\f1\u9881?\u-497? \f0 Sintaxe\par
+\ul\b\f1\u9881?\u-497?\f5  \f0 Sintaxe\par
 \ulnone\b0 overflow: visible | hidden | scroll | auto | clip;\par
 \par
 \ul\b\f1\u-10179?\u-8947?\f2  \f0 Valores principais\par
-\ulnone\b0 1\u-497?\f4\u8419?\f0  overflow: visible; (padr\'e3o)\par
+\ulnone\b0\f3\u-497?\u8419?\f0  overflow: visible; (padr\'e3o)\par
 O conte\'fado transborda livremente do elemento.\par
 Nenhum corte ou barra de rolagem \'e9 aplicado.\par
 \par
@@ -1604,7 +1604,7 @@ div \{\par
 \}\par
 \b\f3\u-10179?\u-9143?\f2  \f0 Vai criar uma \'e1rea com rolagem autom\'e1tica se o texto for grande demais.\par
 \b0\par
-\ul\b\f1\u-10180?\u-8294?\u-497? \f0 Controle individual\ulnone\b0\par
+\ul\b\f1\u-10180?\u-8294?\u-497?\f5  \f0 Controle individual\ulnone\b0\par
 Voc\'ea pode controlar cada eixo separadamente:\par
 overflow-x: hidden;  /* Horizontal */\par
 overflow-y: scroll;  /* Vertical */\par
@@ -1617,11 +1617,6 @@ Containers de rolagem;\par
 Galerias de imagens horizontais;\par
 Caixas de texto limitadas;\par
 Anima\'e7\'f5es que \f2\ldblquote\f0 saem\f2\rdblquote  \f0 da \'e1rea vis\'edvel.\par
-\par
-\par
-\par
-\par
-\par
 \par
 \par
 \ul\b\fs36 Pseudo-elementos (after, before)\ulnone\b0\fs22\par
@@ -1637,13 +1632,13 @@ seletor::after \{\par
   content: "texto ou s\'edmbolo";\par
   /* Outras propriedades CSS */\par
 \}\par
-\b\f1\u9888?\u-497? \f0 A propriedade content \'e9 obrigat\'f3ria \f2\emdash  \f0 sem ela, o pseudo-elemento n\'e3o aparece.\par
+\b\f1\u9888?\u-497?\f5  \f0 A propriedade content \'e9 obrigat\'f3ria \f2\emdash  \f0 sem ela, o pseudo-elemento n\'e3o aparece.\par
 \b0\par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 Exemplo pr\'e1tico\par
 \ulnone\b0 <p>Mensagem importante</p>\par
 \par
 p::before \{\par
-  content: "\f1\u9888?\u-497? \f0 ";\par
+  content: "\f1\u9888?\u-497?\f5  \f0 ";\par
   color: orange;\par
 \}\par
 \par
@@ -1653,7 +1648,7 @@ p::after \{\par
 \}\par
 \par
 \b\f9\u-10179?\u-8222?\f2  \f0 Resultado visual:\b0\par
-\f1\u9888?\u-497? \f0 Mensagem importante \f1\u10004?\u-497?\f0\par
+\f1\u9888?\u-497?\f5  \f0 Mensagem importante \f1\u10004?\u-497?\f0\par
 \par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 Exemplo com decora\'e7\'f5es\par
 \ulnone\b0 <h2>T\'edtulo</h2>\par
@@ -1695,5 +1690,61 @@ Aqui, o ::before cria um c\'edrculo colorido antes do texto.\par
 \ulnone\b0 Tipo\tab Exemplo\tab Fun\'e7\'e3o\par
 Pseudo-elemento\tab ::before, ::after, ::first-line\tab Cria ou estiliza partes do conte\'fado\par
 Pseudo-classe\tab :hover, :active, :nth-child()\tab Aplica estilo em estados ou condi\'e7\'f5es\par
+\par
+\par
+\ul\b\fs36 Pseudo-elementos:  first-letter, fisrt-line, selection\par
+\par
+\ulnone\b0\fs22 Esses tr\'eas \f2\emdash  \f0 ::first-letter, ::first-line e ::selection \f2\emdash  \f0 s\'e3o pseudo-elementos usados para aplicar estilos em partes espec\'edficas do texto. Vamos ver cada um com calma e exemplos pr\'e1ticos \f1\u-10179?\u-9145?\f0\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 ::first-letter\ulnone\b0\par
+Seleciona a primeira letra de um bloco de texto.\par
+\'c9 muito usado para criar aquele efeito de \f2\ldblquote\f0 letra capitular\f2\rdblquote  \f0 (como em livros e revistas).\par
+\par
+\b Exemplo:\par
+\b0 <p>O caf\'e9 \'e9 uma das bebidas mais populares do mundo.</p>\par
+\par
+p::first-letter \{\par
+  font-size: 2em;\par
+  color: brown;\par
+  font-weight: bold;\par
+  float: left;\par
+  margin-right: 5px;\par
+\}\par
+\b\f9\u-10179?\u-8220?\f2  \f0 Resultado:\par
+\b0 A primeira letra \f9\ldblquote\f0 O\f9\rdblquote\f2  \f0 fica maior e destacada.\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 ::first-line\ulnone\b0\par
+Seleciona somente a primeira linha vis\'edvel do texto.\par
+O estilo depende da largura do elemento (ou seja, se voc\'ea redimensionar a tela, a linha muda).\par
+\par
+\b Exemplo:\par
+\b0 <p>O caf\'e9 cont\'e9m cafe\'edna, uma subst\'e2ncia que estimula o sistema nervoso e pode melhorar o foco e a energia.</p>\par
+\par
+p::first-line \{\par
+  font-weight: bold;\par
+  color: darkblue;\par
+  text-transform: uppercase;\par
+\}\par
+\b\f1\u-10179?\u-8907?\f2  \f0 Resultado:\par
+\b0 A primeira linha aparece em negrito e mai\'fasculas, o restante do texto fica normal.\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 ::selection\ulnone\b0\par
+Permite personalizar a apar\'eancia do texto selecionado pelo mouse (por exemplo, quando o usu\'e1rio arrasta o cursor sobre o texto).\par
+\b Exemplo:\par
+\b0 <p>Selecione este texto para ver o efeito personalizado!</p>\par
+\par
+p::selection \{\par
+  background: darkorange;\par
+  color: white;\par
+\}\par
+\par
+\b\f9\u-10179?\u-8224?\f2  \f0 Resultado:\par
+\b0 Quando o usu\'e1rio seleciona o texto, o fundo fica laranja e o texto branco.\par
+\f1\u-10179?\u-8903?\f2  \f0 Resumo r\'e1pido:\par
+Pseudo-elemento\tab O que estiliza\tab Exemplo de uso comum\par
+::first-letter\tab Primeira letra do texto\tab Criar letra capitular\par
+::first-line\tab Primeira linha do texto\tab Destacar in\'edcio de par\'e1grafos\par
+::selection\tab Texto selecionado pelo usu\'e1rio\tab Personalizar a sele\'e7\'e3o de texto\ul\b\fs36\par
+\ulnone\b0\fs22\par
 }
  
