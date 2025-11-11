@@ -1617,5 +1617,83 @@ Containers de rolagem;\par
 Galerias de imagens horizontais;\par
 Caixas de texto limitadas;\par
 Anima\'e7\'f5es que \f2\ldblquote\f0 saem\f2\rdblquote  \f0 da \'e1rea vis\'edvel.\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\ul\b\fs36 Pseudo-elementos (after, before)\ulnone\b0\fs22\par
+Os pseudo-elementos ::before e ::after em CSS s\'e3o usados para inserir conte\'fado antes ou depois de um elemento sem precisar alterar o HTML. Eles s\'e3o muito \'fateis para adicionar \'edcones, decora\'e7\'f5es, ou at\'e9 elementos gr\'e1ficos.\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Sintaxe b\'e1sica\par
+\ulnone\b0 seletor::before \{\par
+  content: "texto ou s\'edmbolo";\par
+  /* Outras propriedades CSS */\par
+\}\par
+\par
+seletor::after \{\par
+  content: "texto ou s\'edmbolo";\par
+  /* Outras propriedades CSS */\par
+\}\par
+\b\f1\u9888?\u-497? \f0 A propriedade content \'e9 obrigat\'f3ria \f2\emdash  \f0 sem ela, o pseudo-elemento n\'e3o aparece.\par
+\b0\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Exemplo pr\'e1tico\par
+\ulnone\b0 <p>Mensagem importante</p>\par
+\par
+p::before \{\par
+  content: "\f1\u9888?\u-497? \f0 ";\par
+  color: orange;\par
+\}\par
+\par
+p::after \{\par
+  content: " \f1\u10004?\u-497?\f0 ";\par
+  color: green;\par
+\}\par
+\par
+\b\f9\u-10179?\u-8222?\f2  \f0 Resultado visual:\b0\par
+\f1\u9888?\u-497? \f0 Mensagem importante \f1\u10004?\u-497?\f0\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Exemplo com decora\'e7\'f5es\par
+\ulnone\b0 <h2>T\'edtulo</h2>\par
+\par
+h2::before \{\par
+  content: "";\par
+  display: inline-block;\par
+  width: 10px;\par
+  height: 10px;\par
+  background: red;\par
+  margin-right: 8px;\par
+  border-radius: 50%;\par
+\}\par
+\b\f9\u-10179?\u-8221?\f2  \f0 Resultado visual:\b0\par
+\f1\u-10179?\u-8908?\f2  \f0 T\'edtulo\par
+Aqui, o ::before cria um c\'edrculo colorido antes do texto.\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Exemplo com efeitos visuais\par
+\ulnone\b0 <div class="caixa">Conte\'fado</div>\par
+\par
+.caixa \{\par
+  position: relative;\par
+  background: lightblue;\par
+  padding: 20px;\par
+\}\par
+\par
+.caixa::after \{\par
+  content: "";\par
+  position: absolute;\par
+  top: 100%;\par
+  left: 0;\par
+  width: 100%;\par
+  height: 10px;\par
+  background: linear-gradient(to bottom, lightblue, transparent);\par
+\}\par
+\f1\u-10179?\u-8907?\f2  \f0 Efeito: cria uma sombra ou reflexo abaixo da caixa.\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Diferen\'e7a entre pseudo-elementos e pseudo-classes\par
+\ulnone\b0 Tipo\tab Exemplo\tab Fun\'e7\'e3o\par
+Pseudo-elemento\tab ::before, ::after, ::first-line\tab Cria ou estiliza partes do conte\'fado\par
+Pseudo-classe\tab :hover, :active, :nth-child()\tab Aplica estilo em estados ou condi\'e7\'f5es\par
 }
  
