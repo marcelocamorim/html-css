@@ -1744,7 +1744,63 @@ p::selection \{\par
 Pseudo-elemento\tab O que estiliza\tab Exemplo de uso comum\par
 ::first-letter\tab Primeira letra do texto\tab Criar letra capitular\par
 ::first-line\tab Primeira linha do texto\tab Destacar in\'edcio de par\'e1grafos\par
-::selection\tab Texto selecionado pelo usu\'e1rio\tab Personalizar a sele\'e7\'e3o de texto\ul\b\fs36\par
-\ulnone\b0\fs22\par
+::selection\tab Texto selecionado pelo usu\'e1rio\tab Personalizar a sele\'e7\'e3o de texto\par
+\par
+\ul\b\fs36 Transition\par
+\ulnone\b0\fs22 uma das propriedades mais usadas para criar anima\'e7\'f5es suaves ao mudar o estilo de um elemento (por exemplo, quando o usu\'e1rio passa o mouse em um bot\'e3o).\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 O que \'e9 transition\ulnone\b0\par
+A propriedade transition define como e em quanto tempo as mudan\'e7as de estilo devem ocorrer.\par
+Sem ela, as mudan\'e7as s\'e3o instant\'e2neas.\par
+Com ela, as mudan\'e7as ficam suaves e animadas \f4\u10024?\f0\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Estrutura b\'e1sica\par
+\ulnone\b0 transition: propriedade dura\'e7\'e3o timing-function delay;\par
+\par
+\b Exemplo:\par
+\b0 button \{\par
+  background: lightblue;\par
+  transition: background 0.5s ease;\par
+\}\par
+\par
+button:hover \{\par
+  background: dodgerblue;\par
+\}\par
+\b\f9\u-10179?\u-8218?\f2  \f0 Quando o mouse passa por cima do bot\'e3o, a cor muda suavemente em meio segundo.\par
+\b0\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Principais propriedades de transition\par
+\ulnone\b0 Propriedade\tab O que faz\par
+transition-property\tab Define qual propriedade ser\'e1 animada (ex: background, width, transform)\par
+transition-duration\tab Define quanto tempo dura a transi\'e7\'e3o (ex: 0.5s, 2s)\par
+transition-timing-function\tab Controla o ritmo da anima\'e7\'e3o (ex: ease, linear, ease-in, ease-out, ease-in-out)\par
+transition-delay\tab Define quanto tempo esperar antes de iniciar a transi\'e7\'e3o\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Exemplo completo\par
+\ulnone\b0 <div class="box"></div>\par
+\par
+.box \{\par
+  width: 100px;\par
+  height: 100px;\par
+  background: tomato;\par
+  transition: width 1s ease-in-out, background 0.5s ease;\par
+\}\par
+\par
+.box:hover \{\par
+  width: 200px;\par
+  background: limegreen;\par
+\}\par
+\par
+\par
+\b\f9\u-10179?\u-8219?\f2  \f6\u8594?\f2  \f9\u-10179?\u-8215?\f2  \f0 Ao passar o mouse:\b0\par
+A largura aumenta lentamente em 1s\par
+A cor muda suavemente em 0.5s\par
+\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Dicas \'fateis\ulnone\b0\par
+Voc\'ea pode animar v\'e1rias propriedades ao mesmo tempo separando-as por v\'edrgulas.\par
+Para aplicar a transi\'e7\'e3o em tudo que mudar, use:\par
+transition: all 0.3s ease;\par
+transition n\'e3o cria movimento por si s\'f3 \f2\emdash  \f0 ela s\'f3 suaviza mudan\'e7as de estilo (diferente de animation).\par
+\par
+\lang22\par
 }
  
