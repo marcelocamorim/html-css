@@ -1461,7 +1461,7 @@ inline-start / inline-end\tab Vers\'f5es adapt\'e1veis \'e0 dire\'e7\'e3o do tex
   margin: 10px;\par
   width: 150px;\par
 \}\par
-\b\f1\u10145?\u-497? \f0 O texto \f1\ldblquote\f0 envolve\f1\rdblquote\f2  \f0 a imagem, ocupando o espa\'e7o ao lado dela.\par
+\b\f1\u10145?\u-497?\f5  \f0 O texto \f5\ldblquote\f0 envolve\f5\rdblquote\f2  \f0 a imagem, ocupando o espa\'e7o ao lado dela.\par
 \b0\par
 \ul\b\f1\u-10178?\u-8708?\f2  \f0 O que \'e9 o clear\ulnone\b0\par
 A propriedade clear serve para cancelar o efeito do float \f2\emdash  \f0 ela \f2\ldblquote\f0 limpa\f2\rdblquote  \f0 os elementos flutuantes anteriores, fazendo o pr\'f3ximo elemento come\'e7ar em uma nova linha.\par
@@ -1490,7 +1490,7 @@ none\tab Permite flutua\'e7\'e3o (padr\'e3o)\par
   padding: 10px;\par
 \}\par
 \par
-\ul\b\f1\u9888?\u-497? \f0 Problema comum com float\ulnone\b0\par
+\ul\b\f1\u9888?\u-497?\f5  \f0 Problema comum com float\ulnone\b0\par
 Quando todos os elementos dentro de um container est\'e3o flutuando, o container \f2\ldblquote\f0 some\f2\rdblquote\f0 , pois ele n\'e3o reconhece a altura dos itens flutuantes.\par
 \par
 \b Exemplo:\par
@@ -1511,7 +1511,7 @@ Quando todos os elementos dentro de um container est\'e3o flutuando, o container
   <div style="clear: both;"></div>\par
 </div>\par
 \par
-2\u-497?\f4\u8419?\f0  Usar o clearfix (modo mais elegante)\par
+\f3\u-497?\u8419?\f0  Usar o clearfix (modo mais elegante)\par
 .container::after \{\par
   content: "";\par
   display: block;\par
@@ -1532,6 +1532,90 @@ Criar pequenos alinhamentos laterais.\par
 Mas para layouts modernos, prefira Flexbox ou Grid, pois s\'e3o mais flex\'edveis e previs\'edveis.\par
 \par
 \par
+\ul\b\fs36 OverFlow\par
+\ulnone\b0\fs22 Vamos ver em detalhes a propriedade overflow \f2\emdash  \f0 fundamental pra controlar como o conte\'fado \'e9 exibido quando ultrapassa o tamanho do elemento (por exemplo, quando o texto \'e9 maior que a caixa).\par
 \par
+\ul\b\f1\u-10178?\u-8719?\f2  \f0 O que \'e9 o overflow\ulnone\b0\par
+A propriedade overflow define o que fazer quando o conte\'fado de um elemento ultrapassa suas dimens\'f5es (largura e/ou altura).\par
+\par
+\ul\b\f1\u9881?\u-497? \f0 Sintaxe\par
+\ulnone\b0 overflow: visible | hidden | scroll | auto | clip;\par
+\par
+\ul\b\f1\u-10179?\u-8947?\f2  \f0 Valores principais\par
+\ulnone\b0 1\u-497?\f4\u8419?\f0  overflow: visible; (padr\'e3o)\par
+O conte\'fado transborda livremente do elemento.\par
+Nenhum corte ou barra de rolagem \'e9 aplicado.\par
+\par
+div \{\par
+  overflow: visible;\par
+\}\par
+\par
+\ul\b\f1\u-10178?\u-8736?\f2  \f0 Usado quando voc\'ea n\'e3o quer limitar o conte\'fado.\ulnone\b0\par
+overflow: hidden;\par
+Esconde o conte\'fado que ultrapassa a \'e1rea do elemento.\par
+Nenhuma barra de rolagem aparece.\par
+\par
+div \{\par
+  width: 200px;\par
+  height: 100px;\par
+  overflow: hidden;\par
+\}\par
+\b\f1\u-10178?\u-8719?\f2  \f0 Ideal para criar m\'e1scaras (como esconder parte de uma imagem, texto, ou anima\'e7\'e3o).\par
+\par
+\ul  overflow: scroll;\ulnone\b0\par
+Adiciona barras de rolagem (horizontal e vertical), mesmo que n\'e3o sejam necess\'e1rias.\par
+\par
+div \{\par
+  width: 200px;\par
+  height: 100px;\par
+  overflow: scroll;\par
+\}\par
+\b\f1\u-10178?\u-8723?\f2  \f0 Garante que o usu\'e1rio sempre possa rolar, mesmo que o conte\'fado caiba.\par
+\b0\par
+\ul\b overflow: auto;\ulnone\b0\par
+Adiciona barras de rolagem apenas se o conte\'fado ultrapassar o tamanho do elemento.\par
+\par
+div \{\par
+  width: 200px;\par
+  height: 100px;\par
+  overflow: auto;\par
+\}\par
+\b\f3\u-10179?\u-9055?\f2  \f0\'c9 o valor mais comum \f2\emdash  \f0 rolagem s\'f3 quando necess\'e1rio.\par
+\b0\par
+\ul\b overflow: clip;\ulnone\b0\par
+Corta o conte\'fado excedente, sem mostrar barras de rolagem e sem permitir acesso ao conte\'fado cortado (sem rolagem com teclado ou mouse).\par
+\par
+div \{\par
+  overflow: clip;\par
+\}\par
+\b\f3\u-10179?\u-8942?\f2  \f0 Funciona como hidden, mas \'e9 mais eficiente e restritivo.\par
+\b0 (Suporte moderno: Chrome, Firefox e Edge novos)\par
+\par
+\ul\b\f4\u10024?\f2  \f0 Exemplo pr\'e1tico\par
+\ulnone\b0 <div class="caixa">\par
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut sem a lorem facilisis lacinia. Donec commodo sapien nec dignissim feugiat.</p>\par
+</div>\par
+\par
+.caixa \{\par
+  width: 200px;\par
+  height: 100px;\par
+  border: 2px solid #4CAF50;\par
+  overflow: auto;\par
+\}\par
+\b\f3\u-10179?\u-9143?\f2  \f0 Vai criar uma \'e1rea com rolagem autom\'e1tica se o texto for grande demais.\par
+\b0\par
+\ul\b\f1\u-10180?\u-8294?\u-497? \f0 Controle individual\ulnone\b0\par
+Voc\'ea pode controlar cada eixo separadamente:\par
+overflow-x: hidden;  /* Horizontal */\par
+overflow-y: scroll;  /* Vertical */\par
+\par
+\ul\b\f1\u-10178?\u-8736?\f2  \f0 Dicas \'fateis\par
+\ulnone\b0\par
+overflow s\'f3 funciona em elementos com tamanho fixo (width e/ou height definidos).\par
+\'c9 muito usado em:\par
+Containers de rolagem;\par
+Galerias de imagens horizontais;\par
+Caixas de texto limitadas;\par
+Anima\'e7\'f5es que \f2\ldblquote\f0 saem\f2\rdblquote  \f0 da \'e1rea vis\'edvel.\par
 }
  
