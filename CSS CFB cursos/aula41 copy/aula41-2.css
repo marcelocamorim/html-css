@@ -1,0 +1,29 @@
+@keyframes anima{
+    0%{top: 0px; left: 0px;}    
+    25%{top: 0px; left: 500px; background-color: aqua;}
+    50%{top: 500px; left: 500px; background-color: rgb(255, 0, 170);}
+    75%{top: 500px; left: 0px; background-color: blueviolet;}
+    100%{top: 0px; left: 0px; background-color: rgb(226, 43, 43);}
+    /* 75%{top: 500px; left: 0px;}
+    100%{top: 0px; left: 0px;} */
+    
+}
+
+p{
+    position: relative;
+    top: 0px;
+    left: 0px;    
+    width: 260px;
+    height: 260px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: justify;
+    animation-name:anima;
+    animation-duration: 3s;
+    animation-timing-function: linear;    
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+   
+}
