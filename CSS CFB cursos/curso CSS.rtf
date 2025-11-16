@@ -1805,8 +1805,8 @@ transition n\'e3o cria movimento por si s\'f3 \f2\emdash  \f0 ela s\'f3 suaviza 
 \ulnone\b0\fs22 As anima\'e7\'f5es em CSS permitem criar movimentos, transi\'e7\'f5es complexas, efeitos cont\'ednuos, loops e a\'e7\'f5es que acontecem sem intera\'e7\'e3o do usu\'e1rio.\par
 \par
 \ul\b As anima\'e7\'f5es s\'e3o criadas usando duas partes:\b0\par
-\ulnone A regra @keyframes \f6\endash\f2  \f0 Define o que vai acontecer.\par
-As propriedades animation \f6\endash\f2  \f0 Aplicam a anima\'e7\'e3o no elemento.\par
+\ulnone A regra @keyframes \f7\endash\f2  \f0 Define o que vai acontecer.\par
+As propriedades animation \f7\endash\f2  \f0 Aplicam a anima\'e7\'e3o no elemento.\par
 \par
 \ul\b\f1\u-10179?\u-8903?\f2  \f0 1. Criando a anima\'e7\'e3o com @keyframes\ulnone\b0\par
 \b Estrutura b\'e1sica:\par
@@ -1843,11 +1843,11 @@ animation-duration: 1s;\par
 animation-duration: 500ms;\par
 \par
 \b\f4\u10004?\f2  \f0 animation-timing-function\b0\par
-Define a \f4\ldblquote\f0 curva\f4\rdblquote\f2  \f0 do movimento.\par
+Define a \f8\ldblquote\f0 curva\f8\rdblquote\f2  \f0 do movimento.\par
 \par
 Principais valores:\par
-linear \f6\endash\f2  \f0 velocidade constante\par
-ease \f6\endash\f2  \f0 acelera e desacelera (padr\'e3o)\par
+linear \f7\endash\f2  \f0 velocidade constante\par
+ease \f7\endash\f2  \f0 acelera e desacelera (padr\'e3o)\par
 ease-in \f2\endash  \f0 acelera no in\'edcio\par
 ease-out \f2\endash  \f0 desacelera no final\par
 ease-in-out \f2\endash  \f0 acelera e desacelera\par
@@ -1874,7 +1874,7 @@ animation-iteration-count: infinite;\par
 Sentido da anima\'e7\'e3o.\par
 \par
 Valores:\par
-normal \f6\emdash\f2  \f0 roda do in\'edcio ao fim (padr\'e3o)\par
+normal \f7\emdash\f2  \f0 roda do in\'edcio ao fim (padr\'e3o)\par
 reverse \f2\emdash  \f0 roda do fim ao in\'edcio\par
 alternate \f2\emdash  \f0 vai e volta\par
 alternate-reverse \f2\emdash  \f0 volta e vai\par
@@ -1883,7 +1883,7 @@ alternate-reverse \f2\emdash  \f0 volta e vai\par
 Define o estado do elemento ANTES ou DEPOIS da anima\'e7\'e3o.\par
 \par
 \b Valores:\b0\par
-none \f6\endash\f2  \f0 volta ao estado original (padr\'e3o)\par
+none \f7\endash\f2  \f0 volta ao estado original (padr\'e3o)\par
 forwards \f2\endash  \f0 mant\'e9m o estado final\par
 backwards \f2\endash  \f0 aplica o estado inicial antes de come\'e7ar\par
 both \f2\endash  \f0 forwards + backwards\par
@@ -2048,6 +2048,65 @@ HTML:\par
 \f4\u10004?\f2  \f0 Artigos estilo revista\par
 \f4\u10004?\f2  \f0 Layout simples sem grid\par
 \f4\u10004?\f2  \f0 Not\'edcias, blogs, documentos\par
+\par
+\par
+\ul\b\f3\fs36\u-10179?\u-8921?\f2  \f0 resize \par
+\ulnone\b0\fs22\par
+A propriedade resize permite que o usu\'e1rio redimensione manualmente um elemento usando o mouse \f6\emdash\f2  \f0 como arrastar a borda de uma textarea.\par
+Ela funciona apenas quando o elemento tem:\par
+overflow diferente de visible (ou seja, auto, scroll ou hidden)\par
+\par
+\ul\b\f3\u-10180?\u-8273?\f2  \f0 Valores do resize\par
+\ulnone\f4\u10004?\f2  \f0 none (padr\'e3o)\par
+\b0 Desativa o redimensionamento.\par
+resize: none;\par
+\par
+\b\f4\u10004?\f2  \f0 both\b0\par
+Permite redimensionar horizontal e verticalmente.\par
+resize: both;\par
+\par
+\b\f4\u10004?\f2  \f0 horizontal\b0\par
+Permite redimensionar apenas para os lados (largura).\par
+resize: horizontal;\par
+\par
+\b\f4\u10004?\f2  \f0 vertical\b0\par
+Permite redimensionar apenas para cima/baixo (altura).\par
+resize: vertical;\par
+\par
+\b\f4\u10004?\f2  \f0 block (em alguns navegadores)\b0\par
+Redimensiona no eixo do bloco (vertical em layouts LTR).\par
+\par
+\b\f4\u10004?\f2  \f0 inline\b0\par
+Redimensiona no eixo inline (horizontal).\par
+\par
+\ul\b\f3\u-10179?\u-9012?\f2  \f0 Exemplo cl\'e1ssico com textarea\par
+\ulnone\b0 textarea \{\par
+  resize: vertical;\par
+  overflow: auto;\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-9012?\f2  \f0 Exemplo aplicado em divs\par
+\ulnone\b0 .box \{\par
+  width: 200px;\par
+  height: 150px;\par
+  border: 1px solid #000;\par
+  resize: both;\par
+  overflow: auto;\par
+\}\par
+\par
+\ul\b\f4\u9888?\f2  \f0 Regras importantes\ulnone\b0\par
+\f4\u10004?\f2  \f0 S\'f3 funciona em elementos com overflow configurado\par
+\f4\u10004?\f2  \f0 Nem todos navegadores permitem em elementos n\'e3o-formul\'e1rios (mas os modernos sim)\par
+\f4\u10004?\f2  \f0 O design pode quebrar se voc\'ea n\'e3o limitar o tamanho\par
+\par
+\ul\b\f3\u-10179?\u-8479?\f2  \f0 Dica: limitar tamanho\ulnone\b0\par
+Use min-width, max-width, min-height, max-height:\par
+\par
+.box \{\par
+  resize: both;\par
+  overflow: auto;\par
+  min-width: 150px;\par
+  max-width: 400px;\par
 \par
 \lang22\par
 }
