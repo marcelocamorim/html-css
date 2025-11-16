@@ -1953,7 +1953,101 @@ animation: \par
   animation: pulse 1s infinite;\par
 \}\par
 \par
+\ul\b\fs36 COLUNAS  (Multi-Column Layout) - coluns\ulnone\b0\fs22\par
+O CSS permite dividir textos ou blocos em v\'e1rias colunas, igual a revistas e jornais.\par
+As propriedades mais usadas s\'e3o:\par
 \par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 1. column-count\ulnone\b0\par
+Define quantas colunas o conte\'fado ter\'e1.\par
+\par
+.column \{\par
+  column-count: 3;\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 2. column-width\ulnone\b0\par
+Define a largura ideal de cada coluna.\par
+O navegador cria quantas colunas couberem.\par
+\par
+.column \{\par
+  column-width: 200px;\par
+\}\par
+\b\f4\u9888?\f2  \f0 Pode ser usado junto com column-count, mas quando isso acontece:\b0\par
+column-width = largura preferida\par
+column-count = m\'e1ximo de colunas\par
+O navegador ajusta automaticamente.\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 3. column-gap\ulnone\b0\par
+Define o espa\'e7o entre as colunas.\par
+\par
+.column \{\par
+  column-gap: 30px;\par
+\}\par
+Padr\'e3o: 1em\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 4. column-rule\ulnone\b0\par
+\'c9 o \f2\ldblquote\f0 separador\f2\rdblquote  \f0 entre as colunas (equivale ao border entre elas).\par
+Shorthand que engloba:\par
+column-rule-width\par
+column-rule-style\par
+column-rule-color\par
+\par
+\b Exemplo completo:\par
+\b0\par
+.column \{\par
+  column-rule: 3px solid #aaa;\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 5. column-span\ulnone\b0\par
+Faz um elemento atravessar todas as colunas.\par
+\par
+h2 \{\par
+  column-span: all;\par
+\}\par
+Usado, por exemplo, para t\'edtulos entre blocos de colunas.\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 6. column-fill\ulnone\b0\par
+Controla como o conte\'fado \'e9 distribu\'eddo entre as colunas.\par
+\par
+\b Valores:\b0\par
+balance (padr\'e3o) \f6\u8594?\f2  \f0 preenche todas equilibradas\par
+auto \f6\u8594?\f2  \f0 preenche a coluna at\'e9 acabar o espa\'e7o e depois vai para a pr\'f3xima\par
+\par
+\b Exemplo:\b0\par
+.column \{\par
+  column-fill: balance;\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 7. Shorthand geral: columns\ulnone\b0\par
+Combina column-width + column-count.\par
+.column \{\par
+  columns: 300px 3;\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-9012?\f2  \f0 EXEMPLO COMPLETO\par
+\ulnone\b0 .texto \{\par
+  column-count: 3;\par
+  column-gap: 20px;\par
+  column-rule: 2px solid lightgray;\par
+\}\par
+HTML:\par
+<div class="texto">\par
+  Lorem ipsum dolor sit amet...\par
+</div>\par
+\par
+\ul\b\f3\u-10179?\u-9012?\f2  \f0 Exemplo com t\'edtulo atravessando todas as colunas\par
+\ulnone\b0 .container \{\par
+  column-count: 2;\par
+\}\par
+.container h2 \{\par
+  column-span: all;\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-9012?\f2  \f0 Quando usar colunas?\par
+\ulnone\b0\par
+\f4\u10004?\f2  \f0 Textos longos\par
+\f4\u10004?\f2  \f0 Artigos estilo revista\par
+\f4\u10004?\f2  \f0 Layout simples sem grid\par
+\f4\u10004?\f2  \f0 Not\'edcias, blogs, documentos\par
 \par
 \lang22\par
 }
