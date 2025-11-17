@@ -2052,7 +2052,7 @@ HTML:\par
 \par
 \ul\b\f3\fs36\u-10179?\u-8921?\f2  \f0 resize \par
 \ulnone\b0\fs22\par
-A propriedade resize permite que o usu\'e1rio redimensione manualmente um elemento usando o mouse \f6\emdash\f2  \f0 como arrastar a borda de uma textarea.\par
+A propriedade resize permite que o usu\'e1rio redimensione manualmente um elemento usando o mouse \f7\emdash\f2  \f0 como arrastar a borda de uma textarea.\par
 Ela funciona apenas quando o elemento tem:\par
 overflow diferente de visible (ou seja, auto, scroll ou hidden)\par
 \par
@@ -2108,6 +2108,101 @@ Use min-width, max-width, min-height, max-height:\par
   min-width: 150px;\par
   max-width: 400px;\par
 \par
+\par
+\ul\b\fs36 FILTER em CSS\par
+\ulnone\b0\fs22\par
+A propriedade filter aplica efeitos visuais em elementos, semelhante aos filtros de edi\'e7\'e3o de imagem de aplicativos como Photoshop, Instagram, etc.\par
+\par
+Pode ser usada em:\par
+imagens\par
+v\'eddeos\par
+divs com background\par
+textos (em alguns navegadores)\par
+qualquer elemento HTML renderizado\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 Sintaxe b\'e1sica\par
+\ulnone\b0 filter: efeito(valor);\par
+\par
+Ou v\'e1rios filtros juntos:\par
+filter: blur(5px) brightness(150%) contrast(120%);\par
+\par
+A ordem altera o resultado final.\par
+\par
+\ul\b\f3\u-10179?\u-8923?\f2  \f0 TODOS os filtros do CSS explicados\par
+\f4\u10004?\f2  \f0 1. blur()\ulnone\b0\par
+Aplica desfoque.\par
+filter: blur(5px);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 2. brightness()\ulnone\b0\par
+Ajusta brilho.\par
+Valores:\par
+brightness(1) = normal\par
+brightness(0.5) = mais escuro\par
+brightness(2) = dobro do brilho\par
+filter: brightness(150%);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 3. contrast()\ulnone\b0\par
+Aumenta/diminui o contraste.\par
+filter: contrast(200%);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 4. grayscale()\ulnone\b0\par
+Tons de cinza.\par
+filter: grayscale(100%);   /* totalmente preto e branco */\par
+filter: grayscale(50%);    /* parcialmente */\par
+\par
+\ul\b\f4\u10004?\f2  \f0 5. hue-rotate()\ulnone\b0\par
+Gira o matiz da cor (coloriza\'e7\'e3o).\par
+filter: hue-rotate(90deg);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 6. invert()\ulnone\b0\par
+Inverte as cores (negativo).\par
+filter: invert(100%);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 7. saturate()\ulnone\b0\par
+Aumenta/diminui satura\'e7\'e3o (vivacidade das cores).\par
+filter: saturate(200%);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 8. sepia()\ulnone\b0\par
+Efeito s\'e9pia (foto antiga).\par
+filter: sepia(100%);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 9. opacity()\ulnone\b0\par
+Define opacidade (igual a opacity, mas dentro do filter).\par
+filter: opacity(40%);\par
+\par
+\ul\b\f4\u10004?\f2  \f0 10. drop-shadow()\ulnone\b0\par
+Sombra realista aplicada sobre a imagem recortada.\par
+Diferente do box-shadow \f6\emdash\f2  \f0 drop-shadow segue o formato da imagem.\par
+filter: drop-shadow(8px 8px 20px rgba(0,0,0,0.4));\par
+Par\'e2metros:\par
+deslocamento X\par
+deslocamento Y\par
+blur\par
+cor\par
+\par
+\ul\b\f1\u-10178?\u-8726?\f2  \f0 Exemplo com m\'faltiplos filtros\par
+\ulnone\b0 img \{\par
+  filter: brightness(120%) contrast(130%) saturate(150%) blur(2px);\par
+\}\par
+\par
+\ul\b\f1\u-10179?\u-8576?\f2  \f0 ANIMA\'c7\'d5ES com filter\par
+\ulnone\b0 img:hover \{\par
+  filter: grayscale(0%) blur(0px);\par
+  transition: filter 0.4s;\par
+\}\par
+\par
+\ul\b\f1\u-10179?\u-9012?\f2  \f0 filter tamb\'e9m funciona com backdrop-filter\ulnone\b0\par
+Mas com diferen\'e7a:\par
+filter \f6\u8594?\f2  \f0 aplica no elemento\par
+backdrop-filter \f6\u8594?\f2  \f0 aplica no que est\'e1 atr\'e1s\par
+\par
+\ul\b Exemplo:\ulnone\b0\par
+backdrop-filter: blur(15px);\par
+\f3\u-10180?\u-8273?\f2  \f0 Vantagens de usar filter\par
+\f4\u10004?\f2  \f0 N\'e3o precisa editar imagem\par
+\f4\u10004?\f2  \f0 Anim\'e1vel com transition\par
+\f4\u10004?\f2  \f0 Suporta m\'faltiplos filtros\par
+\f4\u10004?\f2  \f0 Funciona inclusive em divs com cor ou background\par
 \lang22\par
 }
  
