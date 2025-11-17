@@ -1,0 +1,6 @@
+img{
+    /* filter: grayscale(100%);  escala de cinza*/ 
+    /* filter: blur(5px);  desfoque*/
+    /* filter: brightness(200%); brilho*/
+    filter: contrast();
+}
