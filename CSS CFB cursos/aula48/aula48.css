@@ -1,0 +1,32 @@
+img {
+    width: 500px;
+}
+
+@media screen and (min-width:0px) and (max-width:600px) {
+    body{
+        background-color: aqua;
+    }
+}
+@media screen and (min-width:601px) and (max-width:850px) {
+    body{
+        background-color: rgb(115, 255, 0);
+    }
+}
+@media screen and (min-width:851px) and (max-width:1200px) {
+    body{
+        background-color: rgb(255, 0, 149);
+    }
+}
+
+
+/*orientação de tela landscape ou portrait*/
+@media screen and (min-width:0px) and (max-width:600px) and (orientation: portrait) {
+    body{
+        background-color: rgb(47, 0, 255);
+    }
+}
+@media screen and (min-width:0px) and (max-width:600px) and (orientation: landscape) {
+    body{
+        background-color: rgb(255, 0, 0);
+    }
+}
