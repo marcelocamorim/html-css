@@ -2172,7 +2172,7 @@ filter: opacity(40%);\par
 \par
 \ul\b\f4\u10004?\f2  \f0 10. drop-shadow()\ulnone\b0\par
 Sombra realista aplicada sobre a imagem recortada.\par
-Diferente do box-shadow \f6\emdash\f2  \f0 drop-shadow segue o formato da imagem.\par
+Diferente do box-shadow \f7\emdash\f2  \f0 drop-shadow segue o formato da imagem.\par
 filter: drop-shadow(8px 8px 20px rgba(0,0,0,0.4));\par
 Par\'e2metros:\par
 deslocamento X\par
@@ -2203,6 +2203,152 @@ backdrop-filter: blur(15px);\par
 \f4\u10004?\f2  \f0 Anim\'e1vel com transition\par
 \f4\u10004?\f2  \f0 Suporta m\'faltiplos filtros\par
 \f4\u10004?\f2  \f0 Funciona inclusive em divs com cor ou background\par
+\par
+\par
+\ul\b\fs36 @media em CSS (Media Queries)\ulnone\b0\fs22\par
+A regra @media permite aplicar estilos somente em determinadas condi\'e7\'f5es, como:\par
+tamanho da tela\par
+orienta\'e7\'e3o (paisagem ou retrato)\par
+resolu\'e7\'e3o\par
+tipo de dispositivo\par
+modo claro/escuro\par
+\par
+\'c9 o recurso principal para design responsivo.\par
+\par
+\ul\b\f3\u-10180?\u-8273?\f2  \f0 Sintaxe b\'e1sica\par
+\ulnone\b0 @media (condi\'e7\'e3o) \{\par
+  /* estilos que s\'f3 se aplicam quando a condi\'e7\'e3o for verdadeira */\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 1. Media Query mais usada: largura da tela\par
+\ulnone\b0\f4\u10004?\f2  \f0 M\'e1ximo de largura (max-width)\par
+Executa quando a tela for menor ou igual ao valor.\par
+\par
+@media (max-width: 600px) \{\par
+  body \{\par
+    background: red;\par
+  \}\par
+\}\par
+\par
+\ul\b\f4\u10004?\f2  \f0 M\'ednimo de largura (min-width)\ulnone\b0\par
+Executa quando a tela for maior ou igual ao valor.\par
+\par
+@media (min-width: 900px) \{\par
+  body \{\par
+    background: blue;\par
+  \}\par
+\}\par
+\par
+\ul\b\f4\u10004?\f2  \f0 Entre duas larguras\ulnone\b0\par
+Responsividade cl\'e1ssica:\par
+\par
+@media (min-width: 600px) and (max-width: 900px) \{\par
+  body \{\par
+    background: green;\par
+  \}\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 2. Orienta\'e7\'e3o da tela\par
+\ulnone\b0 @media (orientation: portrait) \{\par
+  /* celular em p\'e9 */\par
+\}\par
+\par
+@media (orientation: landscape) \{\par
+  /* celular deitado */\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 3. Tipo de m\'eddia (screen, print)\par
+\ulnone\b0 S\'f3 aplica na tela:\par
+@media screen \{\par
+  /* estilos para dispositivos com tela */\par
+\}\par
+\par
+\ul\b Para impress\'e3o:\par
+\ulnone\b0 @media print \{\par
+  /* remove cores, oculta imagens, etc. */\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 4. Modo claro e escuro\par
+\ulnone\b0 Dark Mode:\par
+@media (prefers-color-scheme: dark) \{\par
+  body \{\par
+    background: #111;\par
+    color: #eee;\par
+  \}\par
+\}\par
+\par
+\b Light Mode:\par
+\b0 @media (prefers-color-scheme: light) \{\par
+  body \{\par
+    background: white;\par
+    color: black;\par
+  \}\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 5. Resolu\'e7\'e3o da tela (HiDPI, Retina)\par
+\ulnone\b0 @media (min-resolution: 2dppx) \{\par
+  /* telas retina */\par
+\}\par
+ou\par
+@media (min-device-pixel-ratio: 2) \{\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 6. Media Query para altura da tela\par
+\ulnone\b0 @media (max-height: 500px) \{\par
+  .menu \{\par
+    display: none;\par
+  \}\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 7. Media Queries combinando v\'e1rias condi\'e7\'f5es\par
+\ulnone Exemplo completo:\par
+\b0 @media screen and (min-width: 768px) and (orientation: landscape) \{\par
+  .container \{\par
+    padding: 40px;\par
+  \}\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8923?\f2  \f0 Guia de breakpoints mais usados (pr\'e1tico)\par
+\ulnone\b0 Dispositivo\tab Media Query\par
+Mobile pequeno\tab max-width: 480px\par
+Mobile padr\'e3o\tab max-width: 600px\par
+Tablet vertical\tab max-width: 768px\par
+Tablet horizontal\tab max-width: 992px\par
+Laptop\tab max-width: 1200px\par
+Monitor grande\tab min-width: 1201px\par
+\par
+\ul\b\f3\u-10180?\u-8273?\f2  \f0 Exemplo real de layout responsivo\par
+\ulnone\b0 .container \{\par
+  width: 100%;\par
+  max-width: 1200px;\par
+  margin: auto;\par
+\}\par
+\par
+/* tablet */\par
+@media (max-width: 768px) \{\par
+  .container \{\par
+    padding: 20px;\par
+  \}\par
+\}\par
+\par
+/* celular */\par
+@media (max-width: 480px) \{\par
+  .container \{\par
+    padding: 10px;\par
+    background: #f0f0f0;\par
+  \}\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-9012?\f2  \f0 Observa\'e7\'f5es importantes\par
+\ulnone\b0\par
+\f4\u10004?\f2  \f0 Media queries s\'e3o lidas de cima para baixo\par
+\f4\u10004?\f2  \f0 O \'faltimo estilo v\'e1lido sobrescreve o anterior\par
+\f4\u10004?\f2  \f0 Use sempre unidades px, em ou rem\par
+\f4\u10004?\f2  \f0 min-width = abordagem mobile first (recomendada)\par
+\f4\u10004?\f2  \f0 max-width = abordagem desktop first\par
+\par
+\par
+\par
 \lang22\par
 }
  
