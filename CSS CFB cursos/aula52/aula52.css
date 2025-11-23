@@ -1,0 +1,29 @@
+/*
+px => tamanho fixo
+em => tamanho em relação ao elemento pai
+rem => tamanho em relação ao elemento raiz ( o html)
+% => tamanho em relação ao tamanho do pai
+*/
+html{
+    font-size: 20px;
+}
+body{
+    font-size: 2em;
+}
+
+div{
+    width: 300px;
+}
+
+#d1{
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
+}
+#d2{
+    border: 1px solid blue;
+    height: 1em;
+    width: 100%;
+    height: 100%;
+}
+
