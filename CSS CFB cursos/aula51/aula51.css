@@ -1,0 +1,30 @@
+/*
+px => tamanho fixo
+em => tamanho em relação ao elemento pai
+*/
+html{
+    font-size: 20px;
+}
+
+div{
+    display: inline-block;
+}
+#d1{
+    border: 1px solid red;
+    width: 300px;
+    height: 2em;
+}
+#d2{
+    border: 1px solid blue;
+    width: 300px;
+    height: 1em;
+}
+
+#p1{
+    font-size: 1em;
+    color: red;
+}
+
+p{
+    font-size: 2em;
+}
