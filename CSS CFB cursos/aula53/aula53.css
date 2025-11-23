@@ -1,0 +1,25 @@
+/*
+px => tamanho fixo
+em => tamanho em relação ao elemento pai
+rem => tamanho em relação ao elemento raiz ( o html)
+% => tamanho em relação ao tamanho do pai
+vw => largura da janela
+vh => altura da janela
+*/
+
+body{
+    font-size: 2em;
+}
+
+#d1{
+    border: 1px solid red;
+    width: 90vw;
+    height: 50vh;
+}
+#d2{
+    border: 1px solid blue;
+    height: 1em;
+    width: 50%;
+    height: 50%;
+}
+
