@@ -2348,6 +2348,118 @@ Monitor grande\tab min-width: 1201px\par
 \f4\u10004?\f2  \f0 max-width = abordagem desktop first\par
 \par
 \par
+\ul\b\f3\fs36\u-10179?\u-9009?\f2  \f0 UNIDADES DE MEDIDA EM CSS\par
+\ulnone\b0\fs22\par
+As unidades em CSS se dividem em absolutas e relativas.\par
+\par
+\ul\b\f9\u-10179?\u-8219?\f2  \f0 1. Unidades ABSOLUTAS (fixas)\ulnone\b0\par
+N\'e3o mudam de tamanho independentemente da tela, zoom ou fonte.\par
+\par
+Unidade\tab Equivale a\tab Observa\'e7\'e3o\par
+px\tab pixel\tab A mais usada; pode variar de densidade entre dispositivos.\par
+cm\tab cent\'edmetro\tab Pouco usada na web.\par
+mm\tab mil\'edmetro\tab Raro uso.\par
+in\tab polegada\tab 1in = 96px.\par
+pt\tab ponto tipogr\'e1fico\tab 1pt = 1/72 in.\par
+pc\tab pica\tab 1pc = 12pt.\par
+\b\f1\u-10179?\u-9143?\f2  \f0 Na pr\'e1tica, px \'e9 a \'fanica amplamente usada em web.\par
+\b0\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 2. Unidades RELATIVAS (se adaptam ao contexto)\ulnone\b0\par
+\b S\'e3o as mais importantes para design responsivo.\par
+\b0\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 2.1. Relativas \'e0 fonte\par
+\f4\u10004?\f2  \f0 em\par
+\ulnone\b0 Baseado no tamanho da fonte do elemento pai.\par
+font-size: 2em; /* 2x a fonte do pai */\par
+Se o pai tem 20px \f6\u8594?\f2  \f0 2em = 40px.\par
+\par
+\ul\b\f4\u10004?\f2  \f0 rem\b0\par
+\ulnone Baseado no tamanho da fonte raiz (html).\par
+N\'e3o depende do elemento pai.\par
+font-size: 1.5rem;\par
+Se html \{ font-size: 16px; \} \f6\u8594?\f2  \f0 1.5rem = 24px.\par
+\par
+\b\f3\u-10179?\u-9143?\f2  \f0 Melhor para layouts consistentes.\par
+\b0\par
+\ul\b\f4\u10004?\f2  \f0 ex\b0\par
+\ulnone Altura do "x" min\'fasculo da fonte (pouco usado).\par
+\par
+\ul\b\f4\u10004?\f2  \f0 ch\par
+\ulnone\b0 Largura m\'e9dia do caractere "0" da fonte.\par
+\'d3timo para inputs com largura fixa por caracteres.\par
+\par
+input \{\par
+  width: 20ch; /* cabe +- 20 caracteres */\par
+\}\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 2.2. Relativas \'e0 tela (viewport)\par
+\f4\u10004?\f2  \f0 vw\b0\par
+\ulnone 1% da largura da tela.\par
+width: 50vw; /* metade da largura da tela */\par
+\par
+\ul\b\f4\u10004?\f2  \f0 vh\ulnone\b0\par
+1% da altura da tela.\par
+height: 100vh; /* altura completa */\par
+\par
+\ul\b\f4\u10004?\f2  \f0 vmin\par
+\ulnone\b0 Menor valor entre vw e vh.\par
+Ex: se viewport tem 1200px de largura e 800px de altura \f6\u8594?\f2  \f0 vmin = 8px.\par
+Usado em elementos que devem ser sempre quadrados.\par
+\par
+\ul\b\f4\u10004?\f2  \f0 vmax\ulnone\b0\par
+Maior valor entre vw e vh.\par
+\par
+\ul\b\f4\u10004?\f2  \f0 svh, lvh, dvh\par
+\ulnone\b0 Novas unidades para navegadores m\'f3veis:\par
+svh \f6\endash\f2  \f0 Small Viewport Height\par
+lvh \f6\endash\f2  \f0 Large Viewport Height\par
+dvh \f6\endash\f2  \f0 Dynamic Viewport Height (mais preciso em mobile)\par
+Corrigem erros de altura em celulares com barra do navegador.\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 2.3. Relativas ao container (novas)\par
+\ulnone\b0\f4\u10004?\f2  \f0 cqw, cqh, cqi, cqb, cqmin, cqmax\par
+Usadas em container queries.\par
+\par
+\b Exemplo:\b0\par
+width: 50cqw; /* 50% da largura do container */\par
+Ainda pouco utilizadas, mas tend\'eancia futura.\par
+\par
+\ul\b\f3\u-10179?\u-8903?\f2  \f0 2.4. Percentual (%)\ulnone\b0\par
+Depende do elemento pai.\par
+width: 50%; /* metade da largura do pai */\par
+Para larguras \f6\u8594?\f2  \f0 depende do width do pai\par
+Para altura \f6\u8594?\f2  \f0 s\'f3 funciona se o pai tiver altura definida\par
+\par
+\ul\b\f9\u-10179?\u-8222?\f2  \f0 3. Quando escolher cada unidade\par
+\ulnone\f9\u10004?\f2  \f0 Para fontes:\b0\par
+Use \b\fs28 rem\par
+\b0\fs22 Ou \b\fs32 em\b0\fs22  quando quiser herdar escalas do pai\par
+\par
+\ul\b\f9\u10004?\f2  \f0 Para larguras responsivas:\ulnone\b0\par
+%\par
+vw\par
+cqw (novo)\par
+\par
+\ul\b\f9\u10004?\f2  \f0 Para alturas em mobile:\ulnone\b0\par
+dvh (melhor)\par
+ou vh\par
+\par
+\ul\b\f9\u10004?\f2  \f0 Para espa\'e7amentos consistentes:\ulnone\b0\par
+rem\par
+\f4\u10004?\f2  \f0 Para caixas proporcionais:\par
+vmin\par
+\par
+\ul\b\f3\u-10180?\u-8273?\f2  \f0 4. Tabela de resumo\par
+\ulnone\b0 Categoria\tab Unidades\tab Uso comum\par
+Absolutas\tab px, cm, mm, in, pt, pc\tab Web usa principalmente px\par
+Fonte\tab em, rem, ex, ch\tab Fonte, padding, margens\par
+Tela\tab vw, vh, vmin, vmax, dvh, lvh, svh\tab Layout responsivo\par
+Container\tab cqw, cqh, cqmin...\tab Container queries\par
+Percentual\tab %\tab Largura fluida\par
+\par
+\par
+\par
+\par
 \par
 \lang22\par
 }
