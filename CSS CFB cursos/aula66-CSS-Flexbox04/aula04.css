@@ -5,14 +5,17 @@
     text-align: center;
     font-size: 1rem;
     color: #fff;
+    height: 30px;
+    width: calc(33.333% - 20px);
 }
 
 .container{
     max-width: 500px;
+    height: 400px;
     margin: 0 auto;
-    border: 1px solid black; 
-    flex-flow: row wrap;  
-    
+    border: 1px solid black;   
+    justify-content: space-around;  /*alinhamento no eixo principal*/
+    align-items:center;
     
 }
 
