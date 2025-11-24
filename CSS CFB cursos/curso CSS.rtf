@@ -2411,9 +2411,9 @@ Maior valor entre vw e vh.\par
 \par
 \ul\b\f4\u10004?\f2  \f0 svh, lvh, dvh\par
 \ulnone\b0 Novas unidades para navegadores m\'f3veis:\par
-svh \f6\endash\f2  \f0 Small Viewport Height\par
-lvh \f6\endash\f2  \f0 Large Viewport Height\par
-dvh \f6\endash\f2  \f0 Dynamic Viewport Height (mais preciso em mobile)\par
+svh \f7\endash\f2  \f0 Small Viewport Height\par
+lvh \f7\endash\f2  \f0 Large Viewport Height\par
+dvh \f7\endash\f2  \f0 Dynamic Viewport Height (mais preciso em mobile)\par
 Corrigem erros de altura em celulares com barra do navegador.\par
 \par
 \ul\b\f3\u-10179?\u-8903?\f2  \f0 2.3. Relativas ao container (novas)\par
@@ -2431,20 +2431,20 @@ Para larguras \f6\u8594?\f2  \f0 depende do width do pai\par
 Para altura \f6\u8594?\f2  \f0 s\'f3 funciona se o pai tiver altura definida\par
 \par
 \ul\b\f9\u-10179?\u-8222?\f2  \f0 3. Quando escolher cada unidade\par
-\ulnone\f9\u10004?\f2  \f0 Para fontes:\b0\par
+\ulnone\f4\u10004?\f2  \f0 Para fontes:\b0\par
 Use \b\fs28 rem\par
 \b0\fs22 Ou \b\fs32 em\b0\fs22  quando quiser herdar escalas do pai\par
 \par
-\ul\b\f9\u10004?\f2  \f0 Para larguras responsivas:\ulnone\b0\par
+\ul\b\f4\u10004?\f2  \f0 Para larguras responsivas:\ulnone\b0\par
 %\par
 vw\par
 cqw (novo)\par
 \par
-\ul\b\f9\u10004?\f2  \f0 Para alturas em mobile:\ulnone\b0\par
+\ul\b\f4\u10004?\f2  \f0 Para alturas em mobile:\ulnone\b0\par
 dvh (melhor)\par
 ou vh\par
 \par
-\ul\b\f9\u10004?\f2  \f0 Para espa\'e7amentos consistentes:\ulnone\b0\par
+\ul\b\f4\u10004?\f2  \f0 Para espa\'e7amentos consistentes:\ulnone\b0\par
 rem\par
 \f4\u10004?\f2  \f0 Para caixas proporcionais:\par
 vmin\par
@@ -2457,10 +2457,91 @@ Tela\tab vw, vh, vmin, vmax, dvh, lvh, svh\tab Layout responsivo\par
 Container\tab cqw, cqh, cqmin...\tab Container queries\par
 Percentual\tab %\tab Largura fluida\par
 \par
+\ul\b\fs36 Link para icones google\par
+\ulnone\b0\f10\fs24 <\f0 link\f10  \f0 rel\f10 =\f0 "stylesheet"\f10  \f0 href\f10 =\f0 "https\f10 ://\f0 fonts\f10 .\f0 googleapis\f10 .\f0 com\f10 /\f0 css2\f10 ?\f0 family\f10 =\f0 Material\f10 +\f0 Symbols\f10 +\f0 Outlined"\f10  />\f0\par
+\ul\b\fs36\par
+\f10  \f0 Inherit\f10  \f0 e\f10  \f0 Initial\par
+\ulnone\b0\fs22\par
+\ul\b\f3\u-10179?\u-8907?\f2  \f0 1. inherit\ulnone\b0\par
+inherit significa herdar o valor do elemento pai.\par
+Ou seja:\par
+O elemento pega o valor da mesma propriedade aplicada no pai dele.\par
 \par
+\ul\b\f4\u10004?\f2  \f0 Exemplo 1 \f6\emdash\f2  \f0 herdando cor:\par
+\ulnone\b0 div \{\par
+  color: blue;\par
+\}\par
 \par
+p \{\par
+  color: inherit;\par
+\}\par
+\b Resultado:\par
+\b0 O <p> fica azul, porque herdou do <div>.\par
 \par
+\ul\b\f4\u10004?\f2  \f0 Exemplo 2 \f6\emdash\f2  \f0 herdando fonte:\par
+\ulnone\b0 body \{\par
+  font-size: 20px;\par
+\}\par
 \par
+h1 \{\par
+  font-size: inherit;\par
+\}\par
+O <h1> passa a ter 20px, igual ao body.\par
+\par
+\ul\b\f4\u10004?\f2  \f0 Para que serve?\ulnone\b0\par
+For\'e7ar algo a seguir o estilo do pai\par
+"Desfazer" um estilo mais espec\'edfico\par
+Garantir consist\'eancia visual\par
+\par
+\ul\b\f3\u-10179?\u-8907?\f2  \f0 2. initial\ulnone\b0\par
+initial significa:\par
+Voltar ao valor padr\'e3o da propriedade (o valor definido pelo CSS, n\'e3o pelo navegador).\par
+\par
+\ul\b Exemplo:\par
+\ulnone\b0 A propriedade display por padr\'e3o \'e9 inline para <span>, block para <div>, etc.\par
+Mas o valor inicial da propriedade \'e9 aquele definido pela especifica\'e7\'e3o CSS, n\'e3o pelo elemento.\par
+\par
+\ul\b\f4\u10004?\f2  \f0 Exemplo 1 \f6\emdash\f2  \f0 voltar ao padr\'e3o:\par
+\ulnone\b0 p \{\par
+  color: initial;\par
+\}\par
+O color volta para o valor padr\'e3o do user-agent:\par
+\f9\u-10179?\u-8218?\f2  \f0 Geralmente preto, mas depende do navegador.\par
+\par
+\ul\b\f9\u10004?\f2  \f0 Exemplo 2 \f6\emdash\f2  \f0 reseta display:\par
+\ulnone\b0 div \{\par
+  display: inline;\par
+\}\par
+\par
+div \{\par
+  display: initial;\par
+\}\par
+O display volta para o valor block (padr\'e3o para divs).\par
+\par
+\ul\b\f3\u-10180?\u-8273?\f2  \f0 Diferen\'e7a Essencial\par
+\ulnone\b0 Propriedade\tab O que faz\par
+inherit\tab Pega o valor que o pai tem\par
+initial\tab Volta para o valor padr\'e3o definido na especifica\'e7\'e3o\par
+\par
+\ul\b\f1\u-10178?\u-8736?\f2  \f0 Memoriza\'e7\'e3o Simples\ulnone\b0\par
+inherit = copiar do pai\par
+initial = resetar para o padr\'e3o do CSS\par
+\par
+\ul\b\f9\u-10179?\u-8214?\f2  \f0 Exemplo mostrando a diferen\'e7a\par
+\ulnone\b0 div \{\par
+  color: green;\par
+\}\par
+p \{\par
+  color: initial; /* volta pro padr\'e3o (geralmente preto) */\par
+\}\par
+span \{\par
+  color: inherit; /* fica verde como o pai (div) */\par
+\}\par
+\par
+\ul\b\f9\u-10179?\u-8215?\f2  \f0 Extra: unset (caso queira saber)\ulnone\b0\par
+unset combina os dois:\par
+Se a propriedade \'e9 herd\'e1vel \f6\u8594?\f2  \f0 funciona como inherit\par
+Se N\'c3O \'e9 herd\'e1vel \f2\u8594? \f0 funciona como initial\par
 \lang22\par
 }
  
