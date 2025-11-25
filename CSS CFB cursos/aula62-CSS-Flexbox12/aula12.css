@@ -15,7 +15,7 @@
     margin: 0 auto;
     border: 1px solid black;   
     
-    justify-content: space-around;  /*alinhamento no main axis*/
+    justify-content: center;  /*alinhamento no main axis*/
     align-items:center;  /*alinhamento no cros axis*/
      /*alinhamento das linhas (necessario ter mais de uma linha (wrap))*/
     
