@@ -1,0 +1,82 @@
+.item{
+    margin: 5px;
+    padding: 5px;
+    background-color: #447;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;    
+    width: 200px;
+    
+}
+
+.container{
+    max-width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    border: 1px solid black;   
+    
+    justify-content: space-around;  /*alinhamento no main axis*/
+    align-items:center;  /*alinhamento no cros axis*/
+     /*alinhamento das linhas (necessario ter mais de uma linha (wrap))*/
+    
+}
+
+/* grow => Define quanto o item cresce em relação aos outros quando há espaço livre.
+*/
+.tam1{
+    flex-grow: 1;
+}
+.tam2{
+    flex-grow: 2;
+}
+.tam3{
+    flex-grow: 3;
+}
+
+/*força os elementos a ter o mesmo tamanho independente do conteudo*/
+.basisA{
+    flex-basis: auto;/*não altera*/
+}
+.basi0{
+    flex-basis: 0; /*deixa no mesmo tamanho*/
+}
+
+
+/* shrink => Define quanto o item encolhe quando o container é menor que o total dos itens.
+*/
+.reduzir0{
+    flex-shrink: 0;
+}
+.reduzir1{
+    flex-shrink: 1;
+}
+
+/*posicionamento individual*/
+.inicio{
+    align-self: flex-start;
+}
+.meio{
+    align-self: center;
+}
+.fim{
+    align-self: flex-end;
+}
+
+.flex{
+    display: flex;
+}
+.horizontal{
+    flex-direction: row;
+}
+.vertical{
+    flex-direction: column;
+}
+.quebraLinha{
+    flex-wrap: wrap;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
