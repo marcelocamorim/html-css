@@ -2308,7 +2308,7 @@ Container\tab cqw, cqh, cqmin...\tab Container queries\par
 Percentual\tab %\tab Largura fluida\par
 \par
 \ul\b\fs36 Link para icones google\par
-\ulnone\b0\f10\fs24 <\f0 link\f10  \f0 rel\f10 =\f0 "stylesheet"\f10  \f0 href\f10 =\f0 "https\f10 ://\f0 fonts\f10 .\f0 googleapis\f10 .\f0 com\f10 /\f0 css2\f10 ?\f0 family\f10 =\f0 Material\f10 +\f0 Symbols\f10 +\f0 Outlined"\f10  />\f0\par
+\ulnone\b0\f10\fs24 <\f0 link\f10  \f0 rel\f10 =\f0 "stylesheet"\f10  \f0 href\f10 =\f0 "{{\field{\*\fldinst{HYPERLINK https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined }}{\fldrslt{https\f10 ://\f0 fonts\f10 .\f0 googleapis\f10 .\f0 com\f10 /\f0 css2\f10 ?\f0 family\f10 =\f0 Material\f10 +\f0 Symbols\f10 +\f0 Outlined\ul0\cf0}}}}\f0\fs24 "\f10  />\f0\par
 \ul\b\fs36\par
 \f10  \f0 Inherit\f10  \f0 e\f10  \f0 Initial\par
 \ulnone\b0\fs22\par
@@ -2317,7 +2317,7 @@ inherit significa herdar o valor do elemento pai.\par
 Ou seja:\par
 O elemento pega o valor da mesma propriedade aplicada no pai dele.\par
 \par
-\ul\b\f4\u10004?\f2  \f0 Exemplo 1 \f6\emdash\f2  \f0 herdando cor:\par
+\ul\b\f4\u10004?\f2  \f0 Exemplo 1 \f7\emdash\f2  \f0 herdando cor:\par
 \ulnone\b0 div \{\par
   color: blue;\par
 \}\par
@@ -2328,7 +2328,7 @@ p \{\par
 \b Resultado:\par
 \b0 O <p> fica azul, porque herdou do <div>.\par
 \par
-\ul\b\f4\u10004?\f2  \f0 Exemplo 2 \f6\emdash\f2  \f0 herdando fonte:\par
+\ul\b\f4\u10004?\f2  \f0 Exemplo 2 \f7\emdash\f2  \f0 herdando fonte:\par
 \ulnone\b0 body \{\par
   font-size: 20px;\par
 \}\par
@@ -2351,14 +2351,14 @@ Voltar ao valor padr\'e3o da propriedade (o valor definido pelo CSS, n\'e3o pelo
 \ulnone\b0 A propriedade display por padr\'e3o \'e9 inline para <span>, block para <div>, etc.\par
 Mas o valor inicial da propriedade \'e9 aquele definido pela especifica\'e7\'e3o CSS, n\'e3o pelo elemento.\par
 \par
-\ul\b\f4\u10004?\f2  \f0 Exemplo 1 \f6\emdash\f2  \f0 voltar ao padr\'e3o:\par
+\ul\b\f4\u10004?\f2  \f0 Exemplo 1 \f7\emdash\f2  \f0 voltar ao padr\'e3o:\par
 \ulnone\b0 p \{\par
   color: initial;\par
 \}\par
 O color volta para o valor padr\'e3o do user-agent:\par
 \f9\u-10179?\u-8218?\f2  \f0 Geralmente preto, mas depende do navegador.\par
 \par
-\ul\b\f9\u10004?\f2  \f0 Exemplo 2 \f6\emdash\f2  \f0 reseta display:\par
+\ul\b\f4\u10004?\f2  \f0 Exemplo 2 \f7\emdash\f2  \f0 reseta display:\par
 \ulnone\b0 div \{\par
   display: inline;\par
 \}\par
@@ -2391,7 +2391,7 @@ span \{\par
 \ul\b\f9\u-10179?\u-8215?\f2  \f0 Extra: unset (caso queira saber)\ulnone\b0\par
 unset combina os dois:\par
 Se a propriedade \'e9 herd\'e1vel \f6\u8594?\f2  \f0 funciona como inherit\par
-Se N\'c3O \'e9 herd\'e1vel \f2\u8594? \f0 funciona como initial\par
+Se N\'c3O \'e9 herd\'e1vel \f6\u8594?\f2  \f0 funciona como initial\par
 \par
 \ul\b\fs36 calc\par
 \ulnone\b0\fs22 A propriedade calc() em CSS permite fazer c\'e1lculos matem\'e1ticos diretamente dentro das propriedades.\par
@@ -2406,7 +2406,7 @@ Voc\'ea pode usar:\par
 \par
 \b E sempre precisa haver espa\'e7os entre operadores, assim:\b0\par
 \f1\u10004?\u-497?\f2  \f0 correto: calc(100% - 50px)\par
-\f1\u10060?\f2  \f0 errado: calc(100%-50px)\par
+\f4\u10060?\f2  \f0 errado: calc(100%-50px)\par
 \par
 \ul\b\f1\u-10179?\u-9012?\f2  \f0 Exemplos pr\'e1ticos\par
 \ulnone\b0\f1\u10004?\u-497?\f2  \f0 1. Largura responsiva subtraindo tamanho fixo\par
@@ -2613,8 +2613,127 @@ Permite alinhar um item espec\'edfico, ignorando o align-items do container.\par
 O flexbox \'e9 \'f3timo para:\par
 Centralizar qualquer elemento (horizontal e verticalmente);\par
 Criar layouts responsivos simples;\par
-Distribuir espa\'e7o de forma autom\'e1tica.\lang22\par
+Distribuir espa\'e7o de forma autom\'e1tica.\par
 \par
-\lang22\par
+\ul\b\f1\fs36\u-10178?\u-8727?\f2  \f0 O que \'e9 CSS Grid?\par
+\ulnone\b0\fs22\par
+O CSS Grid Layout \'e9 um sistema de layout bidimensional (linhas + colunas).\par
+Com ele voc\'ea cria estruturas de p\'e1gina complexas de forma simples, sem precisar de float nem flex apenas.\par
+Ele trabalha sempre com um container (pai) e itens (filhos).\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 1. Criando um container Grid\par
+\ulnone\b0 .container \{\par
+  display: grid;\par
+\}\par
+Isso transforma os elementos dentro dele em itens do grid.\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 2. Definindo colunas e linhas\par
+\ulnone\b0\f1\u10004?\u-497?\f2  \f0 grid-template-columns\par
+Define quantas colunas existir\'e3o e seus tamanhos:\par
+.container \{\par
+  display: grid;\par
+  grid-template-columns: 200px 200px 200px;\par
+\}\par
+\b Tr\'eas colunas de 200px.\par
+\b0\par
+\ul\b\f1\u-10179?\u-8903?\f2  \f0 Voc\'ea pode misturar unidades:\ulnone\b0\par
+grid-template-columns: 1fr 2fr 1fr;\par
+fr = fra\'e7\'e3o do espa\'e7o dispon\'edvel.\par
+\par
+\f1\u10004?\u-497?\f2  \f0 grid-template-rows\par
+grid-template-rows: 100px auto 50px;\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 3. Valores especiais \'fateis\par
+\ulnone\b0 repeat()\par
+grid-template-columns: repeat(3, 1fr);\par
+\par
+auto-fit / auto-fill\par
+\par
+Cria colunas autom\'e1ticas que se ajustam ao espa\'e7o:\par
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\par
+Excelente para responsividade.\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 4. Espa\'e7amento entre items\par
+\ulnone\b0\f1\u10004?\u-497?\f2  \f0 gap\par
+gap: 20px;\par
+\par
+Ou separado:\par
+\par
+row-gap: 10px;\par
+column-gap: 20px;\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 5. Definindo posi\'e7\'e3o dos itens\ulnone\b0\par
+Voc\'ea pode controlar onde cada item vai ficar.\par
+\b\f1\u10004?\u-497?\f2  \f0 Posicionando manualmente\par
+\b0 .item1 \{\par
+  grid-column: 1 / 3;   /* Ocupa da coluna 1 at\'e9 a 3 */\par
+  grid-row: 1 / 2;\par
+\}\par
+\par
+\b\f1\u10004?\u-497?\f2  \f0 Expandindo por v\'e1rias colunas ou linhas\par
+\b0 .item2 \{\par
+  grid-column: span 2;\par
+  grid-row: span 3;\par
+\}\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 6. Alinhamento no grid\par
+\ulnone\f1\u10004?\u-497?\f2  \f0 Alinhar todo o conte\'fado\par
+\b0 justify-content: center; /* horizontal */\par
+align-content: center;   /* vertical */\par
+\par
+\b\f1\u10004?\u-497?\f2  \f0 Alinhar dentro das c\'e9lulas\par
+\b0 justify-items: center;\par
+align-items: center;\par
+\par
+\b\f1\u10004?\u-497?\f2  \f0 Alinhar item individual\par
+\b0 .item \{\par
+  justify-self: end;\par
+  align-self: center;\par
+\}\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 7. Template de \'e1reas (muito bom!)\ulnone\b0\par
+Serve para criar layouts completos de p\'e1gina.\par
+\par
+Estrutura:\par
+.container \{\par
+  display: grid;\par
+  grid-template-areas:\par
+    "header header"\par
+    "sidebar content"\par
+    "footer footer";\par
+  grid-template-columns: 1fr 3fr;\par
+  grid-template-rows: auto 1fr auto;\par
+\}\par
+\par
+header  \{ grid-area: header; \}\par
+aside   \{ grid-area: sidebar; \}\par
+main    \{ grid-area: content; \}\par
+footer  \{ grid-area: footer; \}\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 8. Grid + responsividade\ulnone\b0\par
+\b Exemplo: cards que se reorganizam sozinhos:\par
+\b0\par
+.container \{\par
+  display: grid;\par
+  gap: 20px;\par
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\par
+\}\par
+\b Zero media queries, super moderno.\par
+\b0\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 9. Diferen\'e7a entre GRID e FLEX\par
+\ulnone FLEX\tab GRID\par
+\b0 unidimensional (linha ou coluna)\tab bidimensional (linhas e colunas)\par
+melhor para componentes pequenos\tab melhor para layouts completos\par
+fluxo flex\'edvel\tab posicionamento preciso\par
+controle simples\tab controle avan\'e7ado\par
+\par
+\ul\b\f9\u-10179?\u-8218?\f2  \f0 10. Propriedades importantes de itens\ulnone\b0\par
+\f4\u10004?\f2  \f0 grid-column\par
+\f4\u10004?\f2  \f0 grid-row\par
+\f4\u10004?\f2  \f0 grid-area\par
+\f4\u10004?\f2  \f0 justify-self\par
+\f4\u10004?\f2  \f0 align-self\lang22\par
+\par
+\par
 }
  
