@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 33 de HTML</title>
+
+
+    <style>
+
+        .espaco_t {
+            margin-top: 15px;
+        }
+        .espaco_b {
+            margin-bottom: 15px;
+        }
+
+
+        .quebra {
+            display: block;
+            
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 15px;
+            background-color: rgb(212, 212, 212);
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Formulário P3 (password, checkbox, radio) - Curso de HTML Completo e Profissional #33</h1>
+
+    <form action="#" name="f_cadastro" method="get">
+        <label for="">Usuario</label>
+        <input class="quebra espaco_b" type="text" name="f_usename" placeholder="Nome de usuario" size="30">
+
+        <label for="">Senha</label>
+        <input class="quebra espaco_b" type="password" name="f_senha" placeholder="Senha" maxlength="8">
+
+        <label class="quebra" for="">Esportes Favoritos</label>
+        <input type="checkbox" name="f_fut" value="Futebol">Futebol
+        <input type="checkbox" name="f_bask" value="Basket">Basket
+        <input type="checkbox" name="f_nat" value="Natação">Natação
+
+
+        <label class="quebra  espaco_t" for="">Possui Carro?</label>
+        <input type="radio" name="f_carro">Sim
+        <input type="radio" name="f_carro">Não
+        <!--radios precisam ter o mesmo nome para evitar marcar os dois-->
+
+        <input class="quebra espaco_t" type="submit" name="f_entrar" value="Entrar">
+    </form>
+</body>
+
+</html>
