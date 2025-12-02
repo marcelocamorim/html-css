@@ -35,11 +35,16 @@
 <body>
     <h1>Formulário P3 (password, checkbox, radio) - Curso de HTML Completo e Profissional #33</h1>
 
-    <form action="#" name="f_cadastro" method="get">
+    <form action="#" name="f_cadastro" method="get" enctype="multipart/form-data">
 
 
         <label class="quebra" for="">Selecione o Arquivo</label>
-        <input class="espaco_b" type="file" name="f_arquivo">
+        <input class="espaco_b" type="file" name="f_arquivo" multiple accept=".jpg,.png">
+
+
+
+        <label class="quebra" for="">Digite o URL</label>
+        <input class="espaco_b" type="url" name="f_url">
 
        
        
