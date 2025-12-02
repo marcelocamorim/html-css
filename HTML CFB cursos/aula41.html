@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 41 de HTML</title>
+
+
+    <style>
+        .espaco_t {
+            margin-top: 15px;
+        }
+
+        .espaco_b {
+            margin-bottom: 15px;
+        }
+
+
+        .quebra {
+            display: block;
+
+        }
+
+        form {
+            border: 1px solid black;
+            padding: 15px;
+            background-color: rgb(212, 212, 212);
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Formulário P3 (password, checkbox, radio) - Curso de HTML Completo e Profissional #33</h1>
+
+    <form action="#" name="f_cadastro" method="get" enctype="multipart/form-data">
+
+        <fieldset class="espaco_b">
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="fnome" class="quebra espaco_b">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="ftelefone" class="quebra espaco_b">
+        </fieldset>
+
+        <fieldset>
+            <legend>Perguntas</legend>
+            <label for="carro" class="quebra">Possui Carro</label>
+            <input type="radio" name="fcarro" id="carro">Sim
+            <input type="radio" name="fcarro" id="carro" >Não
+            
+            <label for="casa" class="quebra espaco_t">Possui Casa Própria</label>
+            <input type="radio" name="fcasa" id="casa">Sim
+            <input type="radio" name="fcasa" id="casa">Não
+        </fieldset>
+
+        <input class="quebra espaco_t" type="submit" name="f_entrar" value="Entrar">
+
+
+    </form>
+</body>
+
+</html>
