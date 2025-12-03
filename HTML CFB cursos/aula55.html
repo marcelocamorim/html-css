@@ -6,39 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aula 055 de html CFB cursos</title>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
+        iframe{
+            width: 80%;
+            height: 300px;
+            border: 1px solid black;
+            display: block;
+            margin-top: 30px;
         }
-        #iframe_cotacao {
-            position: absolute;
-            top: -100px;
-            left: 0px;
-            width: 100%;
-            height: 650px;
-            border: 2px solid #000;
-           
-            
-
-
+        #banner{
+            width: 500px;
+            height: 200px;
         }
-
-        #div_iframe {
-            position: relative;
-            width: 100%;
-            height: 490px;
-        }
+        
     </style>
 </head>
 
 <body>
-    <div id="div_iframe">
-        <iframe src="https://www.comprarviagem.com.br/lavventuratravel/home" frameborder="0"
-            id="iframe_cotacao"></iframe>
+    <iframe src="" name="banner" id="banner" frameborder="0"></iframe>
 
-    </div>
 
-    <div id="sep1"></div>
+    <a href="aula54.html" target="main">aula54</a>
+    <a href="aula53.html" target="main">aula53</a>
+    <a href="aula52.html" target="main">aula52</a>
+    <iframe name="main" src="aula50.html" frameborder="0"></iframe>
+    
+
+    <script>
+        function trocaBanner(){
+            let num= Math.floor(Math.random()*3)
+            let imgs=['cha.jpg','peixe.PNG','pimenta.jpg']
+            document.getElementById("banner").src=imgs[num]
+        }
+
+        function iniciar(){
+            trocaBanner()
+        }
+
+        window.addEventListener("load",iniciar)
+    </script>
 </body>
 
 </html>
