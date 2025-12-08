@@ -13,8 +13,11 @@ header{
     width: 100%;
     background-color: rgb(255, 255, 255);
 }
+#banner{
+    display: flex;
+}
 #banner img{
-    width: 300px;
+    width: 100%;
 }
 
 header nav ul{
@@ -50,8 +53,23 @@ section{
 section:nth-child(even){
     background-color: rgb(53, 58, 82);
 }
+article{
+    width: 100%;
+}
 
 footer{
     background-color: black;
     height: 50px;
+}
+
+.borda1{
+    border: 1px solid black;
+}
+.borda0{
+    border: none;
+}
+.flexivel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
