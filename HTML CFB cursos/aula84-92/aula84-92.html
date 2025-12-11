@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 84 de HTML</title>
+    <link rel="stylesheet" href="aula84-92.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#canal">Canal</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="banner">
+        <img src="imagens/banner-aula84.png" alt="">
+    </section>    
+
+    <section id="sobre" class="flexivel">
+        <article class="borda1" data-anima="esquerda">
+            sobre o canal
+        </article>
+        <article class="borda1" data-anima="direita">
+            sobre o Mim
+        </article>
+    </section>
+
+    <section id="cursos" class="flexivel">
+        <article class="borda1 containerCursos" data-anima="esquerda">
+            <img src="../imagens/img-html.png" alt="Curso 1" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 2" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 3" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 4" class="mini" onclick="cliqueModal(this)">
+        </article>
+        <article class="borda1 containerCursos" data-anima="meio">
+            <img src="../imagens/img-html.png" alt="Curso 5" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 6" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 7" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 8" class="mini" onclick="cliqueModal(this)">
+        </article>
+        <article class="borda1 containerCursos" data-anima="direita">
+            <img src="../imagens/img-html.png" alt="Curso 9" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 10" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 11" class="mini" onclick="cliqueModal(this)">
+            <img src="../imagens/img-html.png" alt="Curso 12" class="mini" onclick="cliqueModal(this)">
+        </article>
+    </section>
+
+    <section class="paralax p2">
+        <article class="teste">
+            CFB Cursos <br>CFB Cursos <br>CFB Cursos <br>CFB Cursos <br>CFB Cursos <br>
+        </article>
+    </section>
+
+    <section id="canal" class="flexivel">
+        <article class="borda1" data-anima="esquerda">
+            esquerda
+        </article>
+        <article class="borda1" data-anima="direita">
+            direita
+        </article>
+    </section>
+
+    <section id="contato" class="flexivel">
+        <article class="borda1" data-anima="esquerda">
+            esquerda
+        </article>
+        <article class="borda1" data-anima="meio">
+            meio
+        </article>
+        <article class="borda1" data-anima="direita">
+            direita
+        </article>
+    </section>
+
+    <footer>        
+    </footer>
+
+    <div id="modal" class="modal escondeJanelaModal">
+        <span id="btnFechar" class="fecharModal">x</span>
+        <img id="imgModal" class="imgModal" src="" alt="">
+        <div id="txtModal" class="txtModal"></div>
+
+    </div>
+
+
+    <script src="aula84-92.js"></script>
+
+</body>
+</html>
