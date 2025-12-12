@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+}
+
+#containerIcons {  
+    position: fixed;
+    top: 0px;    
+    background-color: cadetblue;
+    width: 60px;
+    height: 100vh;
+    transition: .3s;
+
+}
+
+#containerIcons span {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: .3s;
+    cursor: pointer;
+
+}
+
+#containerIcons span:hover {
+    background-color: rgb(155, 248, 248);
+    font-size: 2.2rem;
+    
+}
+
+.ativo{
+    background-color: rgb(100, 241, 241);
+}
+
+.invisivel{    
+    left: -60px;
+    opacity:0;
+}
+
+.visivel{    
+    left: 0px;
+    opacity:1;
+}
+
+#burguer{
+    margin: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .2s;
+}
+#burguer:hover{
+    scale: 1.2;
+}
