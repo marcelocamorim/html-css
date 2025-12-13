@@ -1,0 +1,53 @@
+nav{
+    background-color: antiquewhite;  
+    border: 2px solid  rgb(236, 189, 127)  
+}
+
+.guia{
+    background-color: antiquewhite;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    ;
+
+}
+
+.guia:hover{
+    background-color: rgb(236, 189, 127);
+}
+
+.conteudo{
+    border: 2px solid  rgb(236, 189, 127);
+    background-color: white;
+    
+    padding: 10px;  
+    display: block;  
+}
+
+.fechar{
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    
+    
+}
+.fechar:hover{
+    color: red;
+     
+}
+
+/*class dos buttons*/
+.ativo{
+    background-color: rgb(236, 189, 127);
+}
+
+
+
+/*class dos conteudos*/
+.visivel{
+    display: block;
+}
+.invisivel{
+    display: none;
+}
