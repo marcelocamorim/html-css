@@ -1,0 +1,32 @@
+nav{
+    background-color: rgb(199, 199, 199);
+    height: 100vh;
+    width: 250px;
+    
+}
+nav input{
+    width: 242px;
+    height: 30px;
+}
+
+ul{
+    list-style: none;    
+    padding: 0px;
+}
+
+ul li{
+    padding: 5px 0px;
+    
+    
+    
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+ul li:hover{
+    background-color: rgb(235, 235, 235);
+    
+}
