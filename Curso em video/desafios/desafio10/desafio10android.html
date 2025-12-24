@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>desafio 10 Revisão</title>
+
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
     <link rel="stylesheet" href="estilo/desafio10android.css">
 </head>
 
@@ -15,7 +19,7 @@
         <p>Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único lugar</p>
     </header>
 
-    <nav>
+    <nav class="menuDesktop">
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Notícias</a></li>
@@ -23,6 +27,22 @@
             <li><a href="#">Fale Conosco</a></li>
         </ul>
     </nav>
+
+    <span id="burguer" class="material-symbols-outlined">
+        menu
+    </span>
+
+    <div id="containerMenuMobile">
+        <nav class="menuMobile">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Curiosidades</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>
+
+        </nav>
+    </div>
 
     <main>
         <article>
@@ -49,7 +69,11 @@
                 de um mascote.
             </p>
 
-            <img src="imagens/dan-droids.png" alt="">
+            <picture>
+                <source media="(min-width: 650px)" srcset="imagens/dan-droids.png">
+                <img src="imagens/dan-droids-pq.png" alt=" dan-droids">
+            </picture>
+
             <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os Dandroids.</p>
 
             <h2>Surge um novo mascote</h2>
@@ -62,8 +86,8 @@
                 agradável.
             </p>
             <picture>
-                <source media="(min-width:850px )" srcset="">
-                <img src="imagens/irina-blok.jpg" alt="">
+                <source media="(min-width:650px )" srcset="imagens/irina-blok.jpg">
+                <img src="imagens/irina-blok-pq.jpg" alt=" irina block">
             </picture>
 
             <p>
@@ -73,7 +97,11 @@
                 também deveria gerar identificação rápida com quem o olha. Surgiu então o Bugdroid, o novo mascote do
                 Android.
             </p>
-            <img id="bugdroid" src="imagens/bugdroid.png" alt="">
+
+            <picture>
+                <img id="bugdroid" src="imagens/bugdroid.png" alt="">
+            </picture>
+
             <p>
                 A principal inspiração para os traços do novo Bugdroid veio daqueles bonequinhos que ilustram portas de
                 banheiro
@@ -142,6 +170,8 @@
     <footer>
         Site criado por: Marcelo C. Amorim para desafio 10 Curso em vídeo
     </footer>
+
+    <script src="desafio10.js"></script>
 </body>
 
 </html>
