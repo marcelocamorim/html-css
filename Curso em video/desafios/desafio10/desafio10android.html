@@ -14,17 +14,17 @@
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <h1>Curiosidades de Tecnologia</h1>
         <p>Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único lugar</p>
     </header>
 
     <nav class="menuDesktop">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Notícias</a></li>
-            <li><a href="#">Curiosidades</a></li>
-            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#noticias">Notícias</a></li>
+            <li><a href="#divVideo">Curiosidades</a></li>
+            <li><a href="#contato">Fale Conosco</a></li>
         </ul>
     </nav>
 
@@ -35,10 +35,10 @@
     <div id="containerMenuMobile">
         <nav class="menuMobile">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Notícias</a></li>
-                <li><a href="#">Curiosidades</a></li>
-                <li><a href="#">Fale Conosco</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+                <li><a href="#divVideo">Curiosidades</a></li>
+                <li><a href="#contato">Fale Conosco</a></li>
             </ul>
 
         </nav>
@@ -76,7 +76,7 @@
 
             <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os Dandroids.</p>
 
-            <h2>Surge um novo mascote</h2>
+            <h2 id="noticias">Surge um novo mascote</h2>
             <p>
                 A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A
                 ilustradora Russa
@@ -167,7 +167,15 @@
         </article>
     </main>
 
-    <footer>
+    
+        <a href="#home">
+            <span id="inicio" class="material-symbols-outlined">
+                home
+            </span>
+        </a>
+    
+
+    <footer id="contato">
         Site criado por: Marcelo C. Amorim para desafio 10 Curso em vídeo
     </footer>
 
