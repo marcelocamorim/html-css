@@ -37,7 +37,7 @@ header h1{
     font-family: var(--fonte-destaque);
     color: white;
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 3rem);
     padding-top: 35px;
 
 }
@@ -115,6 +115,7 @@ main img{
     width: 100%;
 }
 #bugdroid{
+    width: 100%;
     max-width: 350px;
     display: block;
     margin: auto;
@@ -125,19 +126,23 @@ main img{
     justify-content: center;
     align-items: center;
     background-color: var(--cor4);
-    height: 500px;
+    height: clamp(300px, 50vw, 500px);
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
 }
 
-#iframeVideo{
-    width: 80%;
-    height: 440px;
+#iframeVideo {
+    width: 90%;
+    height: 90%;
 }
+
 
 aside{
     background-color: var(--cor1);
     margin-top: 30px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
     
 }
 
@@ -150,6 +155,9 @@ aside{
     color: white;
 }
 
+aside p{
+    padding: 10px;
+}
 aside ul{
     list-style: '\2714\00A0\00A0';
     columns: 2;
