@@ -190,7 +190,7 @@ footer {
 
 #inicio{
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
 
     background-color: var(--cor5);
@@ -299,6 +299,15 @@ footer {
 
 
     }
+
+    #inicio{ 
+
+   
+    height: 30px;
+    width: 30px;
+
+    
+}
 
 }
 
