@@ -102,8 +102,7 @@ header nav a {
 #rodapeParalax {
     display: flex;
     color: white;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between;    
     margin-right: 30px;
 }
 
@@ -112,21 +111,27 @@ header nav a {
 }
 
 #rodapeParalax ul li {
-    padding: 5px;
+    padding: 3px;
 }
 
 #rodapeParalax a {
     text-decoration: none;
     color: white;
-    padding: 5px;
+    padding: 3px;
 }
 
 #rodapeParalax #div1{
+    display: flex;
+    align-items: center;
     width: 50%;
-    
+}
+#rodapeParalax #div3 p{
+        padding: 3px;
+
 }
 
 
+/*Section 2*/
 #section2 {
     height: 1600px;
     background-color: rgb(255, 255, 255);
