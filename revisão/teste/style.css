@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#parallax {
+  position: relative;
+  height: 1000px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#parallax img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+#parallax h1 {
+  position: relative;
+  color: white;
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-shadow: 0 0 20px black;
+}
+
+.conteudo {
+  height: 150vh;
+  padding: 50px;
+  background: white;
+  font-size: 1.5rem;
+}

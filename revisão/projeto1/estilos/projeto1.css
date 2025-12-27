@@ -73,7 +73,7 @@ header nav a {
     padding-bottom: 100px;
 }
 .containerTextoGrande{
-    margin: 120px 0px;
+    margin: 100px 0px;
 }
 .textoGrande {
     color: white;
@@ -106,5 +106,10 @@ header nav a {
     color: white;
     padding: 5px;
     
+}
+
+#segundaSection{
+    height: 1600px;
+    background-color: white;
 }
 
