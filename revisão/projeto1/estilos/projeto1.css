@@ -133,6 +133,13 @@ header nav a {
 
 /*Section 2*/
 #section2 {
+    
     height: 1600px;
     background-color: rgb(255, 255, 255);
+}
+#containerSec2{
+    background-color: bisque;
+    height: 1600px;
+    width: 80vw;
+    margin: auto;
 }
