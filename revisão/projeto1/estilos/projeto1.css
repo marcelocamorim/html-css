@@ -143,3 +143,15 @@ header nav a {
     width: 80vw;
     margin: auto;
 }
+
+#projeto1{
+    width: 350px;
+    height: 600px;
+}
+#projeto1 img{
+    width: 100%;
+}
+#section2 h1{
+    font-size: 8.5rem;
+    margin: 150px 0px 50px 0px;
+}
