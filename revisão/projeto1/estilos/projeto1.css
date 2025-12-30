@@ -15,6 +15,7 @@ header {
     justify-content: space-between;
     z-index: 2;
 }
+
 #logo {
     position: fixed;
     top: 30px;
@@ -49,7 +50,8 @@ header nav a {
 #paralax {
     position: relative;
     height: 1350px;
-    overflow: hidden;  
+    overflow: hidden;
+    display: block;
 }
 
 #paralax img {
@@ -102,7 +104,7 @@ header nav a {
 #rodapeParalax {
     display: flex;
     color: white;
-    justify-content: space-between;    
+    justify-content: space-between;
     margin-right: 30px;
 }
 
@@ -120,62 +122,67 @@ header nav a {
     padding: 3px;
 }
 
-#rodapeParalax #div1{
+#rodapeParalax #div1 {
     display: flex;
     align-items: center;
     width: 50%;
 }
-#rodapeParalax #div3 p{
-        padding: 3px;
+
+#rodapeParalax #div3 p {
+    padding: 3px;
 
 }
 
 
 /*Section 2*/
-#section2 {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 40px;
-  padding: 120px;
-  background: #fff;
+.containerTexto {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
 }
 
+.containerTexto h1 {
+    margin-top: 100px;
+    font-size: 9rem;
+}
+.textoPequeno1{
+    display: flex;
+    justify-content: end;
+    width: 80vw;
+    color: red;
+    position: relative;
+}
+.textoPequeno1 p{
+    width: 300px;
+    position: absolute;
+}
 
-.img1Grande img { aspect-ratio: 4 / 5; }
-.img2Pequena img { aspect-ratio: 3 / 4; }
-.img3Pequena img { aspect-ratio: 3 / 4; }
-.img4Grande img { aspect-ratio: 4 / 5; }
+#section2 {    
+    width: 80vw;
+    margin: 0 auto;
+    background: #fff;
+}
+.projetos{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
 
 #section2 img {
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-#section2 h1 {
-  grid-column: 1 / 7;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .img1Grande {
-  grid-column: 1 / 7;
-}
-
-.textoPequeno1 {
-  grid-column: 8 / 13;
+    grid-column: 2/8;
+    aspect-ratio: 4/5;
 }
 
 .img2Pequena {
-  grid-column: 8 / 13;
-  
-}
-
-.img3Pequena {
-  grid-column: 1 / 5;
-}
-
-.img4Grande {
-  grid-column: 6 / 12;
-}
-
-.linkSec2 {
-  grid-column: 9 / 12;
+    margin-top: 300px;
+    grid-column: 9/13;
+    aspect-ratio: 3/4;
 }
