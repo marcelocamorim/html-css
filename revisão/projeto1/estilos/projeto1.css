@@ -159,30 +159,42 @@ header nav a {
     width: 80vw;
     margin: 0 auto;
     background: #fff;
-}
-.projetos{
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
 }
 
+#section2 .containerTexto{
+    z-index: 1;
+    grid-area: 1/1/3/13;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+.titulo{
+    grid-area: 1/1/1/7;
+    margin: 0 0 100px 0;
+}
+.textoGrid{    
+    grid-area: 3/8/3/13;
+}
+.img1Grande img { aspect-ratio: 4 / 5; }
+.img2Pequena img { aspect-ratio: 3 / 4; }
+.img3Pequena img { aspect-ratio: 3 / 4; }
+.img4Grande img { aspect-ratio: 4 / 5; }
 #section2 img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.img1Grande {
-    grid-column: 2/8;
-    aspect-ratio: 4/5;
+.projetos{
+    z-index: 2;    
+    grid-area: 2/1/2/13;
+}
+.img1Grande{
+    grid-area: 2/1/3/7;
 }
 
-.textoGrid{
-    grid-column: 9/13;
-}
-.img2Pequena {
-    margin-top: -200px;
-    grid-column: 9/13;
-    aspect-ratio: 3/4;
-}
+
+
