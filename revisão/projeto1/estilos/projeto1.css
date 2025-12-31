@@ -153,10 +153,7 @@ header nav a {
     color: red;
     position: relative;
 }
-.textoPequeno1 p{
-    width: 300px;
-    position: absolute;
-}
+
 
 #section2 {    
     width: 80vw;
@@ -181,8 +178,11 @@ header nav a {
     aspect-ratio: 4/5;
 }
 
+.textoGrid{
+    grid-column: 9/13;
+}
 .img2Pequena {
-    margin-top: 300px;
+    margin-top: -200px;
     grid-column: 9/13;
     aspect-ratio: 3/4;
 }
