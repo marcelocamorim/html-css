@@ -303,6 +303,20 @@ header nav a {
 }
 
 
+/*section4*/
+#section4 video, img{
+    width: 350px;
+    
+}
+
+.listaGaleria{
+    list-style: none;
+    position: relative;
+}
+.listaGaleria[data-item]:nth-child(3){
+    position: relative;
+    margin: 0 auto;
+}
 
 
 
