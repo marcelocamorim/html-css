@@ -141,87 +141,96 @@ header nav a {
     font-size: 9rem;
 }
 
-#section2 {    
+#section2 {
     width: 80vw;
     margin: 0 auto;
     background: #fff;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     gap: 1rem;
 }
 
-#section2 .containerTexto{    
+#section2 .containerTexto {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows:  auto auto auto auto auto ;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto auto auto;
     gap: 1rem;
     width: 80vw;
-    
+
 }
-.titulo{
+
+.titulo {
     grid-area: 1/1/1/7;
     margin: 0 0 80px 0;
 }
-.linkTexto{
+
+.linkTexto {
     grid-area: 2/9/2/13;
     text-decoration: none;
 }
-.textoGrid{      
+
+.textoGrid {
     grid-area: 3/9/3/13;
 }
-.projetos{
+
+.projetos {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
     gap: 1rem;
     z-index: 2;
     grid-row: 3;
     grid-column: 1/13;
     width: 80vw;
 }
-.img1Grande{
+
+.img1Grande {
     margin-top: -160px;
     grid-column: 1/7;
 }
-.img1Grande img{
+
+.img1Grande img {
     width: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
 }
 
-.img2Pequena{
+.img2Pequena {
     margin-top: 160px;
     grid-column: 9/13;
 }
-.img2Pequena img{ 
+
+.img2Pequena img {
     width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
 }
 
-.img3Pequena{
+.img3Pequena {
     grid-column: 2/5;
     grid-row: 3;
     margin-top: -120px;
 }
-.img3Pequena img{
+
+.img3Pequena img {
     width: 100%;
     aspect-ratio: 3/4;
     object-fit: cover;
 }
 
 
-.img4Grande{
+.img4Grande {
     grid-column: 6/11;
 }
-.img4Grande img{
+
+.img4Grande img {
     margin-top: 80px;
     width: 100%;
     aspect-ratio: 4/5;
     object-fit: cover;
 }
 
-.linkSec2{
+.linkSec2 {
     grid-column: 9/12;
     grid-row: 4;
     padding-left: 20px;
@@ -230,54 +239,69 @@ header nav a {
 
 
 /*section 3*/
-#section3{
+#section3 {
     margin-top: 150px;
     background-color: black;
     height: 100vh;
+    position: relative;
 }
-.container3{
+
+.container3 {
     width: inherit;
     height: inherit;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     position: relative;
-    
+    z-index: 1;
+
 }
 
-#section3 .text{
+#section3 .text {
     color: white;
 }
-.textoCima{
-        
+
+.textoCima {
+
     margin: auto;
     padding-top: 50px;
-    
+
 }
 
-.tituloCentral{
+.tituloCentral {
     width: inherit;
     display: flex;
     justify-content: center;
     margin: 300px 80px;
-    font-size: 4rem;
-    border: 1px solid white;
-}
-#play{
-    padding-right:50vw ;
+    font-size: 4rem;    
+    z-index: 3;
 }
 
-.textoBaixo{
+#play {
+    padding-right: 50vw;
+}
+
+.textoBaixo {
     margin: auto;
     width: 30%;
 }
 
-.container3 video{
+#section3 video {
+    position: absolute;
     top: 50%;
     left: 50%;
-    transfor
+    transform: translate(-50%, -50%);
     width: 50%;
-    position: absolute;
+    z-index: 1;
+    
 }
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(92, 22, 17, 0.25);
+    z-index: 2;
+    pointer-events: none;
+}
+
 
 
 
@@ -302,7 +326,7 @@ header nav a {
 
 
 /*section 4*/
-#section4{
+#section4 {
     background-color: white;
     height: 100vh;
 }
