@@ -426,55 +426,75 @@ header nav a {
 /*Footer*/
 footer {
     margin-top: 700px;
-    width: 100%;
-    height: 75vh;
+    width: 100%;    
     background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 700px;
 }
 footer .text{
-    color: bisque;
+    color: #E2CBAF;
 }
 
-#containerFooter {
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    border: 1px solid yellow;
-    width: 90vw;
+#containerFooter {    
+    display: grid;
+    grid-template-columns: repeat(12,1fr); 
+    grid-template-rows: auto;   
+    gap: 1rem;    
+    width: 80vw;
 }
 
-[data-esquerda] {
-    border: 1px solid blue;
-    width: 40%;
-    height: 50%;
+.tituloFooter{
+    grid-column: 1/5;
+    grid-row: 1;
+    margin-bottom: 40px;
+    
 }
-[data-esquerda] h1{
-    font-size: 6rem;
-    padding-bottom: 50px;
-}
-[data-esquerda] p{
-    font-size: 1.5rem;
-    padding-bottom: 50px;
+.tituloFooter h1{
+   font-size: 7rem;
+   line-height: 100px;
 }
 
-[data-direita] {
-    border: 1px solid red;
-    width: 60%;
-    height: 50%;
+.paragrafo{
+    grid-column: 1/5;
+    grid-row: 2;
 }
-
-[data-direita] video{
-    width: 100%;
-    height: 100%;    
-    object-fit: cover;
-    object-position: bottom;
+.paragrafo p{
+    font-size: 1.2rem;
 }
-
 #divisor{
-    height: 1rem;
-    width: 80%;
-    background-color: bisque;
+    height: 2px;
+    color: #E2CBAF;
+    grid-column: 1/13;
+    margin: 60px 0px;
+}
+.videoFooter{
+    grid-column: 7/13;
+    grid-row: 1;
+    
+}
+.videoFooter video{
+    width: 100%;
+}
+
+#fotterContatos{
+    grid-column: 1/3;
+}
+#fotterLinks{
+    grid-column: 4/5;
+}
+#sociais{
+    grid-column: 6/7;
+}
+#OurStory{
+    grid-column: 12/13;
+    align-self: end;
+}
+footer nav li{
+    padding: 5px;
+}
+footer a{
+    text-decoration: none;
+    color: #E2CBAF;
 }
