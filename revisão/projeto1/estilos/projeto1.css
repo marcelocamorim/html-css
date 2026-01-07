@@ -136,12 +136,14 @@ header nav a {
 
 /*Section 2*/
 
-.containerTexto h1 {
+.containerTexto h1 {    
+    
+    
     margin-top: 100px;
     font-size: 9rem;
 }
 
-#section2 {
+#section2 {    
     width: 80vw;
     margin: 0 auto;
     background: #fff;

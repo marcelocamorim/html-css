@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#div1{
+    height: 100vh;
+    background-color: orange;
+}
+#div2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 90, 0);
+}
+#div3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0, 124, 161);
+}
+#div4{
+    height: 100vh;
+    background-color: rgb(92, 18, 110);
+}
+
+#div2 img{
+    width: 80%;
+}
+#div3 img{
+    width: 80%;
+}
+
+.scroll-anima{
+    height: 10px;
+    background-color: red;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-anima;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+}
+@keyframes scroll-anima{
+    to { scale: 1 1;}
+}
+
+
+
+article img{
+    scale: .8;
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range:entry;    
+    
+}
+@keyframes fade-in{    
+    to { scale: 1; opacity: 1;}
+}
+/*
+fade-in → nome do @keyframes
+linear → progresso constante (sem aceleração)
+forwards → mantém o estado final após a animação terminar
+📌 Sem forwards, a imagem voltaria a ficar invisível.
+
+animation-range:entry;
+inicia ao aparecer, encerra quando aparece100%
+
+animation-range:5% 40%;    
+5% → animação começa quando 5% do elemento entra na viewport
+40% → animação termina quando 40% do elemento está visível
+*/
+
+#container-div4{
+    width: 100vw;
+     
+}
+#div4 ul{
+    
+    
+          
+}
+#div4 ul li{
+    
+}
+#div4 ul li a{
+    
+
+}
