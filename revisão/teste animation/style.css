@@ -76,19 +76,18 @@ animation-range:5% 40%;
 40% → animação termina quando 40% do elemento está visível
 */
 
-#container-div4{
-    width: 100vw;
-     
+.carousel{
+    border: 5px solid red;
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
 }
-#div4 ul{
-    
-    
-          
-}
-#div4 ul li{
-    
-}
-#div4 ul li a{
-    
-
+.card{
+    height: 5em;
+    padding: 1em;
+    background-color: aquamarine;
+    font-size: 3rem;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
 }
