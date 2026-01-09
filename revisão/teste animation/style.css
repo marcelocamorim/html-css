@@ -1,12 +1,14 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-#div1{
+
+#div1 {
     height: 100vh;
     background-color: orange;
 }
-#div2{
+
+#div2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,26 +16,32 @@
     width: 100%;
     background-color: rgb(0, 90, 0);
 }
-#div3{
+
+#div3 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgb(0, 124, 161);
 }
-#div4{
+
+#div4 {
     height: 100vh;
     background-color: rgb(92, 18, 110);
 }
 
-#div2 img{
+#div2 img {
     width: 80%;
-}
-#div3 img{
-    width: 80%;
+    max-width: 1000px;
 }
 
-.scroll-anima{
+#div3 img {
+    width: 80%;
+    max-width: 1000px;
+
+}
+
+.scroll-anima {
     height: 10px;
     background-color: red;
     width: 100%;
@@ -45,23 +53,31 @@
     animation-timeline: scroll();
     animation-timing-function: linear;
 }
-@keyframes scroll-anima{
-    to { scale: 1 1;}
+
+@keyframes scroll-anima {
+    to {
+        scale: 1 1;
+    }
 }
 
 
 
-article img{
+article img {
     scale: .8;
     opacity: 0;
     animation: fade-in linear forwards;
     animation-timeline: view();
-    animation-range:entry;    
-    
+    animation-range: entry;
+
 }
-@keyframes fade-in{    
-    to { scale: 1; opacity: 1;}
+
+@keyframes fade-in {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
 }
+
 /*
 fade-in → nome do @keyframes
 linear → progresso constante (sem aceleração)
@@ -76,17 +92,22 @@ animation-range:5% 40%;
 40% → animação termina quando 40% do elemento está visível
 */
 
-.carousel{
+.carousel, .carousel2 {
     border: 5px solid red;
     width: 90%;
     margin: 100px auto;
     display: flex;
     overflow-x: auto;
 }
-.carousel::-webkit-scrollbar{
+
+.carousel::-webkit-scrollbar {
     display: none;
 }
-.group{
+.carousel2::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,18 +115,38 @@ animation-range:5% 40%;
     animation: spin 10s infinite linear;
     padding-right: 1em;
 }
-.card{
-    flex: 0 0 5em;
-    height: 5em;
-    padding: 1em ;
+
+.group2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 10s infinite linear reverse;
+    padding-right: 1em;
+}
+
+.card, .card2 {
+    flex: 0 0 2em;
+    height: 2em;
+    padding: 1em;
     background-color: aquamarine;
     font-size: 3rem;
     border-radius: 10px;
     text-align: center;
     align-content: center;
+
 }
 
-@keyframes spin{
-    from {translate: 0;}
-    to {translate: -100%;}
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.carousel:hover .group{
+    animation-play-state: paused;
 }
