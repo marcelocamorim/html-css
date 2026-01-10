@@ -93,12 +93,53 @@ animation-range:5% 40%;
 */
 
 .carousel, .carousel2 {
-    border: 5px solid red;
-    width: 90%;
-    margin: 100px auto;
-    display: flex;
-    overflow-x: auto;
+  width: 90%;
+  margin: 100px auto;
+  display: flex;
+  overflow-x: auto;
+
+  /* fade nas laterais */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
 }
+/* .carousel::after,
+.carousel::before,
+.carousel2::after,
+.carousel2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.carousel::before,
+.carousel2::before{
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.carousel::after,
+.carousel2::after{
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+} */
+ 
 
 .carousel::-webkit-scrollbar {
     display: none;
