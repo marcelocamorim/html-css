@@ -191,3 +191,6 @@ animation-range:5% 40%;
 .carousel:hover .group{
     animation-play-state: paused;
 }
+.carousel2:hover .group2{
+    animation-play-state: paused;
+}
