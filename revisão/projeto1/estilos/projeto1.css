@@ -500,3 +500,12 @@ footer a{
     text-decoration: none;
     color: #E2CBAF;
 }
+
+#menuMobile{
+    position: fixed;
+    right: 20px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1000;
+}

@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 60, 83);
+}
+
+#menu ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#menu ul li a,
+#logoSite {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+#menu ul li a:hover {
+    background-color: blueviolet;
+}
+
+#burguer {
+    display: none;
+}
+
+
+@media screen and (max-width:650px) {
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu a{
+        padding: 30px;
+    }
+}
