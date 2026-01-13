@@ -12,18 +12,34 @@
 <body>
     <header>
         <div id="container-header">
-            <a href="#">Logo</a>
 
-            <div id="container-nav-esquerda">
-                <nav>
-                    <ul id="lista-menu">
-                        <li><a href="">Para Você</a></li>
-                        <li><a href="">Para Empresas</a></li>
-                        <li><a href="">Ajuda</a></li>
-                    </ul>
-                </nav>
+            <div id="container-logo">
+                <a href="#">
+                    <img src="imagens/logo itatus.png" alt="logo itatús">
+                </a>
             </div>
-            <a href="#">Lupa</a>
+            <div id="container-nav-esquerda">
+                <div id="menu">
+                    <nav>
+                        <ul id="lista-menu">
+                            <li>
+                                <a class="link-menu" href="">Para Você 
+                                    <span class="material-symbols-outlined">
+                                        keyboard_arrow_down
+                                    </span>
+                                </a>
+                            </li>
+                            <li><a class="link-menu" href="">Para Empresas</a></li>
+                            <li><a class="link-menu" href="">Ajuda</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <a class="link-menu" href="#">
+                <span id="lupa" class="material-symbols-outlined">
+                    search
+                </span>
+            </a>
 
             <div id="container-direita">
 
@@ -46,7 +62,7 @@
                     </span>
                 </button>
 
-                <a href="#">Acessos</a>
+                <a class="link-menu" href="#">Acessos</a>
                 <button id="btn-abrir-conta">Abra Sua Conta</button>
             </div>
 
