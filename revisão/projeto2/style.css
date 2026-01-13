@@ -14,6 +14,13 @@ header {
     background-color: var(--cor-1);
 
 }
+#flex-test{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    grid-column: 1/13;
+}
 
 #container-logo {
     grid-column: 1/2;
@@ -21,7 +28,7 @@ header {
 }
 
 #container-logo img {
-    width: 90%;
+    width: 80%;
 
 }
 
@@ -36,9 +43,8 @@ header {
 
 
 #container-header {
-    width: 80vw;
+    width: 1200px;
     max-width: 1200px;
-    border: 1px solid black;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -109,4 +115,55 @@ header {
 
     font-size: 1.2rem;
     font-weight: bold;
+}
+#div-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a span{
+    position: relative;
+    top: 5px;
+}
+header a{
+ white-space: nowrap;
+}
+
+.humburguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    width: 30px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+}
+
+.humburguer span{
+    background: white;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0; 
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+@media screen and (max-width:1250px)  {
+    #container-nav-esquerda{
+        display: none;
+    }
 }
