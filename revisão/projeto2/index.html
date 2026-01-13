@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Itatús</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
 <body>
@@ -25,17 +26,28 @@
             <a href="#">Lupa</a>
 
             <div id="container-direita">
-                
-                <div id="container-form">
-                    <form action="">
-                        <input id="conta" type="text" placeholder="Conta">
-                        <input id="senha" type="password" placeholder="Senha">
-                    </form>                    
-                </div>
 
-                <button>Cadeado</button>
+                <div id="container-form">
+                    <form id="login" action="">
+                        <div>
+                            <label hidden for="agencia">Agência</label>
+                            <input size="3" id="agencia" type="text" placeholder="Agência">
+                        </div>
+                        <span>&nbsp;</span>
+                        <div>
+                            <label hidden for="conta">Conta</label>
+                            <input size="3" id="conta" type="text" placeholder="Conta">
+                        </div>
+                    </form>
+                </div>
+                <button id="cadeado">
+                    <span class="material-symbols-outlined">
+                        lock
+                    </span>
+                </button>
+
                 <a href="#">Acessos</a>
-                <button>Abra Sua Conta</button>
+                <button id="btn-abrir-conta">Abra Sua Conta</button>
             </div>
 
 
