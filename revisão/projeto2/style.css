@@ -5,7 +5,10 @@
 }
 
 :root {
-    --cor-1: rgb(0, 165, 143);
+    --cor-1: #008cff;
+    --cor-2: #0063b4;
+    --cor-3: #003968;
+    --cor-4: #001c33;
     --cor-cinza-claro: rgba(231, 231, 231, 0.692);
 
 
@@ -193,12 +196,13 @@ header a {
 }
 
 
-#container-para-voce{
+#container-para-voce {
     background-color: var(--cor-cinza-claro);
-    
+
 }
-#container-links{
-    max-width: 1200px;
+
+#container-links {
+    max-width: 1180px;
     height: 500px;
     margin: 0 auto;
     border: 1px solid red;
@@ -207,26 +211,71 @@ header a {
     grid-template-columns: repeat(12, 1fr);
     gap: 2rem;
 }
-#produtos{
+
+#produtos {
     grid-column: 1/5;
 }
 
-#resolva{
+#resolva {
     grid-column: 5/9;
 }
-#perfis{
+
+#perfis {
     grid-column: 9/13;
 }
 
-.lista-link, .lista-link-2{
+.lista-link,
+.lista-link-2 {
     margin-top: 15px;
     list-style: none;
 }
-.lista-link li{
+
+.lista-link li {
     padding: 15px 0px;
 }
-.lista-link a{
+
+.lista-link a {
     text-decoration: none;
     color: black;
-    
+}
+
+.lista-link-2 {
+    list-style: none;
+}
+
+.lista-link-2 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+.lista-link-2 li a span:first-child{
+    transition: .3s;
+}
+
+.lista-link-2 li:nth-child(1) a:hover {
+    background: var(--cor-1);
+    color: white;
+}
+.lista-link-2 li:nth-child(2) a:hover {
+    background: var(--cor-2);
+    color: white;
+}
+
+.lista-link-2 li:nth-child(3) a:hover {
+    background: var(--cor-3);
+    color: white;
+}
+
+.lista-link-2 li:nth-child(4) a:hover {
+    background: var(--cor-4);
+    color: white;
+}
+.lista-link-2 li a:hover span:first-child{
+    transform: translateX(20px);
+
 }
