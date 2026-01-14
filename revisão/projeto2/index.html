@@ -14,12 +14,12 @@
         <div id="container-header">
 
             <div id="flex-test">
-                <div id="container-logo">
+                <div id="container-logo" data-both="">
                     <a href="#">
                         <img src="imagens/logo itatus.png" alt="logo itatús">
                     </a>
                 </div>
-                <div id="container-nav-esquerda">
+                <div id="container-nav-esquerda" data-desktop="">
                     <div id="menu">
                         <nav>
                             <ul id="lista-menu">
@@ -48,16 +48,15 @@
                         </nav>
                     </div>
                 </div>
-                <a class="link-menu" href="#">
+                <a class="link-menu" href="#" data-desktop="">
                     <span id="lupa" class="material-symbols-outlined">
                         search
                     </span>
                 </a>
 
-                <div id="container-direita">
-
-                    <div id="container-form">
-                        <form id="login" action="">
+                <div id="container-direita" data-desktop="">
+                    <div id="container-form" data-desktop="">
+                        <form id="login" action="" >
                             <div>
                                 <label hidden for="agencia">Agência</label>
                                 <input size="3" id="agencia" type="text" placeholder="Agência">
@@ -69,13 +68,13 @@
                             </div>
                         </form>
                     </div>
-                    <button id="cadeado">
+                    <button id="cadeado" data-desktop="">
                         <span class="material-symbols-outlined">
                             lock
                         </span>
                     </button>
 
-                    <a class="link-menu" href="#">
+                    <a class="link-menu" href="#" data-desktop="">
                         <span class="material-symbols-outlined">
                             add
                         </span>
@@ -87,20 +86,19 @@
                 
                 
                 <div id="div-mobile">
-                    <button id="btn-abrir-conta">Abra Sua Conta</button>
-                    <a href="#">
+                    <button id="btn-abrir-conta" data-both="">Abra Sua Conta</button>
+
+                    <a href="#" class="link-menu" data-mobile="">
                         <span class="material-symbols-outlined">
                             person
                         </span>
                     </a>
 
-                    <button id="humburguer" class="humburguer">
+                    <button id="humburguer" class="humburguer" data-mobile="">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
-
-
                 </div>
 
             </div>

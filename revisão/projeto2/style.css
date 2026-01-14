@@ -14,7 +14,8 @@ header {
     background-color: var(--cor-1);
 
 }
-#flex-test{
+
+#flex-test {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -24,11 +25,11 @@ header {
 
 #container-logo {
     grid-column: 1/2;
-    align-content: center;   
+    align-content: center;
 }
 
 #container-logo img {
-    width: 80%;
+    width: 60px;
 
 }
 
@@ -39,11 +40,11 @@ header {
     font-weight: bold;
     padding: 30px 0px;
     display: block;
+    margin-left: 10px;
 }
 
 
 #container-header {
-    width: 1200px;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
@@ -65,7 +66,6 @@ header {
 
 #lupa {
     font-weight: bolder;
-    margin-left: 15px;
 
 }
 
@@ -103,6 +103,7 @@ header {
     border-radius: 15px;
     border: none;
     color: rgb(112, 112, 112);
+    margin-left: 10px;
 }
 
 #btn-abrir-conta {
@@ -116,20 +117,43 @@ header {
     font-size: 1.2rem;
     font-weight: bold;
 }
-#div-mobile{
+
+#div-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header a span{
+
+header a span {
     position: relative;
     top: 5px;
 }
-header a{
- white-space: nowrap;
+
+header a {
+    white-space: nowrap;
 }
 
-.humburguer{
+
+[data-mobile] {
+    display: none;
+}
+
+@media screen and (max-width:1250px) {
+    [data-desktop] {
+        display: none;
+    }
+
+    [data-mobile] {
+        display: block;
+    }
+
+
+    #div-mobile {
+        width: 300px;
+    }
+
+    
+.humburguer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -142,28 +166,25 @@ header a{
 
 }
 
-.humburguer span{
+.humburguer span {
     background: white;
     height: 3px;
     width: 100%;
     border-radius: 2px;
-    
+
 }
+
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger.active span:nth-child(2) {
-  opacity: 0; 
+    opacity: 0;
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 
-@media screen and (max-width:1250px)  {
-    #container-nav-esquerda{
-        display: none;
-    }
 }
