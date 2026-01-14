@@ -6,6 +6,7 @@
 
 :root {
     --cor-1: rgb(0, 165, 143);
+    --cor-cinza-claro: rgba(231, 231, 231, 0.692);
 
 
 }
@@ -42,6 +43,8 @@ header {
     display: block;
     margin-left: 10px;
 }
+
+.link-menu:hover {}
 
 
 #container-header {
@@ -152,39 +155,78 @@ header a {
         width: 300px;
     }
 
+
+    .humburguer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: transparent;
+        width: 30px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+    }
+
+    .humburguer span {
+        background: white;
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+
+}
+
+
+#container-para-voce{
+    background-color: var(--cor-cinza-claro);
     
-.humburguer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background: transparent;
-    width: 30px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-
+}
+#container-links{
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    border: 1px solid red;
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+}
+#produtos{
+    grid-column: 1/5;
 }
 
-.humburguer span {
-    background: white;
-    height: 3px;
-    width: 100%;
-    border-radius: 2px;
-
+#resolva{
+    grid-column: 5/9;
+}
+#perfis{
+    grid-column: 9/13;
 }
 
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+.lista-link, .lista-link-2{
+    margin-top: 15px;
+    list-style: none;
 }
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
+.lista-link li{
+    padding: 15px 0px;
 }
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-
+.lista-link a{
+    text-decoration: none;
+    color: black;
+    
 }
