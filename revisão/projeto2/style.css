@@ -198,14 +198,13 @@ header a {
 
 #container-para-voce {
     background-color: var(--cor-cinza-claro);
+   
 
 }
 
 #container-links {
     max-width: 1180px;
-    height: 500px;
     margin: 0 auto;
-    border: 1px solid red;
     padding: 40px 0px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -253,6 +252,11 @@ header a {
     padding: 20px;
     font-size: 1.2rem;
 }
+.link-comum:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .lista-link-2 li a span:first-child{
     transition: .3s;
 }
@@ -278,4 +282,24 @@ header a {
 .lista-link-2 li a:hover span:first-child{
     transform: translateX(20px);
 
+}
+
+#link-abra-conta{
+    background-color: rgb(255, 172, 172);
+    width: 100%;
+    height: 100px;
+    border: none;
+}
+#abra-conta{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#container-link-abra-sua-conta{
+    background-color: aquamarine;
+    max-width: 1180px;
+    margin: 0 auto;
+    height: inherit;
+    display: flex;
 }
