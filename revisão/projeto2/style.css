@@ -38,6 +38,7 @@ header {
 }
 
 .link-menu {
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
@@ -47,7 +48,24 @@ header {
     margin-left: 10px;
 }
 
-.link-menu:hover {}
+.link-menu::after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    bottom: 20px;
+    width: 40%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    transform-origin: center;
+    transform: translateX(-50%) scaleX(0);
+    transition: .3s;
+    
+}
+
+.link-menu:hover::after{
+    transform: translateX(-50%) scaleX(1);
+}
 
 
 #container-header {
@@ -193,6 +211,17 @@ header a {
     }
 
 
+}
+.submenu{    
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s;
+}
+.submenu:hover{
+
+}
+.visivel{
+    max-height: 900px;
 }
 
 
