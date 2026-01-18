@@ -48,6 +48,7 @@ header {
     margin-left: 10px;
 }
 
+
 .link-menu::after {
     content: "";
     position: absolute;
@@ -59,8 +60,20 @@ header {
     background-color: white;
     transform-origin: center;
     transform: translateX(-50%) scaleX(0);
-    transition: .3s;
-    
+    transition: .3s;    
+}
+.link-menu.ativo::after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    bottom: 20px;
+    width: 40%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: white;
+    transform-origin: center;
+    transform: translateX(-50%) scaleX(1);
+    transition: .3s;    
 }
 
 .link-menu:hover::after{
@@ -224,8 +237,7 @@ header a {
     max-height: 900px;
 }
 
-
-#container-para-voce {
+.container-submenu {
     background-color: var(--cor-cinza-claro);
 
 }
@@ -233,7 +245,7 @@ header a {
     font-weight: bold;
 }
 
-.container-links {
+.container-links-submenu {
     max-width: 1180px;
     margin: 0 auto;
     padding: 40px 0px;
@@ -242,15 +254,15 @@ header a {
     gap: 2rem;
 }
 
-#produtos {
+.div-submenu-esquerda {
     grid-column: 1/5;
 }
 
-#resolva {
+.div-submenu-centro {
     grid-column: 5/9;
 }
 
-#perfis {
+.div-submenu-direita {
     grid-column: 9/13;
 }
 
@@ -319,7 +331,7 @@ header a {
 }
 
 /*btn abra sua conta*/
-#link-abra-conta {  
+.div-abra-conta {  
     background-color: white;  
     width: 100%;
     border-bottom: 1px solid rgb(182, 182, 182);
@@ -327,7 +339,7 @@ header a {
     z-index: 1;
 }
 
-#abra-conta {
+.link-abra-conta {
     width: 100%;
     height: 100%;   
     text-decoration: none;
@@ -335,7 +347,7 @@ header a {
     font-size: 1.2rem;
     z-index: 2;
 }
-#container-abra-conta {
+.container-abra-conta {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -343,25 +355,46 @@ header a {
     max-width: 1180px;
     height: 100px;
 }
-#teste555{
+.div-esquerda-abra-conta{
     display: flex;
     align-items: center;
 }
 
-#icon1 {
+.material-symbols-outlined.icon1 {
     font-size: 2rem;
     padding-right: 20px;
 }
 
-#icon2 {
+.material-symbols-outlined.icon2{
     font-size: 3rem;
 }
 
-#abra-conta:hover {
+.link-abra-conta:hover {
     color: rgb(255, 255, 255);
 }
-#link-abra-conta:hover {
+.div-abra-conta:hover {
     background-color: var(--cor-1);
    
 }
+
+/*submenu para empresas*/
+#link-para-empresas{
+    grid-column: 1/5;  
+    text-decoration: none;  
+    font-weight: bold;
+    color: rgba(255, 94, 0, 0.767);
+    font-size: 1rem;
+}
+#link-para-empresas:hover{
+    color: var(--cor-3);
+}
+#container-link-para-empresas{
+    display: flex;
+    align-items: center;
+}
+
+#link-para-empresas .material-symbols-outlined.seta{
+    font-size: 2rem;
+}
+
 
