@@ -199,10 +199,12 @@ header a {
 #container-para-voce {
     background-color: var(--cor-cinza-claro);
 
-
+}
+.titulo-submenu{
+    font-weight: bold;
 }
 
-#container-links {
+.container-links {
     max-width: 1180px;
     margin: 0 auto;
     padding: 40px 0px;
@@ -223,26 +225,26 @@ header a {
     grid-column: 9/13;
 }
 
-.lista-link,
-.lista-link-2 {
+.lista-submenu-comum,
+.lista-submenu-especial {
     margin-top: 15px;
     list-style: none;
 }
 
-.lista-link li {
+.lista-submenu-comum li {
     padding: 15px 0px;
 }
 
-.lista-link a {
+.lista-submenu-comum a {
     text-decoration: none;
     color: black;
 }
 
-.lista-link-2 {
+.lista-submenu-especial {
     list-style: none;
 }
 
-.lista-link-2 a {
+.lista-submenu-especial a {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -258,35 +260,36 @@ header a {
     text-decoration: underline;
 }
 
-.lista-link-2 li a span:first-child {
+.lista-submenu-especial li a span:first-child {
     transition: .3s;
 }
 
-.lista-link-2 li:nth-child(1) a:hover {
+.lista-submenu-especial li:nth-child(1) a:hover {
     background: var(--cor-1);
     color: white;
 }
 
-.lista-link-2 li:nth-child(2) a:hover {
+.lista-submenu-especial li:nth-child(2) a:hover {
     background: var(--cor-2);
     color: white;
 }
 
-.lista-link-2 li:nth-child(3) a:hover {
+.lista-submenu-especial li:nth-child(3) a:hover {
     background: var(--cor-3);
     color: white;
 }
 
-.lista-link-2 li:nth-child(4) a:hover {
+.lista-submenu-especial li:nth-child(4) a:hover {
     background: var(--cor-4);
     color: white;
 }
 
-.lista-link-2 li a:hover span:first-child {
+.lista-submenu-especial li a:hover span:first-child {
     transform: translateX(20px);
 
 }
-/*Sub menu para voce*/
+
+/*btn abra sua conta*/
 #link-abra-conta {  
     background-color: white;  
     width: 100%;
@@ -332,3 +335,4 @@ header a {
     background-color: var(--cor-1);
    
 }
+
