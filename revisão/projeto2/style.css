@@ -61,23 +61,10 @@ header {
     background-color: white;
     transform-origin: center;
     transform: translateX(-50%) scaleX(0);
-    transition: .3s;    
-}
-.link-menu.ativo::after {
-    content: "";
-    position: absolute;
-    left: 40%;
-    bottom: 20px;
-    width: 40%;
-    height: 3px;
-    border-radius: 3px;
-    background-color: white;
-    transform-origin: center;
-    transform: translateX(-50%) scaleX(1);
-    transition: .3s;    
+    transition: .3s;
 }
 
-.link-menu:hover::after{
+.link-menu:hover::after {
     transform: translateX(-50%) scaleX(1);
 }
 
@@ -226,22 +213,46 @@ header a {
 
 
 }
-.submenu{    
+
+
+.submenu {
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s;
 }
 
-.visivel{
-    max-height: 900px;
-}
+/*uso js*/
+    .submenu.visivel {
+        max-height: 900px;
+    }
+    .seta-link-menu.ativo{
+        transform: rotate(180deg);
+    }
+    .link-menu.ativo::after {
+        content: "";
+        position: absolute;
+        left: 40%;
+        bottom: 20px;
+        width: 40%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: white;
+        transform-origin: center;
+        transform: translateX(-50%) scaleX(1);
+        transition: .3s;
+    }
+/*uso js*/
+
 
 .container-submenu {
     background-color: var(--cor-cinza-claro);
 
 }
-.titulo-submenu{
+
+.titulo-submenu {
     font-weight: bold;
+    font-size: 1.1rem;
+        
 }
 
 .container-links-submenu {
@@ -267,12 +278,12 @@ header a {
 
 .lista-submenu-comum,
 .lista-submenu-especial {
-    margin-top: 15px;
+    margin-top: 20px;
     list-style: none;
 }
 
 .lista-submenu-comum li {
-    padding: 15px 0px;
+    padding: 10px 0px;
 }
 
 .lista-submenu-comum a {
@@ -280,12 +291,14 @@ header a {
     color: black;
 }
 
-.lista-submenu-especial {
+.lista-submenu-especial,
+.lista-submenu-especial-ajuda {
     list-style: none;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-.lista-submenu-especial a {
+.lista-submenu-especial a,
+.lista-submenu-especial-ajuda a {
 
     display: flex;
     justify-content: space-between;
@@ -293,7 +306,7 @@ header a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding: 20px;    
+    padding: 20px;
     font-size: 1.2rem;
     border-bottom: 1px solid gray;
 }
@@ -326,18 +339,32 @@ header a {
     background: var(--cor-4);
     color: white;
 }
-.lista-submenu-especial li a:hover {
+
+.lista-submenu-especial li a:hover,
+.lista-submenu-especial-ajuda li a:hover {
     background: var(--cor-cinza-claro-2);
 }
 
 .lista-submenu-especial li a:hover span:first-child {
     transform: translateX(20px);
+}
 
+.lista-submenu-especial-ajuda li a:hover .especial-ajuda {
+    transition: .3s;
+}
+
+.lista-submenu-especial-ajuda li a:hover .especial-ajuda {
+    transform: translateX(20px);
+}
+
+.material-symbols-outlined.icon-2rem{
+    font-size: 2rem;
+    margin-right: 10px;
 }
 
 /*btn abra sua conta*/
-.div-abra-conta {  
-    background-color: white;  
+.div-abra-conta {
+    background-color: white;
     width: 100%;
     border-bottom: 1px solid rgb(182, 182, 182);
     border-top: 1px solid rgb(182, 182, 182);
@@ -346,12 +373,13 @@ header a {
 
 .link-abra-conta {
     width: 100%;
-    height: 100%;   
+    height: 100%;
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
     z-index: 2;
 }
+
 .container-abra-conta {
     margin: 0 auto;
     display: flex;
@@ -360,7 +388,8 @@ header a {
     max-width: 1180px;
     height: 100px;
 }
-.div-esquerda-abra-conta{
+
+.div-esquerda-abra-conta {
     display: flex;
     align-items: center;
 }
@@ -370,36 +399,43 @@ header a {
     padding-right: 20px;
 }
 
-.material-symbols-outlined.icon2{
+.material-symbols-outlined.icon2 {
     font-size: 3rem;
 }
 
 .link-abra-conta:hover {
     color: rgb(255, 255, 255);
 }
+
 .div-abra-conta:hover {
     background-color: var(--cor-1);
-   
+
 }
 
 /*submenu para empresas*/
-#link-para-empresas{
-    grid-column: 1/5;  
-    text-decoration: none;  
+#link-para-empresas {
+    grid-column: 1/5;
+    text-decoration: none;
     font-weight: bold;
     color: rgba(255, 94, 0, 0.767);
     font-size: 1rem;
 }
-#link-para-empresas:hover{
+
+#link-para-empresas:hover {
     color: var(--cor-3);
 }
-#container-link-para-empresas{
+
+#container-link-para-empresas {
     display: flex;
     align-items: center;
 }
 
-#link-para-empresas .material-symbols-outlined.seta{
+#link-para-empresas .material-symbols-outlined.seta {
     font-size: 2rem;
 }
 
-
+/*submenu ajuda*/
+.especial-ajuda{
+    display: flex;
+    align-items: center;
+}
