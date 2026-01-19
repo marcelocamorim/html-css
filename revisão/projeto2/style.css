@@ -10,6 +10,7 @@
     --cor-3: #003968;
     --cor-4: #001c33;
     --cor-cinza-claro: rgba(231, 231, 231, 0.692);
+    --cor-cinza-claro-2: rgba(212, 212, 212, 0.658);
 
 
 }
@@ -230,9 +231,7 @@ header a {
     overflow: hidden;
     transition: max-height .3s;
 }
-.submenu:hover{
 
-}
 .visivel{
     max-height: 900px;
 }
@@ -283,17 +282,20 @@ header a {
 
 .lista-submenu-especial {
     list-style: none;
+    margin-top: 40px;
 }
 
 .lista-submenu-especial a {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
     color: black;
     font-weight: bold;
-    padding: 20px;
+    padding: 20px;    
     font-size: 1.2rem;
+    border-bottom: 1px solid gray;
 }
 
 .link-comum:hover {
@@ -305,24 +307,27 @@ header a {
     transition: .3s;
 }
 
-.lista-submenu-especial li:nth-child(1) a:hover {
+.lista-submenu-especial.cores li:nth-child(1) a:hover {
     background: var(--cor-1);
     color: white;
 }
 
-.lista-submenu-especial li:nth-child(2) a:hover {
+.lista-submenu-especial.cores li:nth-child(2) a:hover {
     background: var(--cor-2);
     color: white;
 }
 
-.lista-submenu-especial li:nth-child(3) a:hover {
+.lista-submenu-especial.cores li:nth-child(3) a:hover {
     background: var(--cor-3);
     color: white;
 }
 
-.lista-submenu-especial li:nth-child(4) a:hover {
+.lista-submenu-especial.cores li:nth-child(4) a:hover {
     background: var(--cor-4);
     color: white;
+}
+.lista-submenu-especial li a:hover {
+    background: var(--cor-cinza-claro-2);
 }
 
 .lista-submenu-especial li a:hover span:first-child {
