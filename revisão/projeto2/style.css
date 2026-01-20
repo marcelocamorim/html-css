@@ -222,7 +222,7 @@ header a {
 }
 
 /*uso js*/
-    .submenu.visivel {
+    .submenu.ativo {
         max-height: 900px;
     }
     .seta-link-menu.ativo{
