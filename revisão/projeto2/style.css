@@ -9,14 +9,15 @@
     --cor-2: #0063b4;
     --cor-3: #003968;
     --cor-4: #001c33;
-    --cor-cinza-claro: rgba(231, 231, 231, 0.692);
-    --cor-cinza-claro-2: rgba(212, 212, 212, 0.658);
+    --cor-cinza-claro: rgb(231, 231, 231);
+    --cor-cinza-claro-2: rgb(212, 212, 212);
 
 
 }
 
 header {
     background-color: var(--cor-1);
+    position: relative;
 
 }
 
@@ -214,15 +215,24 @@ header a {
 
 }
 
+/* #paraVoce, #paraEmpresas, #ajuda{
+    position: fixed;
+    top: 90px;
+    left: 50px;
+} */
+
 
 .submenu {
+    position: absolute;
+    width: 100%;
     max-height: 0;
     overflow: hidden;
+    z-index: 1000;
 }
 
 /*uso js*/
     .submenu.ativo {
-        max-height: 900px;
+        max-height: 700px;
     }
     .seta-link-menu.ativo{
         transform: rotate(180deg);
