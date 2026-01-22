@@ -38,3 +38,9 @@ menu.addEventListener("click", (evt) => {
   }
 
 })
+
+//menu burguer
+const hamburguer=document.getElementById("hamburguer")
+hamburguer.addEventListener("click",()=>{
+  hamburguer.classList.toggle("active")
+})

@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-branco:white;
+    --cor-1: #008cff;
+    --cor-2: #0063b4;
+    --cor-3: #003968;
+    --cor-4: #001c33;
+    --cor-cinza-claro: rgb(231, 231, 231);
+    --cor-cinza-claro-2: rgb(212, 212, 212);
+
+    --font-padrao: Arial, Helvetica, sans-serif;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-padrao);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
