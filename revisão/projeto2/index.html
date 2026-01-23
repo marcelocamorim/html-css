@@ -28,7 +28,7 @@
                 </div>
                 <div id="container-nav-esquerda" data-desktop="">
                     <div id="menu">
-                        <nav>
+                        <nav id="menu-desktop">
                             <ul id="lista-menu">
                                 <li>
                                     <a id="para-voce-btn" class="link-menu" data-target="paraVoce" href="#">Para Você
@@ -113,331 +113,420 @@
 
     </header>
 
-    <section id="menu-mobile" class="menu-mobile" data-mobile="">
-        <button id="" class="btn-menu-mobile">
-            <div class="container-btn-menu-mobile">
-                <span>Oque você está buscando?</span>
-                
-                <div>
-                    <span class="material-symbols-outlined">
-                        keyboard_arrow_down
-                    </span>
-                </div>
-            </div>
-        </button>
+    <section id="section-menu-mobile" class="menu-mobile" data-mobile="">
+        <nav id="menu-mobile">
+            <ul>
+                <li>
+                    <button id="buscando-mobile" class="btn-menu-mobile" data-mobile="">
+                        <div class="container-btn-menu-mobile">
+                            <span>Oque você está buscando?</span>
 
-
-        <!--submenu-1-para voce -->
-        <section id="paraVoce" class="submenu">
-            <div id="container-para-voce" class="container-submenu">
-
-                <div id="container-links-para-voce" class="container-links-submenu">
-                    <div id="produtos" class="div-submenu-esquerda">
-                        <span class="titulo-submenu">Conheça Nossos Produtos</span>
-                        <ul class="lista-submenu-comum">
-                            <li><a class="link-comum" href="#">Empréstimo e financiamento</a></li>
-                            <li><a class="link-comum" href="#">Conta-Corrente</a></li>
-                            <li><a class="link-comum" href="#">Cartões de Crédito</a></li>
-                            <li><a class="link-comum" href="#">Investimentos</a></li>
-                            <li><a class="link-comum" href="#">Título de Capitalização</a></li>
-                            <li><a class="link-comum" href="#">Consórcio</a></li>
-                            <li><a class="link-comum" href="#">Seguro</a></li>
-                            <li><a class="link-comum" href="#">Câmbio e Viagem</a></li>
-                            <li><a class="link-comum" href="#">Correspondente no país</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="resolva" class="div-submenu-centro">
-                        <span class="titulo-submenu">Resolva</span>
-                        <ul class="lista-submenu-comum">
-                            <li><a class="link-comum" href="#">Boletos</a></li>
-                            <li><a class="link-comum" href="#">Comprovantes</a></li>
-                            <li><a class="link-comum" href="#">Cadastro positivo</a></li>
-                            <li><a class="link-comum" href="#">Portabilidade de crédito</a></li>
-                            <li><a class="link-comum" href="#">Portabilidade de salário</a></li>
-                            <li><a class="link-comum" href="#">Sistema de informação de crédito</a></li>
-                            <li><a class="link-comum" href="#">Renegociação de dívidas</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="perfis" class="div-submenu-direita">
-                        <span class="titulo-submenu">Outros Perfis</span>
-                        <ul class="lista-submenu-especial cores">
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatús Uniclass</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatús Personalité</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatús private Bank</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatús Empresas</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="div-abra-conta">
-                    <a class="link-abra-conta" href="#">
-                        <div class="container-abra-conta">
-                            <div class="div-esquerda-abra-conta">
-                                <span data-icon1="" class="material-symbols-outlined icon1">
-                                    person
-                                </span>
-                                <span>
-                                    Abra Sua Conta no Itatús
-                                </span>
-                            </div>
                             <div>
-                                <span data-icon2="" class="material-symbols-outlined icon2">
-                                    chevron_right
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
                                 </span>
                             </div>
                         </div>
-                    </a>
+                    </button>
+                </li>
 
+                <li>
+                    <button id="para-voce-mobile" class="btn-menu-mobile" data-mobile="">
+                        <div class="container-btn-menu-mobile">
+                            <span>Para você</span>
+
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+                        </div>
+                    </button>
+
+                    <div>
+                        <button id="para-voce-mobile" class="btn-menu-mobile" data-mobile="">
+                        <div class="container-btn-menu-mobile">
+                            <span>Conheça nossos produtos</span>
+
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+                        </div>
+                    </button>
+                    </div>
+                    <div>
+                        <button id="para-voce-mobile" class="btn-menu-mobile" data-mobile="">
+                        <div class="container-btn-menu-mobile">
+                            <span>Resolva</span>
+
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+                        </div>
+                    </button>
+                    </div>
+                    <div>
+                        <button id="para-voce-mobile" class="btn-menu-mobile" data-mobile="">
+                        <div class="container-btn-menu-mobile">
+                            <span>Outros perfis</span>
+
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+                        </div>
+                    </button>
+                    </div>
+
+                </li>
+
+                <!-- <li>
+                    <button id="para-empresas-mobile" class="btn-menu-mobile" data-mobile="">
+                        <div class="container-btn-menu-mobile">
+                            <span>Para Empresas</span>
+
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+                        </div>
+                    </button>
+                </li>
+
+                <li>
+                    <button id="ajuda-mobile" class="btn-menu-mobile" data-mobile="">
+                        <div class="container-btn-menu-mobile">
+                            <span>Ajuda</span>
+
+                            <div>
+                                <span class="material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+                        </div>
+                    </button>
+                </li> -->
+            </ul>
+        </nav>
+
+    </section>
+
+    <!--submenu-1-para voce -->
+    <section id="paraVoce" class="submenu">
+        <div id="container-para-voce" class="container-submenu">
+
+            <div id="container-links-para-voce" class="container-links-submenu">
+                <div id="produtos" class="div-submenu-esquerda">
+                    <span class="titulo-submenu">Conheça Nossos Produtos</span>
+                    <ul class="lista-submenu-comum">
+                        <li><a class="link-comum" href="#">Empréstimo e financiamento</a></li>
+                        <li><a class="link-comum" href="#">Conta-Corrente</a></li>
+                        <li><a class="link-comum" href="#">Cartões de Crédito</a></li>
+                        <li><a class="link-comum" href="#">Investimentos</a></li>
+                        <li><a class="link-comum" href="#">Título de Capitalização</a></li>
+                        <li><a class="link-comum" href="#">Consórcio</a></li>
+                        <li><a class="link-comum" href="#">Seguro</a></li>
+                        <li><a class="link-comum" href="#">Câmbio e Viagem</a></li>
+                        <li><a class="link-comum" href="#">Correspondente no país</a></li>
+                    </ul>
                 </div>
 
+                <div id="resolva" class="div-submenu-centro">
+                    <span class="titulo-submenu">Resolva</span>
+                    <ul class="lista-submenu-comum">
+                        <li><a class="link-comum" href="#">Boletos</a></li>
+                        <li><a class="link-comum" href="#">Comprovantes</a></li>
+                        <li><a class="link-comum" href="#">Cadastro positivo</a></li>
+                        <li><a class="link-comum" href="#">Portabilidade de crédito</a></li>
+                        <li><a class="link-comum" href="#">Portabilidade de salário</a></li>
+                        <li><a class="link-comum" href="#">Sistema de informação de crédito</a></li>
+                        <li><a class="link-comum" href="#">Renegociação de dívidas</a></li>
+                    </ul>
+                </div>
+
+                <div id="perfis" class="div-submenu-direita">
+                    <span class="titulo-submenu">Outros Perfis</span>
+                    <ul class="lista-submenu-especial cores">
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatús Uniclass</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatús Personalité</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatús private Bank</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatús Empresas</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
 
-        </section>
-
-        <!--submenu-2-para empresas -->
-        <section id="paraEmpresas" class="submenu">
-            <div id="container-para-empresas" class="container-submenu">
-
-                <div id="container-links-para-empresas" class="container-links-submenu">
-
-                    <a href="#" id="link-para-empresas">
-                        <div id="container-link-para-empresas">
-                            <span>Acessar página Itatús Empresas</span>
-                            <span class="material-symbols-outlined seta">
+            <div class="div-abra-conta">
+                <a class="link-abra-conta" href="#">
+                    <div class="container-abra-conta">
+                        <div class="div-esquerda-abra-conta">
+                            <span data-icon1="" class="material-symbols-outlined icon1">
+                                person
+                            </span>
+                            <span>
+                                Abra Sua Conta no Itatús
+                            </span>
+                        </div>
+                        <div>
+                            <span data-icon2="" class="material-symbols-outlined icon2">
                                 chevron_right
                             </span>
                         </div>
-                    </a>
-
-                    <div id="conheca" class="div-submenu-esquerda">
-                        <span class="titulo-submenu">Conheça</span>
-                        <ul class="lista-submenu-comum">
-                            <li><a class="link-comum" href="#">Conta Júridica</a></li>
-                            <li><a class="link-comum" href="#">Laranjinha</a></li>
-                            <li><a class="link-comum" href="#">Empréstimo Empresarial</a></li>
-                            <li><a class="link-comum" href="#">Pagamentos e Recebimentos</a></li>
-                            <li><a class="link-comum" href="#">Cartão empresarial</a></li>
-                            <li><a class="link-comum" href="#">Seguros</a></li>
-                            <li><a class="link-comum" href="#">Câmbio e Comercio exterior</a></li>
-                            <li><a class="link-comum" href="#">Investimentos para Empresas</a></li>
-                            <li><a class="link-comum" href="#">Consórcio</a></li>
-                        </ul>
                     </div>
-
-                    <div id="mais" class="div-submenu-centro">
-                        <span class="titulo-submenu">E mais</span>
-                        <ul class="lista-submenu-comum">
-                            <li><a class="link-comum" href="#">Renegociação</a></li>
-                            <li><a class="link-comum" href="#">Tarifas</a></li>
-                            <li><a class="link-comum" href="#">Segurança e fraudes</a></li>
-                            <li><a class="link-comum" href="#">Boletos</a></li>
-                            <li><a class="link-comum" href="#">Comprovantes</a></li>
-                            <li><a class="link-comum" href="#">Blog Itatús Empresas</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="servicos-exclusivos" class="div-submenu-direita">
-                        <span class="titulo-submenu">Serviços Exclusivos</span>
-                        <ul class="lista-submenu-especial">
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatús BBA</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatús Clientes Institucionais</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatús Securities Services</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="text-span-link">Itatú</span>
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="div-abra-conta">
-                    <a class="link-abra-conta" href="#">
-                        <div class="container-abra-conta">
-                            <div class="div-esquerda-abra-conta">
-                                <span data-icon1="" class="material-symbols-outlined icon1">
-                                    person
-                                </span>
-                                <span>
-                                    Abra Sua Conta no Itatús
-                                </span>
-                            </div>
-                            <div>
-                                <span data-icon2="" class="material-symbols-outlined icon2">
-                                    chevron_right
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
+                </a>
 
             </div>
 
-        </section>
-
-        <!--submenu-3-ajuda -->
-        <section id="ajuda" class="submenu">
-            <div id="container-ajuda" class="container-submenu">
-
-                <div id="container-links-para-empresas" class="container-links-submenu">
-
-                    <div id="ajuda" class="div-submenu-esquerda">
-                        <span class="titulo-submenu">Central de ajuda</span>
-                        <ul class="lista-submenu-comum">
-                            <li><a class="link-comum" href="#">Ajuda para você</a></li>
-                            <li><a class="link-comum" href="#">Ajuda para Empresas</a></li>
-                            <li><a class="link-comum" href="#">Ajuda para poder público</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="duvidas-frequentes" class="div-submenu-centro">
-                        <span class="titulo-submenu">Dúvidas frequentes</span>
-                        <ul class="lista-submenu-comum">
-                            <li><a class="link-comum" href="#">Itoken</a></li>
-                            <li><a class="link-comum" href="#">Renegociação</a></li>
-                            <li><a class="link-comum" href="#">Cartão virtual</a></li>
-                            <li><a class="link-comum" href="#">Fatura</a></li>
-                            <li><a class="link-comum" href="#">Limite</a></li>
-                        </ul>
-                    </div>
-
-                    <div id="Fale-com" class="div-submenu-direita">
-                        <span class="titulo-submenu">Serviços Exclusivos</span>
-                        <ul class="lista-submenu-especial-ajuda">
-                            <li>
-                                <a href="#">
-                                    <div class="especial-ajuda">
-                                        <span class="material-symbols-outlined icon-2rem">
-                                            mobile_2
-                                        </span>
-                                        <span class="text-span-link">App Itatús</span>
-                                    </div>
-
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <div class="especial-ajuda">
-                                        <span class="material-symbols-outlined icon-2rem">
-                                            call
-                                        </span>
-
-                                        <span class="text-span-link">Telefones</span>
-                                    </div>
-
-
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <div class="especial-ajuda">
-                                        <span class="material-symbols-outlined icon-2rem">
-                                            location_on
-                                        </span>
-
-                                        <span class="text-span-link">Encontre agências</span>
-                                    </div>
-
-                                    <span class="material-symbols-outlined">
-                                        chevron_right
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="div-abra-conta">
-                    <a class="link-abra-conta" href="#">
-                        <div class="container-abra-conta">
-                            <div class="div-esquerda-abra-conta">
-                                <span data-icon1="" class="material-symbols-outlined icon1">
-                                    person
-                                </span>
-                                <span>
-                                    Abra Sua Conta no Itatús
-                                </span>
-                            </div>
-                            <div>
-                                <span data-icon2="" class="material-symbols-outlined icon2">
-                                    chevron_right
-                                </span>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
+        </div>
 
     </section>
+
+    <!--submenu-2-para empresas -->
+    <section id="paraEmpresas" class="submenu">
+        <div id="container-para-empresas" class="container-submenu">
+
+            <div id="container-links-para-empresas" class="container-links-submenu">
+
+                <a href="#" id="link-para-empresas">
+                    <div id="container-link-para-empresas">
+                        <span>Acessar página Itatús Empresas</span>
+                        <span class="material-symbols-outlined seta">
+                            chevron_right
+                        </span>
+                    </div>
+                </a>
+
+                <div id="conheca" class="div-submenu-esquerda">
+                    <span class="titulo-submenu">Conheça</span>
+                    <ul class="lista-submenu-comum">
+                        <li><a class="link-comum" href="#">Conta Júridica</a></li>
+                        <li><a class="link-comum" href="#">Laranjinha</a></li>
+                        <li><a class="link-comum" href="#">Empréstimo Empresarial</a></li>
+                        <li><a class="link-comum" href="#">Pagamentos e Recebimentos</a></li>
+                        <li><a class="link-comum" href="#">Cartão empresarial</a></li>
+                        <li><a class="link-comum" href="#">Seguros</a></li>
+                        <li><a class="link-comum" href="#">Câmbio e Comercio exterior</a></li>
+                        <li><a class="link-comum" href="#">Investimentos para Empresas</a></li>
+                        <li><a class="link-comum" href="#">Consórcio</a></li>
+                    </ul>
+                </div>
+
+                <div id="mais" class="div-submenu-centro">
+                    <span class="titulo-submenu">E mais</span>
+                    <ul class="lista-submenu-comum">
+                        <li><a class="link-comum" href="#">Renegociação</a></li>
+                        <li><a class="link-comum" href="#">Tarifas</a></li>
+                        <li><a class="link-comum" href="#">Segurança e fraudes</a></li>
+                        <li><a class="link-comum" href="#">Boletos</a></li>
+                        <li><a class="link-comum" href="#">Comprovantes</a></li>
+                        <li><a class="link-comum" href="#">Blog Itatús Empresas</a></li>
+                    </ul>
+                </div>
+
+                <div id="servicos-exclusivos" class="div-submenu-direita">
+                    <span class="titulo-submenu">Serviços Exclusivos</span>
+                    <ul class="lista-submenu-especial">
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatús BBA</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatús Clientes Institucionais</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatús Securities Services</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="text-span-link">Itatú</span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="div-abra-conta">
+                <a class="link-abra-conta" href="#">
+                    <div class="container-abra-conta">
+                        <div class="div-esquerda-abra-conta">
+                            <span data-icon1="" class="material-symbols-outlined icon1">
+                                person
+                            </span>
+                            <span>
+                                Abra Sua Conta no Itatús
+                            </span>
+                        </div>
+                        <div>
+                            <span data-icon2="" class="material-symbols-outlined icon2">
+                                chevron_right
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--submenu-3-ajuda -->
+    <section id="ajuda" class="submenu">
+        <div id="container-ajuda" class="container-submenu">
+
+            <div id="container-links-para-empresas" class="container-links-submenu">
+
+                <div id="ajuda" class="div-submenu-esquerda">
+                    <span class="titulo-submenu">Central de ajuda</span>
+                    <ul class="lista-submenu-comum">
+                        <li><a class="link-comum" href="#">Ajuda para você</a></li>
+                        <li><a class="link-comum" href="#">Ajuda para Empresas</a></li>
+                        <li><a class="link-comum" href="#">Ajuda para poder público</a></li>
+                    </ul>
+                </div>
+
+                <div id="duvidas-frequentes" class="div-submenu-centro">
+                    <span class="titulo-submenu">Dúvidas frequentes</span>
+                    <ul class="lista-submenu-comum">
+                        <li><a class="link-comum" href="#">Itoken</a></li>
+                        <li><a class="link-comum" href="#">Renegociação</a></li>
+                        <li><a class="link-comum" href="#">Cartão virtual</a></li>
+                        <li><a class="link-comum" href="#">Fatura</a></li>
+                        <li><a class="link-comum" href="#">Limite</a></li>
+                    </ul>
+                </div>
+
+                <div id="Fale-com" class="div-submenu-direita">
+                    <span class="titulo-submenu">Serviços Exclusivos</span>
+                    <ul class="lista-submenu-especial-ajuda">
+                        <li>
+                            <a href="#">
+                                <div class="especial-ajuda">
+                                    <span class="material-symbols-outlined icon-2rem">
+                                        mobile_2
+                                    </span>
+                                    <span class="text-span-link">App Itatús</span>
+                                </div>
+
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="especial-ajuda">
+                                    <span class="material-symbols-outlined icon-2rem">
+                                        call
+                                    </span>
+
+                                    <span class="text-span-link">Telefones</span>
+                                </div>
+
+
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="especial-ajuda">
+                                    <span class="material-symbols-outlined icon-2rem">
+                                        location_on
+                                    </span>
+
+                                    <span class="text-span-link">Encontre agências</span>
+                                </div>
+
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="div-abra-conta">
+                <a class="link-abra-conta" href="#">
+                    <div class="container-abra-conta">
+                        <div class="div-esquerda-abra-conta">
+                            <span data-icon1="" class="material-symbols-outlined icon1">
+                                person
+                            </span>
+                            <span>
+                                Abra Sua Conta no Itatús
+                            </span>
+                        </div>
+                        <div>
+                            <span data-icon2="" class="material-symbols-outlined icon2">
+                                chevron_right
+                            </span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
 
 

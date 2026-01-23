@@ -229,8 +229,7 @@
 
 
 /*menu mobile*/
-#menu-mobile{
-    background-color: aquamarine;
+#section-menu-mobile{
     width: 100vw;
     height: 100vh;
     z-index: 1000;
@@ -250,4 +249,9 @@
     align-items: center;
     justify-content: space-between;
 
+}
+
+.btn-menu-mobile{
+    background-color: var(--cor-branco);
+    border-top: 1px solid var(--cor-cinza-claro-2);
 }
