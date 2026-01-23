@@ -226,3 +226,28 @@
     display: flex;
     align-items: center;
 }
+
+
+/*menu mobile*/
+#menu-mobile{
+    background-color: aquamarine;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.btn-menu-mobile{
+    width: 100%;
+    display: flex;
+    background-color: var(--cor-branco);
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+}
+.container-btn-menu-mobile{
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
