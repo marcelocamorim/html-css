@@ -230,8 +230,8 @@
 
 /*menu mobile*/
 #section-menu-mobile{
-    width: 100vw;
-    height: 100vh;
+    max-width: 100%;;
+    height: calc(100vh - 90px);
     z-index: 1000;
     
 }
@@ -259,6 +259,11 @@
 
 .btn-secundario{
     margin-left: 40px;
+    width: calc(100% - 40px);
+}
+
+.container-links-mobile{
+    margin-left: 60px;
 }
 
 
