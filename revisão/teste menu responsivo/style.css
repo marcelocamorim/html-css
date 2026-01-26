@@ -1,0 +1,97 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 1.5rem;
+  background: #111;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* BOTÃO HAMBURGUER */
+.btn-menu {
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  background: #222;
+  transition: max-height 0.3s ease;
+}
+
+.nav.ativo {
+  max-height: 100vh;
+}
+
+/* MENU */
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu li {
+  border-bottom: 1px solid #333;
+}
+
+.link-menu {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .btn-menu {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    max-height: none;
+    background: transparent;
+  }
+
+  .menu {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .menu li {
+    border: none;
+  }
+
+  .link-menu {
+    padding: 0;
+  }
+}

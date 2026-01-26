@@ -266,15 +266,21 @@
     margin-left: 60px;
 }
 
-.submenu-principal-mobile, .section-menu-mobile, .section-secundaria{
+.submenu-principal-mobile, .section-menu-mobile,.section-secundaria{
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-5);
     opacity: 0;
-    transform: translateY(-5px);
-    transition:.3s ease;
+    transition: .3s ease-in-out;
+    
 }
 
 .submenu-principal-mobile.ativo,
-.section-menu-mobile.ativo
+.section-menu-mobile.ativo,
+.section-secundaria.ativo
 {
+    max-height: 9999px;
+    overflow: visible;
     transform: translateY(0);
     opacity: 1;
     
