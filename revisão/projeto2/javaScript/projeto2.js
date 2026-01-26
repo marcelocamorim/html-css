@@ -27,11 +27,11 @@ menu.addEventListener("click", (evt) => {
   const seta = link.querySelector(".seta-link-menu")
   if (!submenu) return
 
-  
+
   const isOpen = submenu.classList.contains("ativo")
   fecharTudo()
 
-  if(!isOpen){
+  if (!isOpen) {
     link.classList.add("ativo")
     submenu.classList.add("ativo")
     seta.classList.add("ativo")
@@ -40,10 +40,42 @@ menu.addEventListener("click", (evt) => {
 })
 
 //menu burguer
-const hamburguer=document.getElementById("hamburguer")
-hamburguer.addEventListener("click",()=>{
+const btnPricipal = document.querySelectorAll(".btn-principal")
+const btnSecundario = document.querySelectorAll(".btn-secundario")
+const sectionPrincipal = document.querySelectorAll(".submenu-principal-mobile")
+const sectionSecundaria = document.querySelectorAll(".section-secundaria")
+
+const fecharTudoMobile = () => {
+  btnPricipal.forEach(el => el.classList.remove('ativo'))
+  btnSecundario.forEach(el => el.classList.remove('ativo'))
+  sectionPrincipal.forEach(el => el.classList.remove('ativo'))
+  sectionSecundaria.forEach(el => el.classList.remove('ativo'))
+
+}
+
+hamburguer.addEventListener("click", () => {
   hamburguer.classList.toggle("active")
+  menuMobile.classList.toggle("ativo")
+  fecharTudoMobile()
+
 })
 
-const menuMobile= document.getElementById("section-menu-mobile")
-const btnPricipalMobile = document.querySelectorAll(".btn-principal")
+const menuMobile = document.getElementById("section-menu-mobile")
+menuMobile.addEventListener("click", (evt) => {
+
+  const btn = evt.target.closest(".btn-menu-mobile")
+  const seta=btn.querySelector(".seta-link-menu")
+  if (!btn) return
+
+
+  const submenu=document.getElementById(btn.dataset.target)
+  submenu.classList.toggle("ativo")
+
+  seta.classList.toggle("ativo")
+
+
+  
+})
+
+
+

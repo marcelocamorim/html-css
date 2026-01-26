@@ -266,12 +266,18 @@
     margin-left: 60px;
 }
 
-.submenu-principal-mobile{
-    max-height: 0px;
-    overflow: hidden;
+.submenu-principal-mobile, .section-menu-mobile, .section-secundaria{
+    opacity: 0;
+    transform: translateY(-5px);
+    transition:.3s ease;
 }
-.submenu-principal-mobile.ativo{
-    max-height: 1000px;
+
+.submenu-principal-mobile.ativo,
+.section-menu-mobile.ativo
+{
+    transform: translateY(0);
+    opacity: 1;
+    
 }
 
 
