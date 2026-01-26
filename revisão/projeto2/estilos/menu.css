@@ -266,4 +266,12 @@
     margin-left: 60px;
 }
 
+.submenu-principal-mobile{
+    max-height: 0px;
+    overflow: hidden;
+}
+.submenu-principal-mobile.ativo{
+    max-height: 1000px;
+}
+
 

@@ -44,3 +44,6 @@ const hamburguer=document.getElementById("hamburguer")
 hamburguer.addEventListener("click",()=>{
   hamburguer.classList.toggle("active")
 })
+
+const menuMobile= document.getElementById("section-menu-mobile")
+const btnPricipalMobile = document.querySelectorAll(".btn-principal")
