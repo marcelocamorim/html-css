@@ -1,4 +1,4 @@
-header{
+header {
     background-color: var(--cor-1);
     height: 80px;
     width: 100%;
@@ -6,23 +6,55 @@ header{
     align-items: center;
     justify-content: center;
 }
-#container-header{
+
+.icon1 {
+    color: var(--cor-branco);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.icon2 {
+    color: var(--cor-preto);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#container-header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: red;
+    justify-content: space-between;
     width: 80%;
+    max-width: 1248px;
 }
-#container-logo{
-    height: 50px;
-    width: 50px;
+
+#container-logo {
+    height: 55px;
+    width: 55px;
 }
-#logo{
+
+#logo {
     width: 100%;
     height: 100%;
 }
 
-#hamburguer{
+.btn-conta-header {
+    padding: 15px;
+    border-radius: 15px;
+    background-color: var(--cor-1);
+    border: 1px solid var(--cor-branco);
+    color: var(--cor-branco);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.container-hamburguer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+#hamburguer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,11 +63,53 @@ header{
     width: 30px;
     cursor: pointer;
     background-color: transparent;
-    
+
 }
-#hamburguer span{
+
+#hamburguer span {
     background-color: var(--cor-branco);
     height: 3px;
     width: 100%;
     border-radius: 5px;
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    
+}
+.container-search{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.link-menu{
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid var(--cor-cinza-claro-2);
+    
+}
+@media screen and (min-width:1250px) {
+    body{
+        background-color: rgba(154, 226, 154, 0.63);
+    }
+    [data-mobile]{
+        display: none;
+    }
+}
+
+@media screen and (max-width:900px) {
+    #container-header {
+        width: 100%;
+        padding: 0 20px ;
+    }
 }

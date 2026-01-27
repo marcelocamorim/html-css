@@ -6,6 +6,7 @@
 
 :root {
     --cor-branco:white;
+    --cor-preto:black;
     --cor-1: #008cff;
     --cor-2: #0063b4;
     --cor-3: #003968;
@@ -23,7 +24,6 @@ html{
 }
 
 body{
-    
     font-family: var(--font-padrao);
 }
 
@@ -40,3 +40,9 @@ button{
     cursor: pointer;
     border: none;
 }
+
+.flex-row{
+    display: flex;
+    align-items: center;
+}
+
