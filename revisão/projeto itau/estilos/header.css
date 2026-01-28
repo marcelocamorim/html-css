@@ -126,45 +126,35 @@ nav {
         display: none;
     }
 
-    #container-header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: end;
-        width: 80%;
-        max-width: 1248px;
+    
+
+    nav li:nth-child(1) {
+        order: 4;
     }
 
     .lista-menu {
         flex-direction: row;
     }
 
-    nav {
-        position: relative;
-        top: 0px;
-
-    }
-
-    nav li:nth-child(1) {
-        order: 4;
-    }
-
     nav li {
         margin-right: 20px;
     }
 
+    #container-header {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
 
     .link-menu {
-        background-color: red;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 24px 10px;
+        padding: 24px 5px;
         font-size: 1.2rem;
         font-weight: bold;
         border: none;
         color: var(--cor-branco);
-
 
     }
 }
