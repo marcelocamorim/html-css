@@ -1,0 +1,92 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+button{
+    cursor: pointer;
+}
+
+:root {
+    --var-cor-1: #00A388;
+    --var-cor-2: #046380;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 160px;
+    background-color: aquamarine;
+    padding: 20px;
+
+}
+
+.container-header {
+    background-color: rgb(124, 124, 124);
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.container-logo{
+    width: 100px;
+    height: 100px;
+}
+.container-logo img{
+    width: 100%;
+}
+
+.container-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    padding: 20px 0;
+    color: var(--var-cor-1);
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.menu ul li {
+    padding: 20px 0;
+
+}
+.btn-whats{
+    background-color: var(--var-cor-1);
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 15px;
+}
+.btn-social{
+    background-color: var(--var-cor-2);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    
+}
