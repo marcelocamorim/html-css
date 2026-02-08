@@ -125,8 +125,13 @@ nav {
     [data-mobile] {
         display: none;
     }
+    #container-logo{
+        margin-right: 20px;
+    }
 
-    
+    nav{
+        position: static;
+    }
 
     nav li:nth-child(1) {
         order: 4;
