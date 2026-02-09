@@ -19,7 +19,6 @@ button {
     --var-cor-whats: #08C40E;
 
 
-
 }
 
 header {
@@ -28,7 +27,7 @@ header {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 15px;
 
 }
 
@@ -40,7 +39,7 @@ header {
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 0px;
 }
 
 .container-logo {
@@ -59,19 +58,55 @@ header {
     gap: 40px;
 }
 
-.menu ul {
+.lista-menu {
     list-style: none;
     display: flex;
+    flex-direction: row;
     gap: 30px;
 }
 
-.menu ul li a {
+.link-menu {
+    position: relative;
     text-decoration: none;
     padding: 20px 0;
     color: var(--var-cor-branco);
     font-size: 1.2rem;
     font-weight: bold;
+}
 
+.link-menu::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    bottom: 5px;
+    height: 1px;
+    width: 70%;
+    background-color: var(--var-cor-branco);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.link-menu:hover::before {
+    transform: scaleX(1);
+}
+
+.link-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 40px;
+    height: 20px;
+    background: url("imagens/icone\ aviao.PNG") no-repeat center;
+    background-size: contain;
+    opacity: 0;
+    transition: left 0.3s ease, opacity 0.2s ease;
+}
+
+.link-menu:hover::after {
+    left: 75%;
+    opacity: 1;
 }
 
 .menu ul li {
@@ -91,12 +126,13 @@ header {
     flex-wrap: nowrap;
     gap: 10px;
     text-decoration: none;
+    transition: 0.2s;
 
 }
 
 .btn-whats:hover {
     transform: scale(1.005);
-    box-shadow: 0px 0px 5px var(--var-cor-2);
+    box-shadow: 0px 2px 10px var(--var-cor-1);
 }
 
 .btn-whats img {
@@ -109,24 +145,28 @@ header {
     gap: 10px;
 }
 
+.container-sociais img {
+    width: 30px;
+}
+
 .btn-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--var-cor-2);
     border: none;
-    padding: 10px 15px;
-    border-radius: 100%;
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: white;
+    padding: 0px 10px;
+    border-radius: 50%;
     text-decoration: none;
     transition: .4s;
 }
 
 .btn-social:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 0px 5px;
+    box-shadow: 0px 5px 5px var(--var-cor-1);
 }
 
-[data-mobile]{
+[data-mobile] {
     display: none;
 }
 
@@ -163,4 +203,137 @@ header {
 
 .hamburguer.active span:nth-child(3) {
     transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media screen and (max-width:1260px) {
+    [data-mobile] {
+        display: block;
+    }   
+
+    header{
+        position: relative;
+    }
+    .container-logo {
+        width: 100px;
+        height: 120px;
+    }
+
+    .container-logo img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-menu {
+        
+    }
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        width: 100%;
+    }
+
+    .lista-menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        
+        
+    }
+
+    .link-menu {
+        text-decoration: none;
+        padding: 0;
+        color: var(--var-cor-branco);
+        font-size: 1.2rem;
+        font-weight: bold;
+        background-color: var(--var-cor-3);
+        width: 100%;
+        display: block;
+        padding: 15px;
+       
+        
+    }    
+
+    .menu ul li {
+        padding: 0;
+
+    }
+
+    .btn-whats {        
+
+    }
+
+    .btn-whats:hover {
+        transform: scale(1.005);
+        box-shadow: 0px 2px 10px var(--var-cor-1);
+    }
+
+    .btn-whats img {
+        width: 20px;
+    }
+
+    .container-sociais {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .container-sociais img {
+        width: 30px;
+    }
+
+    .btn-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--var-cor-2);
+        border: none;
+        padding: 0px 10px;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: .4s;
+    }
+
+    .btn-social:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 5px var(--var-cor-1);
+    }
+    
+
+    .hamburguer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background: transparent;
+        width: 25px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        gap: 3px;
+
+    }
+
+    .hamburguer span {
+        background: white;
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+        transition: .3s;
+
+    }
+
+    .hamburguer.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6.3px, 6.3px);
+    }
+
+    .hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 }
