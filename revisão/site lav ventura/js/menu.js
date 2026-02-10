@@ -1,8 +1,30 @@
+fetch("componentes/header.html")
+    .then(res => res.text())
+    .then(html => {
+        document.querySelector("#header").innerHTML = html
+        iniciarMenu()
+
+    })
+
+
+function iniciarMenu() {
+    const btnMenu = document.querySelector(".hamburguer")
+    const menu = document.querySelector(".menu")
+
+    if (!btnMenu || !menu) return
+
+    btnMenu.addEventListener("click", () => {
+        btnMenu.classList.toggle("active")
+        menu.classList.toggle("ativo")
+
+    })
+}
 
 
 
 
 
+/*
 
 const hamburguer = document.getElementById("hamburguer")
 const menu = document.getElementById("menu")
@@ -30,3 +52,4 @@ window.addEventListener("resize", () => {
         isMobile = nowIsMobile;
     }
 });
+*/
