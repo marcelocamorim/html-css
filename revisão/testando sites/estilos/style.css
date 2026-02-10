@@ -54,6 +54,7 @@ header {
     height: 100%;
 }
 
+
 .container-menu {
     display: flex;
     align-items: center;
@@ -73,7 +74,7 @@ header {
     padding: 20px 0;
     color: var(--var-cor-branco);
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .link-menu::before {
@@ -195,18 +196,24 @@ header {
 
 
     .menu {
+        display: none;
         position: absolute;
         top: 100%;
         left: 0px;
         width: 100%;
         border-top: 1px solid var(--var-cor-1);
         opacity: 0;
+        visibility: hidden;
         transform: translateY(-5px);
         transition: .3s;
     }
-    .menu.ativo{
+
+    .menu.ativo {
+        display: block;
         opacity: 1;
+        visibility: visible;
         transform: translate(0);
+        transform: .3s;
     }
 
 
@@ -251,7 +258,7 @@ header {
     .btn-whats {
         padding: 10px 10px;
     }
-    
+
 
     .container-sociais {
         display: flex;
@@ -313,24 +320,44 @@ header {
     .hamburguer.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+
+
+    /*animação de menu*/
+    @keyframes slideDown {
+        from{
+            opacity: 0;
+            transform: translateY(-5px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .menu .lista-menu{
+        animation: slideDown 0.5s ease forwards;
+    }
 }
 
-@media screen and (max-width:750px) {
-    body{
-        background-color: red;
-    }
+@media screen and (max-width:768px) {
+    
 
-    .btn-whats{
+    .btn-whats {
         width: 50px;
         height: 50px;
         border-radius: 50%;
         overflow: hidden;
     }
-    .container-menu{
+
+    .btn-whats:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 5px var(--var-cor-1);
+    }
+
+    .container-menu {
         flex-direction: column;
     }
 
-    .container-hamburguer{
+    .container-hamburguer {
         order: 2;
     }
 
@@ -338,6 +365,7 @@ header {
         width: 125px;
         height: 150px;
     }
+
     /* .container-sociais{
         position: absolute;
         top: 100%;
