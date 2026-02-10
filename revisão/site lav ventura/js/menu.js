@@ -7,49 +7,69 @@ fetch("componentes/header.html")
     })
 
 
+
+
 function iniciarMenu() {
     const btnMenu = document.querySelector(".hamburguer")
     const menu = document.querySelector(".menu")
 
     if (!btnMenu || !menu) return
 
-    btnMenu.addEventListener("click", () => {
+    //fecha menu
+    function removerAtivos() {
+        btnMenu.classList.remove("active")
+        menu.classList.remove("ativo")
+    }
+
+    //toggle do menu
+    btnMenu.addEventListener("click", (evt) => {
+        evt.stopPropagation()
         btnMenu.classList.toggle("active")
         menu.classList.toggle("ativo")
-
     })
+
+    //fecha o menu ao clicar em um link
+    menu.addEventListener("click",(evt)=>{
+        evt.stopPropagation()
+        const link = evt.target.closest(".link-menu")
+        if(!link)return
+        removerAtivos()
+    })
+
+    let faixaAtual = getFaixa()
+
+    // evento resize fecha menu
+    window.addEventListener("resize", () => {
+        let novaFaixa = getFaixa()
+
+        if (novaFaixa !== faixaAtual) {
+            removerAtivos()
+        }
+        faixaAtual = novaFaixa
+    })
+
+    document.addEventListener("click",()=>{
+        removerAtivos()
+    })
+
+    document.addEventListener("keydown",(evt)=>{
+        if(evt.key === "Escape" && menu.classList.contains("ativo")){
+            removerAtivos()
+        }
+    })
+
+}
+
+function getFaixa() {
+    const largura = window.innerWidth
+
+    if (largura <= 768) return "mobile"
+    if (largura <= 1260) return "tablet"
+    return "desktop"
 }
 
 
 
 
 
-/*
 
-const hamburguer = document.getElementById("hamburguer")
-const menu = document.getElementById("menu")
-
-
-
-
-hamburguer.addEventListener("click", () => {
-    hamburguer.classList.toggle("active")
-    menu.classList.toggle("ativo")
-
-})
-
-
-const breakpoint = 768;
-let isMobile = window.innerWidth <= breakpoint;
-
-window.addEventListener("resize", () => {
-    const nowIsMobile = window.innerWidth <= breakpoint;
-
-    if (nowIsMobile !== isMobile) {
-        hamburguer.classList.remove("active")
-
-        menu.classList.remove("ativo");
-        isMobile = nowIsMobile;
-    }
-});
-*/
