@@ -19,13 +19,17 @@ function iniciarMenu() {
     function removerAtivos() {
         btnMenu.classList.remove("active")
         menu.classList.remove("ativo")
+        btnMenu.setAttribute("aria-expanded","false")
     }
 
     //toggle do menu
     btnMenu.addEventListener("click", (evt) => {
         evt.stopPropagation()
-        btnMenu.classList.toggle("active")
-        menu.classList.toggle("ativo")
+
+        const ativo = menu.classList.toggle("ativo")
+        btnMenu.classList.toggle("active", ativo)
+        btnMenu.setAttribute("aria-expanded", ativo)
+
     })
 
     //fecha o menu ao clicar em um link
