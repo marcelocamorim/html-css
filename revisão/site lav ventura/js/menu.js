@@ -52,10 +52,14 @@ function iniciarMenu() {
         faixaAtual = novaFaixa
     })
 
+
+    //fecha menu clicando fora dele
     document.addEventListener("click",()=>{
         removerAtivos()
     })
 
+
+    //fecha menu com tecla ESC
     document.addEventListener("keydown",(evt)=>{
         if(evt.key === "Escape" && menu.classList.contains("ativo")){
             removerAtivos()
