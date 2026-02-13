@@ -16,3 +16,25 @@
 .slides picture.active img{
     opacity: 1;
 }
+.btn-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    position: absolute;
+    top: 50%;
+    color: black;
+    font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.274);
+    border: none;
+}
+.btn-banner:hover{
+    border: 1px solid black;
+}
+
+.prev{
+    left: 20px;
+}
+.next{
+    right: 20px;
+}

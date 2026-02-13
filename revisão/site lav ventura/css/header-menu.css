@@ -8,6 +8,9 @@ header {
     padding: 0 15px;
 
 }
+.menu{
+    z-index: 1000;
+}
 
 .container-header {
 
