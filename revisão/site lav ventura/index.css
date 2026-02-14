@@ -51,26 +51,36 @@
 }
 
 .dots{
-    width: 150px;
-    height: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
     position: absolute ;
     bottom: 10px;
     left: 50%;
-    transform: translateX(-25%);
+    transform: translateX(-50%);
     display: flex;
     gap: 10px;
-
+    background-color: rgba(0, 0, 0, 0.205);
+    
 }
 
 .dots span{
-    background-color: black;
+    background-color: var(--var-cor-3);
     width: 15px;
     height: 15px;
     border-radius: 50%;
     cursor: pointer;
-   
+    transition: .4s;
+    
+}
+.dots span:hover{    
+    transform: scale(1.2);
+    
 }
 
 .dots span.active{
-    background-color: var(--var-cor-branco);
+    background-color: var(--var-cor-0);
+    width: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px var(--var-cor-3);
 }
+

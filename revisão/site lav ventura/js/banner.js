@@ -6,65 +6,93 @@ const dotsContainer = document.querySelector(".dots")
 
 let index = 0
 let autoSlide = null
+let mouseNoBanner = false
 
+//cria dots e listeners deles
 slides.forEach((el, i) => {
     const dot = document.createElement("span")
 
     if (i === 0) dot.classList.add("active");
 
-    dot.addEventListener("click",()=>{
-        index= i
+    dot.addEventListener("click", () => {
+        index = i
         mostrarSlide(index)
-        restartAutoSlide()
+
+        if (!mouseNoBanner) {
+            restartAutoSlide()
+
+        }
     })
 
     dotsContainer.appendChild(dot)
 
 })
 
+//ativa as classes do banner e dos dots
 function mostrarSlide(i) {
     slides.forEach(slide => slide.classList.remove("active"))
     slides[i].classList.add("active")
 
-    document.querySelectorAll(".dots span").forEach(dot=>{
+    document.querySelectorAll(".dots span").forEach(dot => {
         dot.classList.remove("active")
     })
 
     document.querySelectorAll(".dots span")[i].classList.add("active")
 }
 
-
+// start banner
 function startAutoSlide() {
+    clearInterval(autoSlide)
 
     autoSlide = setInterval(() => {
         index = (index + 1) % slides.length
         mostrarSlide(index)
-    }, 5000)
+    }, 2000)
 
 }
 
+//para banner
 function stopAutoSlide() {
     clearInterval(autoSlide)
 }
 
-function restartAutoSlide(){
+//restart banner
+function restartAutoSlide() {
     stopAutoSlide()
     startAutoSlide()
 }
 
 startAutoSlide()
 
-banner.addEventListener("mouseenter", stopAutoSlide)
-banner.addEventListener("mouseleave", startAutoSlide)
+
+//lister de mouse no banner
+banner.addEventListener("mouseenter", () => {
+    mouseNoBanner = true
+    stopAutoSlide()
+})
+
+banner.addEventListener("mouseleave", () => {
+    mouseNoBanner = false
+    startAutoSlide()
+})
 
 
 //buttons prev e next
 btnPrev.addEventListener("click", () => {
     index = (index - 1 + slides.length) % slides.length
     mostrarSlide(index)
+
+    if (!mouseNoBanner) {
+        restartAutoSlide()
+
+    }
 })
 
 btnNext.addEventListener("click", () => {
     index = (index + 1) % slides.length
     mostrarSlide(index)
+    if (!mouseNoBanner) {
+        restartAutoSlide()
+
+    }
 })
