@@ -1,8 +1,6 @@
-//variaveis mobile
 let startX = 0
 let endX = 0
 
-//variaveis desktop
 const banner = document.querySelector(".banner")
 const slides = document.querySelectorAll(".slides picture")
 const btnPrev = document.querySelector(".prev")
@@ -103,17 +101,17 @@ btnNext.addEventListener("click", () => {
 })
 
 
-//mobile
-banner.addEventListener("touchstart", (evt)=>{
-    startX = evt.touches[0].clientX
+//controle do banner com deslizar (mobile, tablet...)
+banner.addEventListener("pointerdown", (evt)=>{
+    startX = evt.clientX
 })
 
-banner.addEventListener("touchend",(evt)=>{
-    endX = evt.changedTouches[0].clientX
-    mobileSwipe()
+banner.addEventListener("pointerup",(evt)=>{
+    endX = evt.clientX
+    swipe()
 })
 
-function mobileSwipe(){
+function swipe(){
     const distance = endX - startX
     const minSwipe = 50
 
