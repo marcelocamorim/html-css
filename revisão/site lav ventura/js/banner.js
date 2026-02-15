@@ -1,3 +1,8 @@
+//variaveis mobile
+let startX = 0
+let endX = 0
+
+//variaveis desktop
 const banner = document.querySelector(".banner")
 const slides = document.querySelectorAll(".slides picture")
 const btnPrev = document.querySelector(".prev")
@@ -96,3 +101,33 @@ btnNext.addEventListener("click", () => {
 
     }
 })
+
+
+//mobile
+banner.addEventListener("touchstart", (evt)=>{
+    startX = evt.touches[0].clientX
+})
+
+banner.addEventListener("touchend",(evt)=>{
+    endX = evt.changedTouches[0].clientX
+    mobileSwipe()
+})
+
+function mobileSwipe(){
+    const distance = endX - startX
+    const minSwipe = 50
+
+    if(Math.abs(distance) < minSwipe) return
+
+    if(distance < 0){
+        index = (index +1) % slides.length
+    }else{
+        index = (index -1 + slides.length) % slides.length
+    }
+
+    mostrarSlide(index)
+
+    if(!mouseNoBanner){
+        restartAutoSlide()
+    }
+}
