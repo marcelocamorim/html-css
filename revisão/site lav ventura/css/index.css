@@ -13,8 +13,13 @@ main {
     align-items: center;
 
 }
+.container-section{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-.section1 {
+.itens-grid {
     width: 100%;
     margin-top: 50px;
     display: grid;
@@ -23,10 +28,14 @@ main {
 }
 
 .titulo-section {
-    margin-top: 50px;
+    padding: 10px;
+    align-self: start;
+    margin-top: 80px;
     line-height: 1.5rem;
-    text-align: center;
+    text-align: justify;
+    position: relative;
 }
+
 
 .titulo-section h1 {
     margin-bottom: 20px;
@@ -120,24 +129,28 @@ main {
 }
 
 .container-link-veja-mais {
-    background-color: var(--var-cor-3);
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 10px;
 }
 
-.container-link-veja-mais span {
-    display: block;
-}
-
 .container-link-veja-mais a {
+    background-color: var(--var-cor-3);
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
     color: var(--var-cor-branco);
     font-size: 1.2rem;
+    border-radius: 10px;
+    transition: .3s;
 
-
+}
+.container-link-veja-mais a:hover {
+    background-color: var(--var-cor-0);
+    color: var(--var-cor-preto);
+    font-weight: bold;
+    box-shadow: 0px 0px 10px black;
+        
 }
 
 .texto-veja-mais {
@@ -145,6 +158,8 @@ main {
 }
 
 .icone-veja-mais {
+    display: flex;
+    align-items: center;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     background-color: var(--var-cor-1);
@@ -157,7 +172,7 @@ main {
 }
 
 @media screen and (max-width:1180px) {
-    .section1 {
+    .itens-grid {
         grid-template-columns: repeat(3, 1fr);
         column-gap: 2rem;
         row-gap: 3rem;
@@ -169,7 +184,7 @@ main {
 }
 
 @media screen and (max-width:920px) {
-    .section1 {
+    .itens-grid {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3rem;
         row-gap: 3rem;
@@ -178,7 +193,7 @@ main {
 }
 
 @media screen and (max-width:700px) {
-    .section1 {
+    .itens-grid {
         grid-template-columns: repeat(2, 1fr);
         column-gap: .5rem;
         row-gap: 3rem;
@@ -235,7 +250,7 @@ main {
 }
 
 /* @media screen  and (max-width:768px) {
-    .section1 {
+    .itens-grid {
         grid-template-columns: 1fr;
         column-gap: 3rem;
         row-gap: 3rem;
