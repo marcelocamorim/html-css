@@ -15,6 +15,7 @@ main {
 }
 
 .section1 {
+    width: 100%;
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -43,7 +44,6 @@ main {
 
 .item-texto {
     padding: 10px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,6 +121,8 @@ main {
 
 .container-link-veja-mais {
     background-color: var(--var-cor-3);
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
 .container-link-veja-mais span {
@@ -143,6 +145,100 @@ main {
 }
 
 .icone-veja-mais {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     background-color: var(--var-cor-1);
-    padding: 10px;
+    padding: 5px;
+    font-size: 3rem;
 }
+
+.icone-veja-mais span {
+    font-size: 3rem;
+}
+
+@media screen and (max-width:1180px) {
+    .section1 {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        row-gap: 3rem;
+        place-items: center;
+
+    }
+
+
+}
+
+@media screen and (max-width:920px) {
+    .section1 {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+        row-gap: 3rem;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .section1 {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: .5rem;
+        row-gap: 3rem;
+    }
+
+    .item {
+        width: 230px;
+        height: 600px;
+        box-shadow: 0px 5px 10px var(--var-cor-preto);
+    }
+
+    .item-texto {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .periodo {
+        line-height: 1.5rem;
+    }
+
+    .lista-inclusive {
+        font-size: .8rem;
+    }
+
+    .preco {
+        line-height: 1.3rem;
+
+    }
+
+    .destaque {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .letras-miudas {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+
+
+    .btn-contato {
+        width: 180px;
+        border: none;
+        background-color: var(--var-cor-1);
+        padding: 10px;
+        border-radius: 10px;
+        transition: .2s;
+    }
+
+
+}
+
+/* @media screen  and (max-width:768px) {
+    .section1 {
+        grid-template-columns: 1fr;
+        column-gap: 3rem;
+        row-gap: 3rem;
+    }
+
+} */
