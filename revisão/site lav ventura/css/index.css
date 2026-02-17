@@ -13,7 +13,8 @@ main {
     align-items: center;
 
 }
-.container-section{    
+
+.container-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +25,7 @@ main {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .titulo-section {
@@ -45,10 +46,21 @@ main {
     width: 280px;
     height: 650px;
     box-shadow: 0px 5px 10px var(--var-cor-preto);
+    border-radius: 15px;
+}
+
+.item-imagem {
+    width: 100%;
+    height: 180px;
 }
 
 .item img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .item-texto {
@@ -58,6 +70,29 @@ main {
     align-items: center;
     gap: 1.5rem;
 }
+
+
+/*inicio itens cruzeiro*/
+.item.cruzeiro {
+    height: 740px;
+}
+
+.cruzeiro .item-imagem {
+    width: 100%;
+    height: 350px;
+}
+
+.cruzeiro .item-texto {
+    gap: 1rem;
+}
+
+.cruzeiro .periodo {
+    text-align: center;
+}
+
+/* fim itens cruzeiro*/
+
+
 
 .item-texto span {
     display: block;
@@ -145,12 +180,13 @@ main {
     transition: .3s;
 
 }
+
 .container-link-veja-mais a:hover {
     background-color: var(--var-cor-0);
     color: var(--var-cor-preto);
     font-weight: bold;
     box-shadow: 0px 0px 10px black;
-        
+
 }
 
 .texto-veja-mais {
@@ -186,18 +222,54 @@ main {
 @media screen and (max-width:920px) {
     .itens-grid {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 3rem;
+        column-gap: 2rem;
         row-gap: 3rem;
     }
 
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:600px) {
     .itens-grid {
         grid-template-columns: repeat(2, 1fr);
         column-gap: .5rem;
-        row-gap: 3rem;
+        row-gap: 2rem;
     }
+
+    .itens-grid-horizontal {
+        grid-template-columns: 1fr;
+
+    }
+
+    /*inicio itens cruzeiro*/
+    .item.cruzeiro {
+        height: 400px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cruzeiro .item-imagem {
+        width: 50%;
+        height: 100%;
+
+    }
+
+    .cruzeiro .item-imagem img {
+        border-bottom-left-radius: 15px;
+        border-top-right-radius: 0;
+    }
+
+    .cruzeiro .item-texto {
+        width: 50%;
+        gap: 1rem;
+    }
+
+    .cruzeiro .periodo {
+        text-align: center;
+    }
+
+    /* fim itens cruzeiro*/
+
 
     .item {
         width: 230px;
