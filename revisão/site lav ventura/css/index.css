@@ -8,19 +8,32 @@ main {
     width: 100%;
     max-width: 1260px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 .section1 {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
+.titulo-section {
+    margin-top: 50px;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.titulo-section h1 {
+    margin-bottom: 20px;
+}
+
 .item {
-    width: 250px;
-    height: 600px;
+    width: 280px;
+    height: 650px;
     box-shadow: 0px 5px 10px var(--var-cor-preto);
 }
 
@@ -54,7 +67,6 @@ main {
 }
 
 .preco {
-    align-self: flex-start;
     line-height: 1.3rem;
 
 }
@@ -74,5 +86,63 @@ main {
     margin: auto;
     height: 1px;
     border: none;
-    background: linear-gradient(to right,transparent 0%, black 15%, black 85%, transparent 100%);
+    background: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.btn-contato {
+    width: 220px;
+    border: none;
+    background-color: var(--var-cor-1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.btn-contato:hover {
+    transform: scale(1.1);
+    background-color: var(--var-cor-2);
+    box-shadow: 0px 0px 10px var(--var-cor-1);
+}
+
+.btn-contato a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+
+}
+
+.btn-contato img {
+    width: 30px;
+}
+
+.container-link-veja-mais {
+    background-color: var(--var-cor-3);
+}
+
+.container-link-veja-mais span {
+    display: block;
+}
+
+.container-link-veja-mais a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--var-cor-branco);
+    font-size: 1.2rem;
+
+
+}
+
+.texto-veja-mais {
+    padding: 10px;
+}
+
+.icone-veja-mais {
+    background-color: var(--var-cor-1);
+    padding: 10px;
 }
