@@ -206,11 +206,55 @@ main {
     font-size: 3rem;
 }
 
-.casamentos{
-    background-color: red;
+
+
+
+.container-section4 {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1260px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casamentos {
+    box-shadow: 0px 0px 10px var(--var-cor-3);
     width: 100%;
     height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
 }
+.casamentos:hover{
+    box-shadow: 0px 0px 10px var(--var-cor-0);
+    border: 1px solid var(--var-cor-3);
+}
+.container-casamento-esquerda {
+    width: 80%;
+}
+
+.container-casamento-esquerda img {
+    width: 100%;
+}
+
+.container-casamento-direita {
+    width: 50%;
+    height: 100%;
+}
+
+.container-casamento-direita img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0% 60%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+
 
 @media screen and (max-width:1180px) {
     .itens-grid {
@@ -222,6 +266,9 @@ main {
     }
 
 
+    .casamentos {
+        width: 98%;
+    }
 }
 
 @media screen and (max-width:920px) {
@@ -322,6 +369,38 @@ main {
         transition: .2s;
     }
 
+ 
+    .casamentos {
+        width: 95%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .container-casamento-esquerda {
+        width: 100%;
+        height: 120px;
+    }
+    
+    .container-casamento-esquerda img {
+        width: 100%;
+        margin-left: 40px;
+    }
+
+    .container-casamento-direita {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-casamento-direita img {
+        width: 100%;
+        object-fit: cover;
+        object-position: 0% 50%;
+
+    }
 
 }
 
