@@ -65,17 +65,21 @@
 
     <main>
         <div id="container-main" class="container-main">
-            <section id="cotacao">
+            <section id="cotacao" class="cotacao">
                 <div id="container-cotacao" class="container-cotacao">
 
                     <a href="pag-cotacao.html">
                         <div class="texto-cotacao">
-                            <h1>Clique aqui e selecione seu destino</h1>
+                            <h1>Cotação</h1>
+                            <p>Pesquise seu destino aqui</p>
                         </div>
 
                         <div class="img-cotacao">
                             <picture>
-                                <img src="imagens/cotacao-img-desktop.PNG" alt="">
+                                <source media="(min-width:1180px)" srcset="imagens/cotacao-img-desktop.PNG">
+                                <source media="(min-width:900px)" srcset="imagens/cotacao-img-media.PNG">
+                                <source media="(min-width:600px )" srcset="imagens/cotacao-img-pequena.PNG">
+                                <img src="imagens/cotacao-img-pequena.PNG" alt="">
                             </picture>
                         </div>
                     </a>
@@ -621,23 +625,79 @@
             <section id="section4">
                 <div class="container-section4">
 
-                    <a href="https://www.casamentos.com.br/lua-de-mel/lavventura-travel--e464180" class="casamentos" target="_blank">
+                    <a href="https://www.casamentos.com.br/lua-de-mel/lavventura-travel--e464180" class="casamentos"
+                        target="_blank">
                         <div class="container-casamento-esquerda">
                             <img src="imagens/1logo-casamentos.jpg" alt="">
                         </div>
-    
+
                         <div class="container-casamento-direita">
                             <img class="img-anima" src="imagens/casal-casamento.jpg" alt="">
                         </div>
                     </a>
-                    
+
                 </div>
             </section>
         </div>
     </main>
 
-    <h1>qefe</h1>
-    <p>swvwev</p>
+    <footer id="footer" class="footer">
+        <div class="header-footer">
+            <div class="text-header-footer">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="container-sociais">
+                <a href="#" class="btn-whats">
+                    <img src="imagens/icone-whats.png" alt="">
+                </a>
+                <a href="#" class="btn-social"><img src="imagens/icone-face.PNG" alt=""></a>
+                <a href="#" class="btn-social"><img src="imagens/icone-insta.png" alt=""></a>
+                <a href="#" class="btn-social"><img src="imagens/icone-email.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="main-footer">
+            <div class="div-footer1">
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+            </div>
+
+            <div class="div-footer2">
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+            </div>
+
+            <div class="div-footer3">
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+            </div>
+
+            <div class="div-footer4">
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit</p>
+            </div>
+            
+
+        </div>
+
+        <div class="footer-footer">
+            <p>Site Desenvolvido por: <a href="#">Marcelo C. Amorim</a></p>
+        </div>
+
+    </footer>
 
 
 
