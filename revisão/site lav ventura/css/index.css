@@ -221,8 +221,6 @@ main {
 }
 
 
-
-
 .container-section4 {
     margin-top: 50px;
     width: 100%;
@@ -235,18 +233,19 @@ main {
 
 .casamentos {
     box-shadow: 0px 0px 10px var(--var-cor-3);
-    width: 100%;
-    height: 350px;
+    width: 90%;
+    height: 250px;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
+    transition: .5s;
 }
 
 .casamentos:hover {
-    box-shadow: 0px 0px 10px var(--var-cor-1);
-    border: 1px solid var(--var-cor-1);
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px red;
 }
 
 .container-casamento-esquerda {
@@ -258,7 +257,7 @@ main {
 }
 
 .container-casamento-direita {
-    width: 50%;
+    width: 60%;
     height: 100%;
     overflow: hidden;
 }
@@ -267,10 +266,24 @@ main {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0% 60%;
+    object-position: 0% 40%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 
+}
+/*animação imagem da direita casamentos.com*/
+@keyframes zoonIn {
+    from {
+        transform: scale(1);
+    }
+    
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.img-anima {
+    animation: zoonIn 8s ease-in-out infinite alternate;
 }
 /*cadastur*/
 .cadastur {
@@ -290,19 +303,13 @@ main {
     border-radius: 10px;
     width: 100%;
 }
-/*animação imagem da direita casamentos.com*/
-@keyframes zoonIn {
-    from {
-        transform: scale(1);
-    }
 
-    to {
-        transform: scale(1.2);
-    }
+.avaliacoes{
+    width: calc(100% -20px);
+    margin: 100px 20px;
 }
-
-.img-anima {
-    animation: zoonIn 15s ease-in-out infinite alternate;
+.espaco{
+    margin-top: 200px;
 }
 
 @media screen and (max-width:1180px) {
