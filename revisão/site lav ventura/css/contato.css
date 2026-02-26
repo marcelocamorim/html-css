@@ -1,20 +1,93 @@
-.container-form{
-    background-color: aqua;
+.contato{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container-contato{
+    width: 100%;
+    max-width: 1260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 100px 0;
+}
+
+.form-text{
+    width: 50%;
+}
+
+
+
+
+
+form {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.container-form {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--var-cor-2);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-items: center;
     gap: 2rem;
     width: 100%;
-    max-width: 700px;
 
 }
-.div-form{
+
+.div-form {
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--var-cor-0);
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 0 5px var(--var-cor-0);
+}
+
+.div-form input {
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px var(--var-cor-preto);
 
 }
-.div-form input{
-    
-    width: 100%;
+
+textarea {
+    height: 200px;
+    resize: horizontal;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 5px var(--var-cor-preto);
+    border-radius: 10px;
+}
+
+label {
+    margin: 5px;
+    color: var(--var-cor-branco);
+    font-size: 1.2rem;
+}
+
+form button {
+    width: 200px;
+    padding: 15px;
+    align-self: center;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--var-cor-1);
+    color: var(--var-cor-branco);
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+form button:hover {
+    background-color: var(--var-cor-0);
+    color: var(--var-cor-preto);
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--var-cor-preto);
+
+
 }
