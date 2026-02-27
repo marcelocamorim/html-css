@@ -12,12 +12,22 @@
     align-items: center;
     gap: 2rem;
     margin: 100px 0;
+    padding: 40px;
+    border-radius: 15px;
+    background-image: url("../imagens/contato.png");
+    background-size: cover;
+    
 }
 
 .form-text{
     width: 50%;
+    color: var(--var-cor-preto);
+    line-height: 1.3rem;
+    background-color: var(--var-cor-2);
 }
-
+.form-text img{
+    width: 100%;
+}
 
 
 
