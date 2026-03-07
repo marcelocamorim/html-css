@@ -144,7 +144,7 @@ main {
     padding: 30px;
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, var(--var-cor-1) 0%, var(--var-cor-2) 20%, var(--var-cor-2) 80%, var(--var-cor-1) 100%);
+    background: linear-gradient(to bottom, var(--var-cor-1) 20%, var(--var-cor-1) 60%, var(--var-cor-branco) 100%);
 }
 
 .container-img {
@@ -152,7 +152,7 @@ main {
 }
 
 .cadastur img {
-    box-shadow: 0px 0px 10px var(--var-cor-0);
+    box-shadow: 0px 0px 10px var(--var-cor-preto);
     border-radius: 10px;
     width: 100%;
 }

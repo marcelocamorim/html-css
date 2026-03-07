@@ -25,6 +25,7 @@
 .footer .btn-social {
     width: 40px;
     height: 40px;
+    background-color: var(--var-cor-2);
 }
 
 .footer .btn-social:hover,

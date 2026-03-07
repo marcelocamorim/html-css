@@ -1,6 +1,6 @@
 
 header {
-    background-color: var(--var-cor-3);
+    background-color: var(--var-cor-2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,7 +114,7 @@ header {
 
 .btn-whats:hover {
     transform: scale(1.005);
-    box-shadow: 0px 2px 10px var(--var-cor-1);
+    box-shadow: 0px 2px 10px var(--var-cor-3);
 }
 
 .btn-whats img {
@@ -136,7 +136,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--var-cor-2);
+    background-color: var(--var-cor-1);
     border: none;
     padding: 10px 10px;
     border-radius: 50%;
@@ -146,7 +146,7 @@ header {
 
 .btn-social:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 5px 5px var(--var-cor-1);
+    box-shadow: 0px 5px 5px var(--var-cor-3);
 }
 
 [data-mobile] {
@@ -180,7 +180,7 @@ header {
         top: 100%;
         left: 0px;
         width: 100%;
-        border-top: 1px solid var(--var-cor-1);
+        border-top: 1px solid var(--var-cor-3);
         opacity: 0;
         visibility: hidden;
         transform: translateY(-5px);
@@ -205,7 +205,7 @@ header {
     .link-menu {
         color: var(--var-cor-branco);
         font-weight: normal;
-        background-color: var(--var-cor-3);
+        background-color: var(--var-cor-2);
         width: 100%;
         display: block;
         padding: 15px;
@@ -217,7 +217,7 @@ header {
     }
 
     .link-menu:hover {
-        background-color: var(--var-cor-0);
+        background-color: var(--var-cor-1);
         color: var(--var-cor-3);
         font-weight: bolder;
     }
