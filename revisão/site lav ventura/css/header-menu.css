@@ -97,7 +97,7 @@ header {
 }
 
 .btn-whats {
-    background-color: var(--var-cor-whats);
+    background-color: var(--var-cor-1);
     padding: 10px 30px;
     font-size: 1.2rem;
     color: white;
