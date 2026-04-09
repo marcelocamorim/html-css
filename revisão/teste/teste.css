@@ -1,0 +1,39 @@
+
+header{
+    background-color: #535353;
+	padding:10px;
+	border-radius:15px;
+	
+};
+    
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 30px;
+    list-style: none;
+   
+   
+    
+
+}
+
+ul:nth-child(1){
+    order: 3;
+}
+ul li:nth-child(3){
+    display: none;
+}
+li{
+    background-color: #ffffff;
+        width: 100%;
+
+
+}
+a{
+    text-decoration: none;
+    background-color: red;
+
+}
